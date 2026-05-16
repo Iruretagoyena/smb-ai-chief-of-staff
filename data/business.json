@@ -1,0 +1,49 @@
+{
+  "business": {
+    "name": "Lupita's Taqueria",
+    "owner": "Maria Lupita Hernandez",
+    "address": "2847 Mission St, San Francisco, CA 94110",
+    "phone": "+1-415-555-0142",
+    "founded": "2011-03-15",
+    "employees": 4,
+    "google_rating": 4.3,
+    "google_reviews_count": 387,
+    "yelp_rating": 4.0,
+    "yelp_reviews_count": 245,
+    "instagram_handle": "@lupitastaqueriasf",
+    "instagram_followers": 1842,
+    "monthly_revenue_usd": 47000,
+    "hours": "Mon-Sat 10am-9pm, Sun 11am-7pm"
+  },
+  "owner_profile": {
+    "name": "Maria Lupita Hernandez",
+    "age": 58,
+    "english_proficiency": "conversational",
+    "primary_language": "Spanish",
+    "tech_comfort": "low",
+    "personal_priorities": [
+      "Paying down equipment loan ($12k remaining)",
+      "Finding reliable tortilla supplier (current supplier raised prices 18%)",
+      "Daughter Sofia's quinceañera in 4 months",
+      "Renewing food handler permits for staff before June"
+    ],
+    "stress_points": [
+      "Doesn't reply to reviews — doesn't know how",
+      "Pays accountant $400/mo to chase invoices",
+      "Last social media post was 6 weeks ago",
+      "Loses ~$800/mo to late-paying catering clients"
+    ]
+  },
+  "open_commitments": [
+    {"id": "c1", "date": "2026-05-19", "owner": "Maria", "task": "Call landlord about lease renewal (lease ends Aug 31)"},
+    {"id": "c2", "date": "2026-05-22", "owner": "Maria", "task": "Renew business insurance — quote from Hartford is $340 higher than last year"},
+    {"id": "c3", "date": "2026-05-25", "owner": "Maria", "task": "Submit Q1 sales tax filing to CDTFA"},
+    {"id": "c4", "date": "2026-05-30", "owner": "Maria", "task": "Final payment to DJ for Sofia's quinceañera ($1200)"},
+    {"id": "c5", "date": "2026-06-01", "owner": "Maria", "task": "Decide on new tortilla supplier (3 quotes in inbox, haven't compared)"}
+  ],
+  "outstanding_invoices": [
+    {"client": "Mission Cultural Center", "amount_usd": 1850, "invoiced": "2026-04-12", "days_overdue": 22, "service": "Catering for opening night"},
+    {"client": "Balmy Alley Tours LLC", "amount_usd": 420, "invoiced": "2026-04-28", "days_overdue": 6, "service": "Lunch catering for 12"},
+    {"client": "SF Latinx Tech Meetup", "amount_usd": 680, "invoiced": "2026-05-02", "days_overdue": 0, "service": "Taco bar for 40"}
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "emails": [
+    {
+      "id": "e1",
+      "date": "2026-05-15T08:32:00Z",
+      "from": "carlos@masaharinasf.com",
+      "to": "lupita@lupitastaqueriasf.com",
+      "subject": "Price adjustment effective June 1",
+      "body": "Hola Maria, queria avisarte que a partir del 1ro de junio el precio de las tortillas sube a $0.42 por unidad. Es un aumento del 18% por costos de masa. Si quieres pasamos a contrato anual y te dejamos en $0.38. Avisame. — Carlos",
+      "tag": "supplier_pricing"
+    },
+    {
+      "id": "e2",
+      "date": "2026-05-14T19:14:00Z",
+      "from": "events@missionculturalcenter.org",
+      "to": "lupita@lupitastaqueriasf.com",
+      "subject": "Re: Invoice #2041 — follow up",
+      "body": "Hi Maria, sorry for the delay on the catering invoice. Our grant disbursement was pushed to next Friday. We will absolutely pay $1,850 by May 23. Thank you for your patience and the amazing food at opening night!",
+      "tag": "late_payment"
+    },
+    {
+      "id": "e3",
+      "date": "2026-05-13T11:02:00Z",
+      "from": "tortilleriaoaxaca@gmail.com",
+      "to": "lupita@lupitastaqueriasf.com",
+      "subject": "Quote: Wholesale tortillas",
+      "body": "Maria, gusto saludarte. Te paso nuestra cotizacion: tortilla de maiz $0.36 unidad (minimo 800/dia), tortilla de harina $0.31. Entrega martes y viernes. Tenemos certificacion organica. Saludos, Lucia — Tortilleria Oaxaca",
+      "tag": "supplier_quote"
+    },
+    {
+      "id": "e4",
+      "date": "2026-05-13T09:45:00Z",
+      "from": "supplies@elmolino.net",
+      "to": "lupita@lupitastaqueriasf.com",
+      "subject": "Cotizacion tortillas — El Molino",
+      "body": "Buenos dias Maria, El Molino te ofrece tortilla de maiz a $0.39/unidad con entrega diaria gratis (minimo $80). Calidad premium nixtamal. Llamame al 415-555-0931. — Roberto",
+      "tag": "supplier_quote"
+    },
+    {
+      "id": "e5",
+      "date": "2026-05-12T16:28:00Z",
+      "from": "rodriguez.cpa@gmail.com",
+      "to": "lupita@lupitastaqueriasf.com",
+      "subject": "Q1 sales tax — need your sign off by May 25",
+      "body": "Maria, prepared your Q1 CDTFA filing. Total taxable sales: $128,400. Sales tax due: $11,556. Need your e-signature by May 25 to avoid late filing penalty. Doc attached. — Jose Rodriguez, CPA",
+      "tag": "tax"
+    },
+    {
+      "id": "e6",
+      "date": "2026-05-11T14:03:00Z",
+      "from": "balmyalleytours@gmail.com",
+      "to": "lupita@lupitastaqueriasf.com",
+      "subject": "Loved the catering!",
+      "body": "Hi Maria — the tour group was raving about the al pastor. We'd love to book you for 4 more dates this summer (June 8, June 22, July 6, July 20). Same package, 12 people. Can you confirm? Invoice from last week is in flight, my apologies for the delay. — Tanya",
+      "tag": "catering_opportunity"
+    },
+    {
+      "id": "e7",
+      "date": "2026-05-10T20:51:00Z",
+      "from": "noreply@yelp.com",
+      "to": "lupita@lupitastaqueriasf.com",
+      "subject": "You have a new 2-star review",
+      "body": "From Brandon T.: 'Came in Saturday at 8:30pm and they were out of carne asada. Tortillas felt stale. Owner was nice but the food was meh. 2/5.' Reply to this review to show customers you care.",
+      "tag": "negative_review"
+    },
+    {
+      "id": "e8",
+      "date": "2026-05-09T13:17:00Z",
+      "from": "events@latinxtechsf.com",
+      "to": "lupita@lupitastaqueriasf.com",
+      "subject": "Confirmed: Taco bar for 40 on May 28",
+      "body": "Maria — confirmed for our May 28 meetup at 6pm. 40 people. Mix of carnitas, al pastor, vegetarian. Total $680. We will pay net-15 after the event. Address: 2150 Folsom. — Daniel",
+      "tag": "catering_booking"
+    },
+    {
+      "id": "e9",
+      "date": "2026-05-08T07:22:00Z",
+      "from": "leasing@missionproperties.com",
+      "to": "lupita@lupitastaqueriasf.com",
+      "subject": "Lease renewal — 2847 Mission St",
+      "body": "Maria, your lease ends August 31, 2026. We'd like to propose a 3-year renewal at $6,800/mo (current is $5,950). Let's schedule a call to discuss. — Patricia, Mission Properties",
+      "tag": "lease"
+    },
+    {
+      "id": "e10",
+      "date": "2026-05-07T10:48:00Z",
+      "from": "quinceanera.djmiguel@gmail.com",
+      "to": "lupita@lupitastaqueriasf.com",
+      "subject": "Sofia's quinceañera — final payment",
+      "body": "Maria, all confirmed for Sept 12 at the Galeria de la Raza. Final payment of $1,200 due by May 30. Venmo @djmiguel or check. Gracias! — DJ Miguel",
+      "tag": "personal"
+    },
+    {
+      "id": "e11",
+      "date": "2026-05-06T15:33:00Z",
+      "from": "hartfordbusiness@thehartford.com",
+      "to": "lupita@lupitastaqueriasf.com",
+      "subject": "Your renewal quote is ready",
+      "body": "Your business owners policy renews June 15. New premium: $4,180/year (up $340 from $3,840). Coverage unchanged. Renew online or call 1-800-555-0188.",
+      "tag": "insurance"
+    }
+  ]
+}
