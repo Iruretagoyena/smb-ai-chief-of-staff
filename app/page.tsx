@@ -3,6 +3,7 @@
 import { useState } from "react";
 import MirrorPanel from "@/components/MirrorPanel";
 import CosChat from "@/components/CosChat";
+import CosVoice from "@/components/CosVoice";
 import WeeklyBrief from "@/components/WeeklyBrief";
 
 export default function Home() {
@@ -69,12 +70,14 @@ export default function Home() {
 
         <div className="mt-10 grid md:grid-cols-2 gap-6">
           <div className="rounded-2xl bg-white/5 border border-white/10 p-6">
-            <div className="text-sm text-white/50 mb-2">Call Pop on stage</div>
-            <div className="font-mono text-2xl text-brand-500 font-bold">+1 (415) 555-POP1</div>
-            <div className="text-sm text-white/40 mt-2">Twilio → /api/twilio/voice</div>
+            <div className="text-sm text-white/50 mb-3">🎙️ Talk to Pop</div>
+            <CosVoice />
+            <div className="text-xs text-white/30 mt-4 text-center">
+              Chrome desktop · mic permission required
+            </div>
           </div>
           <div className="rounded-2xl bg-white/5 border border-white/10 p-6">
-            <div className="text-sm text-white/50 mb-2">Or type — same brain</div>
+            <div className="text-sm text-white/50 mb-2">⌨️ Or type — same brain</div>
             <CosChat />
           </div>
         </div>
