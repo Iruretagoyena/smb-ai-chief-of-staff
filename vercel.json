@@ -1,0 +1,12 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "nextjs",
+  "regions": ["sfo1"],
+  "functions": {
+    "app/api/cos/route.ts": { "maxDuration": 30 },
+    "app/api/mirror/route.ts": { "maxDuration": 60 },
+    "app/api/clone-competitor/route.ts": { "maxDuration": 60 },
+    "app/api/brief/route.ts": { "maxDuration": 30 },
+    "app/api/twilio/voice/route.ts": { "maxDuration": 15 }
+  }
+}
