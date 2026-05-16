@@ -366,8 +366,16 @@ export default function RazorDemo() {
 
           <div className="text-xs text-white/30">
             GStack × GBrain Hackathon · May 16 2026 ·{" "}
+            <a href="/pitch" className="underline hover:text-white/60">
+              slides
+            </a>{" "}
+            ·{" "}
             <a href="/full" className="underline hover:text-white/60">
-              see full demo
+              full demo
+            </a>{" "}
+            ·{" "}
+            <a href="/dashboard" className="underline hover:text-white/60">
+              dashboard
             </a>
           </div>
         </div>
