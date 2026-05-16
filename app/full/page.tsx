@@ -25,6 +25,9 @@ export default function Home() {
           <a href="#cos" className="text-sm text-white/60 hover:text-white">
             Try the Chief of Staff →
           </a>
+          <a href="/publish" className="text-sm text-white/60 hover:text-white">
+            Publish this app
+          </a>
         </div>
       </header>
 
