@@ -94,7 +94,7 @@ export default function DashboardPage() {
           </div>
         </div>
 
-        <div className="p-4 md:p-8 max-w-6xl mx-auto">
+        <div className={`p-4 md:p-8 mx-auto ${activeTab === "gbrain" ? "max-w-[1400px]" : "max-w-6xl"}`}>
           {activeTab === "inbox" && <InboxPanel />}
           {activeTab === "plans" && <PlansPanel />}
           {activeTab === "gbrain" && <GBrainPanel />}
