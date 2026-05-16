@@ -71,6 +71,24 @@
       "rating": null,
       "text": "hi! is there any way I can book for next Saturday for color? prom for my niece 🫶",
       "replied": false
+    },
+    {
+      "id": "r9",
+      "source": "Instagram comments",
+      "date": "2026-05-13",
+      "author": "@nat_curls",
+      "rating": 5,
+      "text": "Just left Sol & Trenza and I'm literally CRYING. Sofia saved my curls after two years of bad cuts. This woman is a genius 😭🙌",
+      "replied": false
+    },
+    {
+      "id": "r10",
+      "source": "Instagram comments",
+      "date": "2026-05-06",
+      "author": "@quince_luisa",
+      "rating": 5,
+      "text": "My daughter's quinceañera hair was EVERYTHING. All six girls looked stunning. Sofia and her team are magic ✨💕",
+      "replied": false
     }
   ],
   "ai_competitor_simulation": {

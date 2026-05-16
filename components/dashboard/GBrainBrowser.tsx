@@ -23,6 +23,9 @@ interface TreeNode {
   sizeKB?: number;
   ingestedAt?: string;
   subtitle?: string;
+  isProviderFolder?: boolean;
+  providerName?: string;
+  parentContentType?: ContentType;
 }
 
 const NOW = new Date("2026-05-16T09:00:00Z").getTime();
@@ -48,6 +51,41 @@ function formatTime(dateStr: string) {
     minute: "2-digit",
     hour12: true,
   });
+}
+
+function formatRecency(dateStr: string): string {
+  const ms = NOW - new Date(dateStr).getTime();
+  if (ms < 3600000) return `${Math.max(1, Math.floor(ms / 60000))}m ago`;
+  if (ms < DAY_MS) return `${Math.floor(ms / 3600000)}h ago`;
+  return `${Math.floor(ms / DAY_MS)}d ago`;
+}
+
+function getAllLeafItems(node: TreeNode): TreeNode[] {
+  if (node.type === "item") return [node];
+  return (node.children ?? []).flatMap(getAllLeafItems);
+}
+
+function groupByProvider(
+  items: TreeNode[],
+  parentId: string,
+  parentContentType: ContentType
+): TreeNode[] {
+  const groups: Record<string, TreeNode[]> = {};
+  for (const item of items) {
+    const key = item.provider ?? "Unknown";
+    if (!groups[key]) groups[key] = [];
+    groups[key].push(item);
+  }
+  return Object.entries(groups).map(([provider, children]) => ({
+    id: `${parentId}-prov-${provider.replace(/[^a-zA-Z0-9]/g, "-").toLowerCase()}`,
+    label: provider,
+    type: "folder" as const,
+    isProviderFolder: true,
+    providerName: provider,
+    parentContentType: parentContentType,
+    children,
+    itemCount: children.length,
+  }));
 }
 
 function buildTree(): TreeNode[] {
@@ -105,7 +143,7 @@ function buildTree(): TreeNode[] {
     .map((r) => ({
       id: `rv-${r.id}`,
       label: `${r.author}`,
-      subtitle: `${r.rating}★ · ${r.source} · ${formatDate(r.date)}`,
+      subtitle: `${r.rating != null ? r.rating + "★ · " : ""}${r.source} · ${formatDate(r.date)}`,
       type: "item" as const,
       contentType: "review" as ContentType,
       isNew: isRecent(r.date),
@@ -140,7 +178,7 @@ function buildTree(): TreeNode[] {
       ingestedAt: ev.date + "T" + ev.time + ":00Z",
     });
   }
-  const calendarChildren: TreeNode[] = Object.entries(months).map(
+  const calendarMonthFolders: TreeNode[] = Object.entries(months).map(
     ([month, items]) => ({
       id: `cal-month-${month}`,
       label: month,
@@ -167,53 +205,70 @@ function buildTree(): TreeNode[] {
     })
   );
 
+  const voiceProviders = groupByProvider(voiceChildren, "voice", "call");
+  const dmProviders = groupByProvider(dmChildren, "instagram", "dm");
+  const emailProviders = groupByProvider(emailChildren, "gmail", "email");
+  const reviewProviders = groupByProvider(reviewChildren, "reviews", "review");
+  const copilotProviders = groupByProvider(copilotChildren, "copilot", "copilot");
+
+  const calendarProviderFolder: TreeNode = {
+    id: "calendar-prov-google-calendar",
+    label: "Google Calendar",
+    type: "folder",
+    isProviderFolder: true,
+    providerName: "Google Calendar",
+    parentContentType: "calendar",
+    children: calendarMonthFolders,
+    itemCount: calendarData.events.length,
+  };
+
   return [
     {
       id: "voice",
       label: "Voice",
-      subtitle: "Synthflow · OpenAI Realtime",
       type: "folder",
-      children: voiceChildren,
+      contentType: "call" as ContentType,
+      children: voiceProviders,
       itemCount: voiceChildren.length,
     },
     {
       id: "instagram",
       label: "Instagram DMs",
-      subtitle: "Meta · captured via Pop",
       type: "folder",
-      children: dmChildren,
+      contentType: "dm" as ContentType,
+      children: dmProviders,
       itemCount: dmChildren.length,
     },
     {
       id: "gmail",
       label: "Gmail",
-      subtitle: "Google",
       type: "folder",
-      children: emailChildren,
+      contentType: "email" as ContentType,
+      children: emailProviders,
       itemCount: emailChildren.length,
     },
     {
       id: "reviews",
       label: "Reviews",
-      subtitle: "Yelp · Google",
       type: "folder",
-      children: reviewChildren,
+      contentType: "review" as ContentType,
+      children: reviewProviders,
       itemCount: reviewChildren.length,
     },
     {
       id: "calendar",
       label: "Calendar",
-      subtitle: "Google",
       type: "folder",
-      children: calendarChildren,
+      contentType: "calendar" as ContentType,
+      children: [calendarProviderFolder],
       itemCount: calendarData.events.length,
     },
     {
       id: "copilot",
       label: "AI co-pilot sessions",
-      subtitle: "Anthropic Claude · Pop",
       type: "folder",
-      children: copilotChildren,
+      contentType: "copilot" as ContentType,
+      children: copilotProviders,
       itemCount: copilotChildren.length,
     },
   ];
@@ -293,11 +348,17 @@ export default function GBrainBrowser() {
   }, []);
 
   const handleSelect = useCallback((node: TreeNode) => {
-    if (node.type === "folder") return;
     setSelectedId(node.id);
     setFocusedId(node.id);
     setDeleteConfirm(false);
   }, []);
+
+  const isSelectableFolder = useCallback(
+    (node: TreeNode) =>
+      node.type === "folder" &&
+      (!!FOLDER_ICONS[node.id] || !!node.isProviderFolder),
+    []
+  );
 
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
@@ -337,14 +398,18 @@ export default function GBrainBrowser() {
         e.preventDefault();
         const node = focusedId ? findNode(tree, focusedId) : null;
         if (node) {
-          if (node.type === "folder") toggleExpand(node.id);
-          else handleSelect(node);
+          if (node.type === "folder") {
+            toggleExpand(node.id);
+            if (isSelectableFolder(node)) handleSelect(node);
+          } else {
+            handleSelect(node);
+          }
         }
       }
     }
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [tree, expanded, focusedId, toggleExpand, handleSelect]);
+  }, [tree, expanded, focusedId, toggleExpand, handleSelect, isSelectableFolder]);
 
   function matchesSearch(node: TreeNode): boolean {
     if (!search) return true;
@@ -371,6 +436,8 @@ export default function GBrainBrowser() {
       const isExpanded = expanded.has(node.id);
       const isFocused = focusedId === node.id;
       const isSelected = selectedId === node.id;
+      const isRootFolder = isFolder && !!FOLDER_ICONS[node.id];
+      const isProvSub = isFolder && !!node.isProviderFolder;
 
       if (node.type === "item" && !matchesSearch(node)) return null;
       if (node.type === "item" && !matchesFilter(node)) return null;
@@ -378,13 +445,22 @@ export default function GBrainBrowser() {
       return (
         <div key={node.id}>
           <button
-            onClick={() =>
-              isFolder ? toggleExpand(node.id) : handleSelect(node)
-            }
+            onClick={() => {
+              if (isFolder) {
+                toggleExpand(node.id);
+                if (isRootFolder || isProvSub) handleSelect(node);
+              } else {
+                handleSelect(node);
+              }
+            }}
             onFocus={() => setFocusedId(node.id)}
             className={`w-full flex items-center gap-1.5 py-1 px-2 text-left transition-colors ${
               isFolder
-                ? `text-sm font-semibold text-white/90 ${isFocused ? "bg-white/[0.06]" : "hover:bg-white/[0.04]"}`
+                ? isRootFolder
+                  ? `text-sm font-semibold text-white/90 ${isFocused || isSelected ? "bg-white/[0.06]" : "hover:bg-white/[0.04]"}`
+                  : isProvSub
+                    ? `text-sm font-medium text-white/70 ${isFocused || isSelected ? "bg-white/[0.06]" : "hover:bg-white/[0.04]"}`
+                    : `text-xs font-medium text-white/60 ${isFocused ? "bg-white/[0.06]" : "hover:bg-white/[0.04]"}`
                 : isSelected
                   ? "text-xs font-normal text-white"
                   : isFocused
@@ -405,7 +481,7 @@ export default function GBrainBrowser() {
             ) : (
               <span className="w-3" />
             )}
-            {isFolder && FOLDER_ICONS[node.id] && (
+            {isRootFolder && FOLDER_ICONS[node.id] && (
               <span className="text-sm">{FOLDER_ICONS[node.id]}</span>
             )}
             <span className="truncate flex-1">{node.label}</span>
@@ -425,6 +501,8 @@ export default function GBrainBrowser() {
       );
     });
   }
+
+  const showMetaPane = showMeta && selected && selected.type === "item";
 
   return (
     <div>
@@ -496,7 +574,7 @@ export default function GBrainBrowser() {
         </div>
 
         {/* Pane 3: Metadata */}
-        {showMeta && selected && (
+        {showMetaPane && (
           <div
             className="w-80 shrink-0 border-l border-white/[0.06] overflow-y-auto p-4 hidden lg:block"
             style={{ maxHeight: 600 }}
@@ -522,7 +600,7 @@ export default function GBrainBrowser() {
         )}
 
         {/* Collapsed metadata strip */}
-        {!showMeta && selected && (
+        {!showMeta && selected && selected.type === "item" && (
           <button
             onClick={() => setShowMeta(true)}
             className="hidden lg:flex items-center justify-center w-8 shrink-0 border-l border-white/[0.06] text-white/25 hover:text-white/50 hover:bg-white/[0.02] transition-colors"
@@ -548,6 +626,11 @@ function EmptyDetail() {
 }
 
 function DetailView({ node }: { node: TreeNode }) {
+  if (node.type === "folder") {
+    if (node.isProviderFolder) return <ProviderSummary node={node} />;
+    if (FOLDER_ICONS[node.id]) return <FolderSummary node={node} />;
+    return <EmptyDetail />;
+  }
   if (node.contentType === "call") return <CallDetail data={node.data!} />;
   if (node.contentType === "dm") return <DMDetail data={node.data!} />;
   if (node.contentType === "email") return <EmailDetail data={node.data!} />;
@@ -557,6 +640,185 @@ function DetailView({ node }: { node: TreeNode }) {
   if (node.contentType === "copilot")
     return <CopilotDetail data={node.data!} />;
   return <EmptyDetail />;
+}
+
+const CATEGORY_LABELS: Record<string, { singular: string; plural: string }> = {
+  voice: { singular: "call", plural: "calls" },
+  instagram: { singular: "thread", plural: "threads" },
+  gmail: { singular: "email", plural: "emails" },
+  reviews: { singular: "review", plural: "reviews" },
+  calendar: { singular: "event", plural: "events" },
+  copilot: { singular: "session", plural: "sessions" },
+};
+
+const CONTENT_TYPE_LABELS: Record<ContentType, { singular: string; plural: string }> = {
+  call: { singular: "call", plural: "calls" },
+  dm: { singular: "thread", plural: "threads" },
+  email: { singular: "email", plural: "emails" },
+  review: { singular: "review", plural: "reviews" },
+  calendar: { singular: "event", plural: "events" },
+  copilot: { singular: "session", plural: "sessions" },
+};
+
+function FolderSummary({ node }: { node: TreeNode }) {
+  const providerFolders = (node.children ?? []).filter(
+    (c) => c.type === "folder"
+  );
+  const allItems = providerFolders.flatMap(getAllLeafItems);
+  const totalSize = allItems.reduce((sum, i) => sum + (i.sizeKB ?? 0), 0);
+  const totalCost = allItems.reduce((sum, i) => sum + (i.cost ?? 0), 0);
+  const labels = CATEGORY_LABELS[node.id] ?? { singular: "item", plural: "items" };
+
+  return (
+    <div className="p-5">
+      <h3 className="font-bold text-base mb-1">{node.label} memories</h3>
+      <p className="text-xs text-white/40 mb-6">
+        {allItems.length} {labels.plural} across {providerFolders.length}{" "}
+        provider{providerFolders.length !== 1 ? "s" : ""} &middot;{" "}
+        {totalSize.toFixed(1)} KB &middot; ${totalCost.toFixed(2)} total
+      </p>
+
+      <div>
+        {providerFolders.map((pf, idx) => {
+          const items = getAllLeafItems(pf);
+          const cost = items.reduce((s, i) => s + (i.cost ?? 0), 0);
+
+          const dates = items
+            .map((i) =>
+              i.ingestedAt ? new Date(i.ingestedAt).getTime() : 0
+            )
+            .filter(Boolean);
+          const mostRecentDate = dates.length ? Math.max(...dates) : 0;
+          const recencyLabel = mostRecentDate
+            ? formatRecency(new Date(mostRecentDate).toISOString())
+            : "—";
+
+          return (
+            <div
+              key={pf.id}
+              className={`py-3 ${idx > 0 ? "border-t border-white/[0.06]" : ""}`}
+            >
+              <div className="flex justify-between items-center mb-1">
+                <span className="text-sm font-medium text-white/90">
+                  {pf.label}
+                </span>
+                <span className="text-xs text-white/40">
+                  {items.length} {items.length === 1 ? labels.singular : labels.plural}{" "}
+                  &middot; ${cost.toFixed(2)} total
+                </span>
+              </div>
+              <div className="text-[11px] text-white/30">
+                last {recencyLabel}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
+      <div className="mt-6 pt-4 border-t border-white/[0.06]">
+        <p className="text-xs text-white/50">
+          💡 Switch any provider — your data stays in your private GBrain.
+        </p>
+        <button className="mt-2 text-xs text-brand-500 hover:text-brand-600 font-medium transition-colors">
+          Switch a provider &rarr;
+        </button>
+      </div>
+    </div>
+  );
+}
+
+function ProviderSummary({ node }: { node: TreeNode }) {
+  const items = getAllLeafItems(node);
+  const totalCost = items.reduce((s, i) => s + (i.cost ?? 0), 0);
+  const totalSize = items.reduce((s, i) => s + (i.sizeKB ?? 0), 0);
+
+  const dates = items
+    .map((i) => (i.ingestedAt ? new Date(i.ingestedAt).getTime() : 0))
+    .filter(Boolean);
+  const earliest = dates.length ? new Date(Math.min(...dates)) : null;
+  const latest = dates.length ? new Date(Math.max(...dates)) : null;
+
+  const ct = node.parentContentType ?? "call";
+  const labels = CONTENT_TYPE_LABELS[ct];
+
+  return (
+    <div className="p-5">
+      <h3 className="font-bold text-base mb-1">{node.providerName}</h3>
+      <p className="text-xs text-white/40 mb-6">
+        {items.length} {items.length === 1 ? labels.singular : labels.plural}{" "}
+        &middot; ${totalCost.toFixed(2)} total
+        {earliest && latest && (
+          <>
+            {" "}
+            &middot; captured to GBrain {formatDate(earliest.toISOString())}
+            &ndash;{formatDate(latest.toISOString())}
+          </>
+        )}
+      </p>
+
+      {/* Recent items */}
+      <div className="mb-5">
+        <div className="text-[10px] uppercase tracking-wider text-white/40 font-semibold mb-2">
+          Recent {labels.plural}
+        </div>
+        <div className="space-y-1">
+          {items.slice(0, 5).map((item) => (
+            <div
+              key={item.id}
+              className="flex items-center justify-between text-xs py-1"
+            >
+              <span className="text-white/70 truncate flex-1">
+                {item.label}
+              </span>
+              <span className="text-white/40 shrink-0 ml-3 tabular-nums">
+                ${(item.cost ?? 0).toFixed(2)}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <hr className="border-white/5" />
+
+      {/* Provider stats */}
+      <div className="mt-5 mb-5">
+        <div className="text-[10px] uppercase tracking-wider text-white/40 font-semibold mb-2">
+          Provider stats
+        </div>
+        <div className="space-y-1.5 text-xs">
+          <div className="flex justify-between">
+            <span className="text-white/40">
+              Cost per {labels.singular}
+            </span>
+            <span className="text-white/70 tabular-nums">
+              ${items.length ? (totalCost / items.length).toFixed(3) : "0.000"}{" "}
+              avg
+            </span>
+          </div>
+          <div className="flex justify-between">
+            <span className="text-white/40">Total size</span>
+            <span className="text-white/70 tabular-nums">
+              {totalSize.toFixed(1)} KB
+            </span>
+          </div>
+          <div className="flex justify-between">
+            <span className="text-white/40">Data captured</span>
+            <span className="text-emerald-400 text-[11px]">
+              ✓ All in GBrain
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <hr className="border-white/5" />
+
+      <div className="mt-5">
+        <button className="text-xs text-brand-500 hover:text-brand-600 font-medium transition-colors">
+          Switch from {node.providerName} to another provider &rarr;
+        </button>
+      </div>
+    </div>
+  );
 }
 
 function CallDetail({ data }: { data: Record<string, unknown> }) {
