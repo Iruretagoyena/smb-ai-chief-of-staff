@@ -1,5 +1,5 @@
-import RazorDemo from "@/components/RazorDemo";
+import LandingPage from "@/components/LandingPage";
 
 export default function Home() {
-  return <RazorDemo />;
+  return <LandingPage />;
 }

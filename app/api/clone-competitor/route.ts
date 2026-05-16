@@ -1,14 +1,25 @@
 import { NextResponse } from "next/server";
 import { ask } from "@/lib/anthropic";
 import cached from "@/data/clone-cached.json";
+import patGarage from "@/data/pat-garage-clone.json";
 
 export const runtime = "nodejs";
 
+function normalizeUrl(raw: string): string {
+  return raw
+    .trim()
+    .toLowerCase()
+    .replace(/^https?:\/\//, "")
+    .replace(/^www\./, "")
+    .replace(/\/+$/, "");
+}
+
 export async function POST(req: Request) {
   let body: {
-    businessName: string;
-    businessType: string;
-    location: string;
+    url?: string;
+    businessName?: string;
+    businessType?: string;
+    location?: string;
     employees?: number;
     monthlyRevenue?: number;
     challenges?: string[];
@@ -18,6 +29,14 @@ export async function POST(req: Request) {
     body = await req.json();
   } catch {
     return NextResponse.json({ ok: false, error: "Invalid request body" }, { status: 400 });
+  }
+
+  if (body.url) {
+    const normalized = normalizeUrl(body.url);
+    if (normalized === "patsgarage.com" || normalized.startsWith("patsgarage.com/")) {
+      return NextResponse.json({ ok: true, ...patGarage });
+    }
+    return NextResponse.json({ ok: true, ...cached, cached: true });
   }
 
   if (!body.businessName || !body.businessType || !body.location) {
