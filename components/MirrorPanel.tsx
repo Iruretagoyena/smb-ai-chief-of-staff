@@ -43,6 +43,14 @@ export default function MirrorPanel() {
   const o = data.output;
   const c = data.competitor;
 
+  const scoreboard = [
+    { metric: "Review response rate", lupita: "0%", bot: "100%" },
+    { metric: "Avg response time", lupita: "—", bot: "7 min" },
+    { metric: "Instagram posts this week", lupita: "0", bot: "3" },
+    { metric: "Overdue invoices chased", lupita: "0 of 2", bot: "2 of 2" },
+    { metric: "Hours owner spent on this", lupita: "0", bot: "0" },
+  ];
+
   return (
     <section className="mt-16 space-y-12">
       <div className="rounded-2xl bg-gradient-to-br from-red-950/80 to-black border border-red-900/40 p-8">
@@ -53,11 +61,18 @@ export default function MirrorPanel() {
           {c?.name}
         </h2>
         <p className="text-white/60 mt-1">{c?.tagline}</p>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
-          {c?.stats && Object.entries(c.stats).map(([k, v]) => (
-            <div key={k} className="p-3 rounded-lg bg-black/40">
-              <div className="text-xs text-white/40 uppercase tracking-wider">{k.replace(/_/g, " ")}</div>
-              <div className="font-mono font-bold text-xl mt-1">{v}</div>
+
+        <div className="mt-8 rounded-xl bg-black/40 overflow-hidden border border-white/10">
+          <div className="grid grid-cols-3 text-xs uppercase tracking-wider text-white/40 px-4 py-3 border-b border-white/10">
+            <div></div>
+            <div>Lupita&apos;s</div>
+            <div className="text-red-400">TacoBot</div>
+          </div>
+          {scoreboard.map((row) => (
+            <div key={row.metric} className="grid grid-cols-3 px-4 py-3 border-b border-white/5 last:border-0">
+              <div className="text-sm text-white/70">{row.metric}</div>
+              <div className="font-mono font-bold text-white/80">{row.lupita}</div>
+              <div className="font-mono font-bold text-red-400">{row.bot}</div>
             </div>
           ))}
         </div>

@@ -14,7 +14,7 @@ A two-act product:
 1. Open the home page. The business **Lupita's Taqueria** is preloaded.
 2. Click **"Show me the competitor →"** — *TacoBot Cantina* spins up: replies to 4 unreplied reviews, drafts 3 Instagram posts, chases the $1,850 overdue Mission Cultural Center invoice.
 3. Scroll. Headline flips: **"What if Maria had one too?"**
-4. **Call the Twilio number on stage** — ask *"What should I prep for today?"* — Pop pulls from her calendar, inbox, and reviews and answers in 1-2 sentences.
+4. **Tap the mic, ask out loud** — *"What should I prep for today?"* — Pop pulls from her calendar, inbox, and reviews and speaks back in 1-2 sentences (Web Speech API; Chrome desktop).
 5. Click **"Generate Monday brief"** — one-page weekly digest appears.
 
 ---

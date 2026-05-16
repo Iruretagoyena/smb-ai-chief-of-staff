@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { ask } from "@/lib/anthropic";
 import { buildSystemPrompt } from "@/lib/context";
+import cached from "@/data/cos-cached.json";
 
 export const runtime = "nodejs";
 
@@ -22,10 +23,13 @@ const BRIEF_PROMPT = `Generate Maria's Monday morning brief. Format as plain tex
 Total length under 220 words. Be warm, plain English, no jargon. End with one specific question Maria should answer today.`;
 
 export async function GET() {
+  if (!process.env.ANTHROPIC_API_KEY) {
+    return NextResponse.json({ ok: true, brief: cached.brief, cached: true });
+  }
   try {
     const brief = await ask(buildSystemPrompt(), BRIEF_PROMPT, { maxTokens: 700 });
     return NextResponse.json({ ok: true, brief });
-  } catch (err) {
-    return NextResponse.json({ ok: false, error: String(err) }, { status: 500 });
+  } catch {
+    return NextResponse.json({ ok: true, brief: cached.brief, cached: true });
   }
 }

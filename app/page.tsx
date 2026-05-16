@@ -5,6 +5,7 @@ import MirrorPanel from "@/components/MirrorPanel";
 import CosChat from "@/components/CosChat";
 import CosVoice from "@/components/CosVoice";
 import WeeklyBrief from "@/components/WeeklyBrief";
+import MarketStats from "@/components/MarketStats";
 
 export default function Home() {
   const [mirrorRun, setMirrorRun] = useState(false);
@@ -55,6 +56,8 @@ export default function Home() {
       </section>
 
       {mirrorRun && <MirrorPanel />}
+
+      <MarketStats />
 
       <section id="cos" className="mt-32 mb-24">
         <p className="uppercase tracking-[0.2em] text-xs text-brand-500 font-bold mb-4">

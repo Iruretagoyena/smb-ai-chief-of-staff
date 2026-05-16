@@ -1,0 +1,61 @@
+{
+  "competitor": {
+    "name": "TacoBot Cantina",
+    "tagline": "Same neighborhood. AI-native operations.",
+    "stats": {
+      "review_response_rate": "100%",
+      "avg_response_time_minutes": 7,
+      "instagram_posts_per_week": 4,
+      "customer_follow_up_rate": "100%",
+      "monthly_marketing_hours": 0
+    }
+  },
+  "output": {
+    "review_replies": [
+      {
+        "review_id": "r1",
+        "reply": "Brandon — running out of carne asada on a Saturday night is on us, not you. The tortillas should never feel stale either; we get a fresh delivery every morning at 6am so this shouldn't happen. Come back this week and your next plate is on me — text 415-555-0142 and ask for the owner. — Maria"
+      },
+      {
+        "review_id": "r2",
+        "reply": "Jennifer, thank you for being a regular and for the kind words. We added Apple Pay and Cash App last week if Venmo isn't your speed — and we're working on a new al pastor variation we'd love your opinion on. See you soon. — Maria"
+      },
+      {
+        "review_id": "r5",
+        "reply": "Tom, 25 minutes is too long, period. I owe you an apology and a faster experience. If you message us before your next visit we'll have your order ready when you walk in. Hope you'll give us one more shot. — Maria"
+      },
+      {
+        "review_id": "r8",
+        "reply": "Marcus — an off night is no excuse for dry tortillas and cold beans. Thank you for being honest. I've changed how we hold the beans during the dinner rush starting this week. If you're willing to come back, your next meal is on me. — Maria"
+      }
+    ],
+    "instagram_posts": [
+      {
+        "day": "Mon",
+        "caption": "Monday rule: salsa verde made before the doors open. Tomatillos roasted, garlic charred, cilantro chopped 6 minutes ago. This is why your tacos hit different.",
+        "hashtags": ["#MissionDistrict", "#SFTacos", "#FreshSalsa", "#TaqueriaLife"]
+      },
+      {
+        "day": "Wed",
+        "caption": "POV: you walk in at 1pm and Maria already knows your order. 14 years on Mission Street and counting. Pull up — we open at 11.",
+        "hashtags": ["#SFEats", "#MissionSF", "#Regulars"]
+      },
+      {
+        "day": "Fri",
+        "caption": "Friday tortilla check ✅ fresh from the grill, blistered, soft, ready. Carnitas tonight. Bring a friend who has never been to the Mission.",
+        "hashtags": ["#FridayNight", "#SFFoodie", "#TacosForDinner"]
+      }
+    ],
+    "invoice_chasers": [
+      {
+        "client": "Mission Cultural Center",
+        "message": "Hi team — wanted to send a friendly nudge on invoice #2041 ($1,850) from the opening night catering. Totally understand the grant timing; just wanted to confirm the May 23 payment is still on track. We have you on the calendar for two more events this fall and would love to keep things smooth. ¡Gracias! — Maria, Lupita's Taqueria"
+      },
+      {
+        "client": "Balmy Alley Tours LLC",
+        "message": "Hi Tanya — quick reminder that invoice from April 28 ($420) is now 6 days past due. No worries, just want to make sure it didn't get lost in your inbox. Also: we'd love to lock in the four summer dates you mentioned — I'll send a separate proposal today. — Maria"
+      }
+    ],
+    "weekly_summary": "TacoBot replied to every review within 7 minutes, posted 3 times, and collected $2,270 in receivables — all while Lupita's Taqueria did none of it."
+  }
+}

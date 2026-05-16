@@ -1,10 +1,18 @@
 import { NextResponse } from "next/server";
 import { ask } from "@/lib/anthropic";
 import { seed } from "@/lib/context";
+import cached from "@/data/mirror-cached.json";
 
 export const runtime = "nodejs";
 
-export async function POST() {
+export async function POST(req: Request) {
+  const url = new URL(req.url);
+  const forceLive = url.searchParams.get("live") === "1";
+
+  if (!forceLive && (!process.env.ANTHROPIC_API_KEY || process.env.MIRROR_USE_CACHE === "1")) {
+    return NextResponse.json({ ok: true, ...cached, cached: true });
+  }
+
   const business = seed.business.business;
   const unrepliedReviews = seed.reviews.reviews.filter((r) => !r.replied);
   const overdueInvoices = seed.business.outstanding_invoices.filter(
@@ -59,9 +67,11 @@ Be specific, warm, on-brand for a Mission District taqueria. Replies to negative
       output: parsed,
     });
   } catch (err) {
-    return NextResponse.json(
-      { ok: false, error: String(err) },
-      { status: 500 },
-    );
+    return NextResponse.json({
+      ok: true,
+      ...cached,
+      cached: true,
+      fallback_reason: String(err),
+    });
   }
 }
