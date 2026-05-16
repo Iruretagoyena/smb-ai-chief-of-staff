@@ -364,19 +364,35 @@ export default function RazorDemo() {
             )}
           </div>
 
+          <div className="w-full max-w-2xl mt-12 mb-8 rounded-xl border border-white/[0.06] bg-white/[0.02] p-6">
+            <div className="text-[10px] uppercase tracking-[0.2em] text-white/40 font-semibold mb-4">
+              Directory
+            </div>
+            <div className="grid sm:grid-cols-2 gap-3">
+              {[
+                { href: "/", label: "Home", desc: "Landing page & pitch" },
+                { href: "/dashboard", label: "Dashboard", desc: "Sofia's owner portal — Inbox, Plans, GBrain, Providers" },
+                { href: "/full", label: "Full Demo", desc: "Interactive product demo with all panels" },
+                { href: "/pitch", label: "Pitch Deck", desc: "Investor slides — AI co-founder for 36M shops" },
+                { href: "/demo", label: "Demo", desc: "Standalone demo view" },
+              ].map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-white/5 transition-colors group"
+                >
+                  <span className="text-sm font-medium text-white/80 group-hover:text-white transition-colors">
+                    {link.label}
+                    <span className="text-white/25 ml-1.5 font-mono text-xs">{link.href}</span>
+                  </span>
+                  <span className="text-xs text-white/35">{link.desc}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+
           <div className="text-xs text-white/30">
-            GStack × GBrain Hackathon · May 16 2026 ·{" "}
-            <a href="/pitch" className="underline hover:text-white/60">
-              slides
-            </a>{" "}
-            ·{" "}
-            <a href="/full" className="underline hover:text-white/60">
-              full demo
-            </a>{" "}
-            ·{" "}
-            <a href="/dashboard" className="underline hover:text-white/60">
-              dashboard
-            </a>
+            GStack × GBrain Hackathon · May 16 2026
           </div>
         </div>
       </div>
