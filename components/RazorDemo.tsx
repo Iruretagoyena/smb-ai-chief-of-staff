@@ -309,8 +309,15 @@ export default function RazorDemo() {
                 <p className="mt-6 text-white/70 text-lg leading-relaxed max-w-2xl">
                   Every interaction lives in <span className="text-white font-semibold">their</span> private GBrain.
                   If we stop being the best, they own everything and walk.<br />
-                  <span className="text-white/50">No lock-in. That's the moat.</span>
+                  <span className="text-white/50">No lock-in. That&apos;s the moat.</span>
                 </p>
+                <a
+                  href="/dashboard"
+                  onClick={(e) => e.stopPropagation()}
+                  className="mt-8 inline-flex items-center gap-3 px-6 py-4 rounded-xl bg-brand-500 hover:bg-brand-600 text-black font-bold text-lg transition-colors"
+                >
+                  See Sofia&apos;s dashboard &rarr;
+                </a>
               </div>
             )}
 
