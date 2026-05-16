@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import MirrorPanel from "@/components/MirrorPanel";
+import CompetitorClone from "@/components/CompetitorClone";
 import CosChat from "@/components/CosChat";
 import CosVoice from "@/components/CosVoice";
 import WeeklyBrief from "@/components/WeeklyBrief";
@@ -17,9 +18,14 @@ export default function Home() {
           <div className="w-8 h-8 rounded-full bg-brand-500 flex items-center justify-center text-black font-black">P</div>
           <span className="font-display font-black tracking-tight text-lg">Pop</span>
         </div>
-        <a href="#cos" className="text-sm text-white/60 hover:text-white">
-          Try the Chief of Staff →
-        </a>
+        <div className="flex items-center gap-6">
+          <a href="#clone" className="text-sm text-white/60 hover:text-white">
+            Clone your competition
+          </a>
+          <a href="#cos" className="text-sm text-white/60 hover:text-white">
+            Try the Chief of Staff →
+          </a>
+        </div>
       </header>
 
       <section className="mb-24">
@@ -58,6 +64,22 @@ export default function Home() {
       {mirrorRun && <MirrorPanel />}
 
       <MarketStats />
+
+      <section id="clone" className="mt-32 mb-24">
+        <p className="uppercase tracking-[0.2em] text-xs text-red-400 font-bold mb-4">
+          Try it with your business
+        </p>
+        <h2 className="font-display font-black text-4xl md:text-6xl leading-[0.95] tracking-tight">
+          Clone your<br />competition.
+        </h2>
+        <p className="mt-8 max-w-2xl text-white/70 text-lg leading-relaxed">
+          Enter your business details below. We&apos;ll spin up an AI-native competitor
+          and show you exactly what it would do in its first week — the reviews it would
+          reply to, the posts it would make, the invoices it would chase.{" "}
+          <span className="text-white">Then we&apos;ll show you how Pop closes the gap.</span>
+        </p>
+        <CompetitorClone />
+      </section>
 
       <section id="cos" className="mt-32 mb-24">
         <p className="uppercase tracking-[0.2em] text-xs text-brand-500 font-bold mb-4">

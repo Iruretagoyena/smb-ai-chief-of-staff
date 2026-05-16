@@ -1,0 +1,42 @@
+{
+  "competitor": {
+    "name": "AutoPilot Bistro",
+    "tagline": "Your menu. Your neighborhood. Zero downtime."
+  },
+  "threat_analysis": "An AI-native clone of your business opens across the street. Within 48 hours it has replied to every online review, launched a 3-post-per-week Instagram strategy, set up automated invoice reminders, and built a simple online ordering page. It never forgets a follow-up, never misses a supplier deadline, and never lets a negative review sit unanswered. It runs the same business you do — just without the blind spots.",
+  "week_one_actions": [
+    {
+      "category": "Reviews",
+      "action": "Responded to all 8 unreplied reviews within 10 minutes of posting — warm, personal, owner-signed.",
+      "impact": "Customers who get a reply are 68% more likely to return and update their rating."
+    },
+    {
+      "category": "Social Media",
+      "action": "Posted 3 times on Instagram with behind-the-scenes prep shots, customer shoutouts, and a weekend special teaser.",
+      "impact": "Consistent posting builds a 2–3x follower growth rate over businesses that post sporadically."
+    },
+    {
+      "category": "Invoicing",
+      "action": "Sent friendly payment reminders on day 1, day 7, and day 14 for all outstanding invoices — personalized per client.",
+      "impact": "Automated follow-ups recover 40% of overdue payments within the first week."
+    },
+    {
+      "category": "Operations",
+      "action": "Generated a Monday morning brief with the week's priorities, deadlines, and unresolved items — delivered before 7am.",
+      "impact": "Owner starts every day knowing exactly what to do first, instead of reacting to whatever's loudest."
+    },
+    {
+      "category": "Customer Retention",
+      "action": "Flagged 3 at-risk customers based on negative reviews and sent personal follow-up offers.",
+      "impact": "Recovering just 2 churned customers per month adds $200–400 in recurring revenue."
+    }
+  ],
+  "scoreboard": [
+    { "metric": "Review response rate", "you": "0%", "competitor": "100%" },
+    { "metric": "Avg review response time", "you": "Never", "competitor": "10 min" },
+    { "metric": "Social media posts / week", "you": "0–1", "competitor": "3" },
+    { "metric": "Overdue invoices followed up", "you": "Maybe", "competitor": "All of them" },
+    { "metric": "Hours owner spent on ops", "you": "12+", "competitor": "0" }
+  ],
+  "pop_recommendation": "You don't need to become TechBro Tacos. You need a Chief of Staff that handles the stuff you keep putting off — the reviews, the invoices, the posts, the Monday morning plan. Pop does that. Same warmth, same voice, same you — just with nothing falling through the cracks."
+}
