@@ -262,10 +262,13 @@ export default function RazorDemo() {
               <div className="mt-12 animate-fade-in max-w-3xl">
                 <div className="h-px bg-white/10 mb-8" />
                 <h2 className="font-display font-black text-4xl md:text-5xl leading-tight">
-                  Pop. <span className="text-brand-500">An AI Chief of Staff</span> for the 36 million.
+                  Bond is an AI Chief of Staff for <span className="text-white/40">execs.</span><br />
+                  Pop is <span className="text-brand-500">an AI Chief of Staff for the 36 million</span> below them.
                 </h2>
-                <p className="mt-4 text-white/60 text-lg">
-                  Three Mission restaurants in the pilot Monday. Free for 30 days. $99/mo after.
+                <p className="mt-6 text-white/70 text-lg leading-relaxed max-w-2xl">
+                  We start with family-run restaurants in the Mission. Phone
+                  number replaces the manager they can&apos;t afford.
+                  Three pilots Monday. Free 30 days. $99/mo after.
                 </p>
                 <a
                   href="/full#clone"
