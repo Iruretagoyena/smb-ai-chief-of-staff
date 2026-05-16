@@ -242,6 +242,8 @@ export default function InboxPanel() {
   >("all");
   const [statuses, setStatuses] = useState<Record<string, ItemStatus>>({});
   const [lastSent, setLastSent] = useState<string | null>(null);
+  const [editingId, setEditingId] = useState<string | null>(null);
+  const [editText, setEditText] = useState("");
 
   const activeItems = items.filter((i) => !statuses[i.id]);
   const filtered = activeItems.filter((item) => {
@@ -256,6 +258,7 @@ export default function InboxPanel() {
     const item = items.find((i) => i.id === id);
     setStatuses((s) => ({ ...s, [id]: "sent" }));
     setExpandedId(null);
+    setEditingId(null);
     setLastSent(item?.sender ?? null);
     setTimeout(() => setLastSent(null), 3000);
   }
@@ -263,6 +266,7 @@ export default function InboxPanel() {
   function handleSkip(id: string) {
     setStatuses((s) => ({ ...s, [id]: "skipped" }));
     setExpandedId(null);
+    setEditingId(null);
   }
 
   return (
@@ -362,35 +366,73 @@ export default function InboxPanel() {
                   <div className="text-[10px] uppercase tracking-wider text-brand-500 font-bold mb-2">
                     AI-drafted reply
                   </div>
-                  <p className="text-sm text-white/80 leading-relaxed">
-                    {item.aiReply}
-                  </p>
-                  <div className="flex gap-2 mt-4">
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        handleApprove(item.id);
-                      }}
-                      className="px-4 py-2 rounded-lg bg-brand-500 hover:bg-brand-600 text-black text-xs font-bold transition-colors"
-                    >
-                      Approve &amp; Send
-                    </button>
-                    <button
-                      onClick={(e) => e.stopPropagation()}
-                      className="px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-white/60 text-xs font-medium transition-colors"
-                    >
-                      Edit
-                    </button>
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        handleSkip(item.id);
-                      }}
-                      className="px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-white/40 text-xs font-medium transition-colors"
-                    >
-                      Skip
-                    </button>
-                  </div>
+                  {editingId === item.id ? (
+                    <>
+                      <textarea
+                        autoFocus
+                        value={editText}
+                        onChange={(e) => setEditText(e.target.value)}
+                        className="w-full bg-black/30 border border-white/10 rounded-lg px-3 py-2 text-sm text-white/90 leading-relaxed resize-none focus:outline-none focus:border-brand-500/40"
+                        rows={4}
+                      />
+                      <div className="flex gap-2 mt-3">
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleApprove(item.id);
+                          }}
+                          className="px-4 py-2 rounded-lg bg-brand-500 hover:bg-brand-600 text-black text-xs font-bold transition-colors"
+                        >
+                          Save &amp; Send
+                        </button>
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setEditingId(null);
+                          }}
+                          className="px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-white/50 text-xs font-medium transition-colors"
+                        >
+                          Cancel
+                        </button>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <p className="text-sm text-white/80 leading-relaxed">
+                        {item.aiReply}
+                      </p>
+                      <div className="flex gap-2 mt-4">
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleApprove(item.id);
+                          }}
+                          className="px-4 py-2 rounded-lg bg-brand-500 hover:bg-brand-600 text-black text-xs font-bold transition-colors"
+                        >
+                          Approve &amp; Send
+                        </button>
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setEditingId(item.id);
+                            setEditText(item.aiReply);
+                          }}
+                          className="px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-white/60 text-xs font-medium transition-colors"
+                        >
+                          Edit
+                        </button>
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleSkip(item.id);
+                          }}
+                          className="px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-white/40 text-xs font-medium transition-colors"
+                        >
+                          Skip
+                        </button>
+                      </div>
+                    </>
+                  )}
                 </div>
               </div>
             )}
