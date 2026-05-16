@@ -1,17 +1,16 @@
 {
   "events": [
-    {"date": "2026-05-16", "time": "06:00", "title": "Tortilla delivery (Carlos)", "type": "ops"},
-    {"date": "2026-05-16", "time": "11:00", "title": "Open for Saturday lunch rush", "type": "ops"},
-    {"date": "2026-05-17", "time": "14:00", "title": "Sofia dance practice — pick up", "type": "personal"},
-    {"date": "2026-05-18", "time": "09:00", "title": "Meet with Jose (accountant) — Q1 review", "type": "finance"},
-    {"date": "2026-05-19", "time": "15:00", "title": "Call Patricia (landlord) re: lease renewal", "type": "ops"},
-    {"date": "2026-05-20", "time": "10:00", "title": "Health inspector visit (annual)", "type": "compliance"},
-    {"date": "2026-05-22", "time": "11:00", "title": "Catering: Balmy Alley Tours (lunch for 12)", "type": "catering"},
-    {"date": "2026-05-25", "time": "23:59", "title": "DEADLINE: Q1 sales tax e-signature", "type": "deadline"},
-    {"date": "2026-05-28", "time": "17:30", "title": "Catering setup: SF Latinx Tech Meetup", "type": "catering"},
-    {"date": "2026-05-30", "time": "23:59", "title": "DEADLINE: DJ Miguel final payment $1200", "type": "deadline"},
-    {"date": "2026-06-01", "time": "00:00", "title": "Tortilla price hike kicks in (Carlos)", "type": "alert"},
-    {"date": "2026-06-08", "time": "11:00", "title": "Catering: Balmy Alley Tours (if confirmed)", "type": "catering"},
-    {"date": "2026-06-15", "time": "23:59", "title": "Business insurance renewal", "type": "deadline"}
+    {"date": "2026-05-16", "time": "10:00", "title": "First client — Maritza (color refresh)", "type": "client"},
+    {"date": "2026-05-16", "time": "13:30", "title": "Bridal consultation — Isabella Cruz (if she gets a reply)", "type": "bridal"},
+    {"date": "2026-05-17", "time": "14:00", "title": "Walk through 2693 Mission (potential second chair)", "type": "ops"},
+    {"date": "2026-05-18", "time": "09:00", "title": "Block 30 min: reply to bridal DMs (3 backlog)", "type": "admin"},
+    {"date": "2026-05-19", "time": "11:00", "title": "Mara (stylist candidate) — trial day", "type": "hiring"},
+    {"date": "2026-05-20", "time": "16:00", "title": "Estela's mom — quinceañera confirmation (6 updos July 12)", "type": "booking"},
+    {"date": "2026-05-23", "time": "23:59", "title": "DEADLINE: Pay Salon Republic $740", "type": "deadline"},
+    {"date": "2026-05-25", "time": "23:59", "title": "DEADLINE: Decide on third stylist (Mara waiting on response)", "type": "deadline"},
+    {"date": "2026-06-15", "time": "23:59", "title": "Submit cosmetology CE hours + $50 license renewal", "type": "deadline"},
+    {"date": "2026-07-12", "time": "08:00", "title": "Estela's quinceañera — 6 updos at Galleria", "type": "event"},
+    {"date": "2026-07-18", "time": "11:00", "title": "Adriana Morales — bridal day", "type": "bridal"},
+    {"date": "2026-09-05", "time": "07:00", "title": "Isabella Cruz wedding — Cavallo Point (if booked)", "type": "bridal"}
   ]
 }

@@ -8,12 +8,13 @@ type Phase =
   | "relief"
   | "asking"
   | "answering"
-  | "invoice"
-  | "closer";
+  | "dm"
+  | "closer"
+  | "roadmap";
 
-const GOLDEN_QUESTION = "Pop, what do I need to do today?";
+const GOLDEN_QUESTION = "Pop, what should I do first today?";
 const GOLDEN_ANSWER =
-  "Three things, Maria. First: Jose needs your e-signature on the Q1 sales tax — link is at the top of your inbox. Second: the health inspector is here tomorrow at ten, I made a checklist. And by the way — I just sent the friendly nudge to the Mission Cultural Center. Eighteen hundred and fifty dollars. It will land Friday.";
+  "Three things, Sofía. First — Mara needs an answer by Friday or she takes another offer; my read is yes, hire her. Second — you had twenty-seven DMs this morning; I replied to twenty-four and booked eleven of them already. Third — I held back three bridal inquiries because they need your voice, not mine. And by the way, I sent the friendly nudge to Adriana for the trial invoice. She just paid.";
 
 function speak(text: string, opts: { rate?: number; onEnd?: () => void } = {}) {
   if (typeof window === "undefined" || !window.speechSynthesis) {
@@ -36,10 +37,10 @@ function speak(text: string, opts: { rate?: number; onEnd?: () => void } = {}) {
 export default function RazorDemo() {
   const [phase, setPhase] = useState<Phase>("threat");
   const [bot, setBot] = useState({
-    reviews: 0,
+    dms: 0,
     responseMin: 0,
     posts: 0,
-    chased: 0,
+    bookings: 0,
   });
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
@@ -49,10 +50,10 @@ export default function RazorDemo() {
     timerRef.current = setInterval(() => {
       i += 1;
       setBot({
-        reviews: Math.min(100, i * 8),
-        responseMin: Math.max(7, 60 - i * 4),
-        posts: Math.min(4, Math.floor(i / 3)),
-        chased: Math.min(2270, i * 200),
+        dms: Math.min(100, i * 8),
+        responseMin: Math.max(4, 60 - i * 4),
+        posts: Math.min(5, Math.floor(i / 3)),
+        bookings: Math.min(38, i * 3),
       });
       if (i >= 14 && timerRef.current) clearInterval(timerRef.current);
     }, 90);
@@ -67,8 +68,9 @@ export default function RazorDemo() {
       if (p === "flip") return "relief";
       if (p === "relief") return "asking";
       if (p === "asking") return "answering";
-      if (p === "answering") return "invoice";
-      if (p === "invoice") return "closer";
+      if (p === "answering") return "dm";
+      if (p === "dm") return "closer";
+      if (p === "closer") return "roadmap";
       return p;
     });
   }, []);
@@ -81,8 +83,9 @@ export default function RazorDemo() {
       }
       if (e.key === "ArrowLeft") {
         setPhase((p) => {
-          if (p === "closer") return "invoice";
-          if (p === "invoice") return "answering";
+          if (p === "roadmap") return "closer";
+          if (p === "closer") return "dm";
+          if (p === "dm") return "answering";
           if (p === "answering") return "asking";
           if (p === "asking") return "relief";
           if (p === "relief") return "flip";
@@ -109,16 +112,23 @@ export default function RazorDemo() {
     if (phase === "answering") {
       speak(GOLDEN_ANSWER, {
         rate: 1.0,
-        onEnd: () => setTimeout(() => setPhase("invoice"), 400),
+        onEnd: () => setTimeout(() => setPhase("dm"), 400),
       });
     }
-    if (phase === "invoice") {
+    if (phase === "dm") {
       const t = setTimeout(() => setPhase("closer"), 4500);
       return () => clearTimeout(t);
     }
   }, [phase]);
 
-  const flipped = phase === "flip" || phase === "relief" || phase === "asking" || phase === "answering" || phase === "invoice" || phase === "closer";
+  const flipped =
+    phase === "flip" ||
+    phase === "relief" ||
+    phase === "asking" ||
+    phase === "answering" ||
+    phase === "dm" ||
+    phase === "closer" ||
+    phase === "roadmap";
 
   return (
     <div
@@ -152,44 +162,43 @@ export default function RazorDemo() {
               A new sign goes up next door
             </p>
             <h1 className="font-display font-black text-6xl md:text-8xl leading-[0.9] tracking-tight">
-              An AI-native<br />taqueria<br />
+              An AI-native<br />hair salon<br />
               <span className="text-red-500">just opened.</span>
             </h1>
             <p className="mt-10 max-w-2xl text-white/70 text-xl leading-relaxed">
-              Same neighborhood. Same menu. Different operations. It replies to
-              every review in 7 minutes. Posts on Instagram 4 times a week.
-              Chases every late invoice. <br />
-              <span className="text-white font-semibold">It never sleeps.</span>
+              Same neighborhood. Same chairs. Different operations. Replies to
+              every Instagram DM in 4 minutes. Posts 5 times a week.
+              Books bridal trials while you sleep. <br />
+              <span className="text-white font-semibold">It never misses a message.</span>
             </p>
 
             <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-3 max-w-3xl">
-              <Stat label="Review responses" value={`${bot.reviews}%`} />
+              <Stat label="DM response rate" value={`${bot.dms}%`} />
               <Stat label="Avg response" value={`${bot.responseMin} min`} />
               <Stat label="IG posts / week" value={`${bot.posts}`} />
-              <Stat label="Receivables collected" value={`$${bot.chased.toLocaleString()}`} />
+              <Stat label="Bookings captured / wk" value={`${bot.bookings}`} />
             </div>
           </div>
 
           <div className="flex items-end justify-between">
             <div>
-              <div className="text-xs uppercase tracking-wider text-white/40">Lupita&apos;s Taqueria · this week</div>
-              <div className="text-3xl md:text-5xl font-display font-black mt-2 text-white/70">
-                0 replies · 0 posts · $0 chased
+              <div className="text-xs uppercase tracking-wider text-white/40">
+                Sol &amp; Trenza · this week
+              </div>
+              <div className="text-2xl md:text-4xl font-display font-black mt-2 text-white/70 leading-tight">
+                27 unread DMs · 41 unread emails · 3 bridal leads lost
               </div>
             </div>
-            <div className="text-xs text-white/30 hidden md:block">
-              36.2M small businesses in the US. 8.8% use AI in production.
+            <div className="text-xs text-white/30 hidden md:block max-w-xs text-right">
+              36.2M small businesses in the US.<br />8.8% use AI in production.
             </div>
           </div>
         </div>
 
-        {/* BACK — RELIEF / CHIEF OF STAFF */}
+        {/* BACK */}
         <div
           className="absolute inset-0 flex flex-col justify-between p-12 md:p-20 bg-gradient-to-br from-amber-950 via-black to-black"
-          style={{
-            backfaceVisibility: "hidden",
-            transform: "rotateY(180deg)",
-          }}
+          style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}
         >
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
@@ -197,26 +206,31 @@ export default function RazorDemo() {
                 P
               </div>
               <div className="uppercase tracking-[0.3em] text-xs text-brand-500 font-bold">
-                Pop · AI Chief of Staff
+                Pop · AI Co-founder
               </div>
             </div>
             <div className="text-xs text-white/30 font-mono">
-              {phase === "relief" ? "press space →" : phase === "closer" ? "← back" : ""}
+              {phase === "relief"
+                ? "press space →"
+                : phase === "roadmap"
+                  ? "← back"
+                  : ""}
             </div>
           </div>
 
-          <div className="flex-1 flex flex-col justify-center max-w-5xl">
+          <div className="flex-1 flex flex-col justify-center max-w-5xl w-full">
             {phase === "relief" && (
               <div className="animate-fade-in">
                 <p className="uppercase tracking-[0.3em] text-xs text-brand-500 font-bold mb-6">
                   Now flip it
                 </p>
                 <h2 className="font-display font-black text-6xl md:text-8xl leading-[0.9] tracking-tight">
-                  What if Maria<br />had one <span className="text-brand-500">too?</span>
+                  What if Sofía<br />had one <span className="text-brand-500">too?</span>
                 </h2>
                 <p className="mt-10 max-w-2xl text-white/70 text-xl leading-relaxed">
-                  Pop is the same brain — flipped to serve her.<br />
-                  Her inbox, her calendar, her reviews. A phone number she calls.
+                  Pop is the same brain — turned to serve her.<br />
+                  Her DMs, her inbox, her calendar, her clients. A phone number
+                  she just calls.
                 </p>
                 <button
                   onClick={(e) => {
@@ -225,64 +239,129 @@ export default function RazorDemo() {
                   }}
                   className="mt-12 inline-flex items-center gap-3 px-6 py-4 rounded-xl bg-brand-500 hover:bg-brand-600 text-black font-bold text-lg"
                 >
-                  🎙️ Listen to Maria call Pop
+                  🎙️ Listen to Sofía call Pop
                 </button>
               </div>
             )}
 
-            {(phase === "asking" || phase === "answering" || phase === "invoice" || phase === "closer") && (
+            {(phase === "asking" ||
+              phase === "answering" ||
+              phase === "dm" ||
+              phase === "closer") && (
               <div className="flex flex-col gap-6 max-w-3xl">
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center font-bold">M</div>
-                  <div className={`flex-1 p-5 rounded-2xl bg-white/5 border border-white/10 ${phase === "asking" ? "ring-2 ring-brand-500/40" : ""}`}>
-                    <div className="text-xs text-white/40 uppercase tracking-wider mb-1">Maria</div>
+                  <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center font-bold">
+                    S
+                  </div>
+                  <div
+                    className={`flex-1 p-5 rounded-2xl bg-white/5 border border-white/10 ${
+                      phase === "asking" ? "ring-2 ring-brand-500/40" : ""
+                    }`}
+                  >
+                    <div className="text-xs text-white/40 uppercase tracking-wider mb-1">
+                      Sofía
+                    </div>
                     <div className="text-2xl text-white/90">{GOLDEN_QUESTION}</div>
                   </div>
                 </div>
 
-                {(phase === "answering" || phase === "invoice" || phase === "closer") && (
+                {(phase === "answering" ||
+                  phase === "dm" ||
+                  phase === "closer") && (
                   <div className="flex items-start gap-4 animate-fade-in">
-                    <div className="w-10 h-10 rounded-full bg-brand-500 flex items-center justify-center text-black font-black">P</div>
-                    <div className={`flex-1 p-5 rounded-2xl bg-brand-500/10 border border-brand-500/30 ${phase === "answering" ? "ring-2 ring-brand-500/60" : ""}`}>
-                      <div className="text-xs text-brand-500 uppercase tracking-wider mb-1">Pop</div>
-                      <div className="text-xl text-white/90 leading-relaxed">{GOLDEN_ANSWER}</div>
+                    <div className="w-10 h-10 rounded-full bg-brand-500 flex items-center justify-center text-black font-black">
+                      P
+                    </div>
+                    <div
+                      className={`flex-1 p-5 rounded-2xl bg-brand-500/10 border border-brand-500/30 ${
+                        phase === "answering" ? "ring-2 ring-brand-500/60" : ""
+                      }`}
+                    >
+                      <div className="text-xs text-brand-500 uppercase tracking-wider mb-1">
+                        Pop
+                      </div>
+                      <div className="text-xl text-white/90 leading-relaxed">
+                        {GOLDEN_ANSWER}
+                      </div>
                     </div>
                   </div>
                 )}
 
-                {(phase === "invoice" || phase === "closer") && (
+                {(phase === "dm" || phase === "closer") && (
                   <div className="ml-14 animate-slide-in">
-                    <InvoiceCard />
+                    <DMCard />
                   </div>
                 )}
               </div>
             )}
 
             {phase === "closer" && (
-              <div className="mt-12 animate-fade-in max-w-3xl">
+              <div className="mt-12 animate-fade-in max-w-4xl">
                 <div className="h-px bg-white/10 mb-8" />
                 <h2 className="font-display font-black text-4xl md:text-5xl leading-tight">
-                  Bond is an AI Chief of Staff for <span className="text-white/40">execs.</span><br />
-                  Pop is <span className="text-brand-500">an AI Chief of Staff for the 36 million</span> below them.
+                  Motion sells you software.<br />
+                  Bond sells the CEO a dashboard.<br />
+                  <span className="text-brand-500">
+                    Pop is an AI co-founder for the 36 million
+                  </span>{" "}
+                  owners who are <em>also</em> the operator.
                 </h2>
                 <p className="mt-6 text-white/70 text-lg leading-relaxed max-w-2xl">
-                  We start with family-run restaurants in the Mission. Phone
-                  number replaces the manager they can&apos;t afford.
-                  Three pilots Monday. Free 30 days. $99/mo after.
+                  Every interaction lives in <span className="text-white font-semibold">their</span> private GBrain.
+                  If we stop being the best, they own everything and walk.<br />
+                  <span className="text-white/50">No lock-in. That's the moat.</span>
                 </p>
-                <a
-                  href="/full#clone"
-                  onClick={(e) => e.stopPropagation()}
-                  className="mt-6 inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-red-600 hover:bg-red-700 text-white font-bold transition-colors"
-                >
-                  Clone your competition →
-                </a>
+              </div>
+            )}
+
+            {phase === "roadmap" && (
+              <div className="animate-fade-in max-w-4xl">
+                <p className="uppercase tracking-[0.3em] text-xs text-brand-500 font-bold mb-6">
+                  Where this goes
+                </p>
+                <h2 className="font-display font-black text-4xl md:text-5xl leading-tight tracking-tight mb-10">
+                  From <span className="text-brand-500">"AI for Sofía"</span> to{" "}
+                  <span className="text-brand-500">"data layer for the 36 million"</span>
+                </h2>
+                <div className="grid md:grid-cols-3 gap-4">
+                  <RoadCard
+                    when="Today"
+                    title="Pop for salons + florists"
+                    points={[
+                      "3 Mission pilots Monday",
+                      "Free 30 days · $99/mo",
+                      "DMs · inbox · reviews · brief",
+                    ]}
+                  />
+                  <RoadCard
+                    when="6 months"
+                    title="Provider portability layer"
+                    points={[
+                      "Capture every interaction across any AI tool",
+                      "Owner-owned GBrain",
+                      "Switch providers anytime",
+                    ]}
+                  />
+                  <RoadCard
+                    when="18 months"
+                    title="Open-source models on private data"
+                    points={[
+                      "Owners run models on their own brain",
+                      "Network effect: shared playbooks (opt-in)",
+                      "The data layer Mom & Pop never had",
+                    ]}
+                    highlight
+                  />
+                </div>
               </div>
             )}
           </div>
 
           <div className="text-xs text-white/30">
-            GStack × GBrain Hackathon · May 16 2026 · <a href="/full" className="underline hover:text-white/60">see full demo</a>
+            GStack × GBrain Hackathon · May 16 2026 ·{" "}
+            <a href="/full" className="underline hover:text-white/60">
+              see full demo
+            </a>
           </div>
         </div>
       </div>
@@ -293,26 +372,68 @@ export default function RazorDemo() {
 function Stat({ label, value }: { label: string; value: string }) {
   return (
     <div className="p-3 rounded-lg bg-black/40 border border-red-900/30">
-      <div className="text-[10px] uppercase tracking-wider text-red-300/70">{label}</div>
-      <div className="font-mono font-bold text-2xl text-red-400 mt-1 tabular-nums">{value}</div>
+      <div className="text-[10px] uppercase tracking-wider text-red-300/70">
+        {label}
+      </div>
+      <div className="font-mono font-bold text-2xl text-red-400 mt-1 tabular-nums">
+        {value}
+      </div>
     </div>
   );
 }
 
-function InvoiceCard() {
+function DMCard() {
   return (
     <div className="rounded-xl bg-black/60 border border-white/15 p-5 max-w-md shadow-2xl">
       <div className="flex items-center justify-between mb-3">
-        <div className="text-xs uppercase tracking-wider text-white/40">Auto-sent · 2 min ago</div>
-        <div className="text-xs text-emerald-400 font-mono">✓ DELIVERED</div>
+        <div className="text-xs uppercase tracking-wider text-white/40">
+          Instagram DM · auto-sent 2 min ago
+        </div>
+        <div className="text-xs text-emerald-400 font-mono">✓ READ</div>
       </div>
-      <div className="text-sm text-white/50 mb-2">To: events@missionculturalcenter.org</div>
+      <div className="text-sm text-white/50 mb-2">To: @amber_m_sf</div>
       <div className="text-sm text-white/80 leading-relaxed">
-        Hi team — friendly nudge on invoice #2041 (<span className="text-brand-500 font-bold">$1,850</span>). Totally
-        understand the grant timing; confirming May 23 payment is on track. We
-        have you for two fall events and would love to keep things smooth.
-        ¡Gracias! — Maria
+        Hi Amber! Yes — Saturday at <span className="text-brand-500 font-bold">11am or 2pm</span> both
+        open for color. I'll save the 2pm for your niece if that works. Sending you
+        the deposit link now. Excited for prom! 🌟 — Sofía
       </div>
+    </div>
+  );
+}
+
+function RoadCard({
+  when,
+  title,
+  points,
+  highlight,
+}: {
+  when: string;
+  title: string;
+  points: string[];
+  highlight?: boolean;
+}) {
+  return (
+    <div
+      className={`p-5 rounded-xl border ${
+        highlight
+          ? "bg-brand-500/10 border-brand-500/40"
+          : "bg-white/5 border-white/10"
+      }`}
+    >
+      <div className="text-xs uppercase tracking-wider text-brand-500 font-bold">
+        {when}
+      </div>
+      <div className="font-display font-black text-xl mt-2 leading-tight">
+        {title}
+      </div>
+      <ul className="mt-3 space-y-1 text-sm text-white/70">
+        {points.map((p) => (
+          <li key={p} className="flex gap-2">
+            <span className="text-brand-500">·</span>
+            <span>{p}</span>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

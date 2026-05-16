@@ -87,7 +87,8 @@ export default function MirrorPanel() {
               <div key={r.review_id} className="rounded-xl bg-white/5 border border-white/10 p-4">
                 {orig && (
                   <div className="text-xs text-white/40 mb-2">
-                    {orig.source} · {orig.author} · {"⭐".repeat(orig.rating)} ·{" "}
+                    {orig.source} · {orig.author}
+                    {orig.rating ? ` · ${"⭐".repeat(orig.rating)}` : ""} ·{" "}
                     <span className="italic">&quot;{orig.text}&quot;</span>
                   </div>
                 )}

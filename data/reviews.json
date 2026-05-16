@@ -3,28 +3,28 @@
     {
       "id": "r1",
       "source": "Yelp",
-      "date": "2026-05-10",
-      "author": "Brandon T.",
-      "rating": 2,
-      "text": "Came in Saturday at 8:30pm and they were out of carne asada. Tortillas felt stale. Owner was nice but the food was meh. 2/5.",
+      "date": "2026-05-11",
+      "author": "Stephanie K.",
+      "rating": 3,
+      "text": "Sofía herself is amazing — my color was perfect. Took off a star because I had to DM Instagram three times to get a booking, then they didn't have me in the book when I showed up. Front desk situation is rough.",
       "replied": false
     },
     {
       "id": "r2",
       "source": "Google",
-      "date": "2026-05-08",
-      "author": "Jennifer L.",
+      "date": "2026-05-09",
+      "author": "Bianca R.",
       "rating": 5,
-      "text": "BEST tacos al pastor in the Mission. Maria treats you like family. Cash only but they have a Venmo now.",
+      "text": "Sofía understands curly hair like no one else. I've been to 5 salons in SF and this is the first time I left without my curls being fried. Bringing my sister next.",
       "replied": false
     },
     {
       "id": "r3",
       "source": "Google",
       "date": "2026-05-04",
-      "author": "Devon K.",
-      "rating": 3,
-      "text": "Food is solid but the place is tiny and there's always a line. Lost a star because they're cash-only and the ATM down the block charges $5.",
+      "author": "Jasmine T.",
+      "rating": 5,
+      "text": "Got my bridal trial done last week. Sofía took two hours and tried three different looks until we found the one. Worth every penny.",
       "replied": false
     },
     {
@@ -33,16 +33,16 @@
       "date": "2026-05-01",
       "author": "Priya S.",
       "rating": 5,
-      "text": "Hidden gem. The salsa verde is unreal. The owner Maria remembered my order from a month ago. This is what neighborhood spots should feel like.",
+      "text": "Hidden gem. Booking is hard because they don't have an online system but once you're in — magic. Sofía remembered my chemistry from a year ago.",
       "replied": false
     },
     {
       "id": "r5",
       "source": "Google",
-      "date": "2026-04-28",
-      "author": "Tom W.",
-      "rating": 1,
-      "text": "Waited 25 minutes for two tacos. No urgency. Will not return.",
+      "date": "2026-04-26",
+      "author": "Devon K.",
+      "rating": 2,
+      "text": "DM'd Instagram 4 times over two weeks, never got a reply. Showed up in person — fully booked through June. If you can't take new clients say so.",
       "replied": false
     },
     {
@@ -51,7 +51,7 @@
       "date": "2026-04-22",
       "author": "Maritza H.",
       "rating": 5,
-      "text": "Mi lugar favorito en la Mission. Maria es una joya y los tacos son autenticos. ¡Que no cierren nunca!",
+      "text": "Mi salón favorito en la Mission. Sofía es una artista. Mi quinceañera salió perfecta gracias a ella. ¡Vayan!",
       "replied": false
     },
     {
@@ -60,27 +60,27 @@
       "date": "2026-04-15",
       "author": "Ashley R.",
       "rating": 4,
-      "text": "Great food, great prices. Wish they took cards. Wish they had outdoor seating.",
+      "text": "Great cut and color. Wish they had online booking — I almost gave up before getting an appointment.",
       "replied": false
     },
     {
       "id": "r8",
-      "source": "Yelp",
-      "date": "2026-04-10",
-      "author": "Marcus J.",
-      "rating": 2,
-      "text": "Reviewed bomb. Tortillas were dry, beans were cold. Felt like an off night but disappointing.",
+      "source": "Instagram DM",
+      "date": "2026-05-15",
+      "author": "@amber_m_sf",
+      "rating": null,
+      "text": "hi! is there any way I can book for next Saturday for color? prom for my niece 🫶",
       "replied": false
     }
   ],
   "ai_competitor_simulation": {
-    "name": "TacoBot Cantina",
-    "tagline": "Same neighborhood. AI-native operations.",
+    "name": "Curl Lab AI",
+    "tagline": "Same hands. Same neighborhood. Always replies in 4 minutes.",
     "stats": {
-      "review_response_rate": "100%",
-      "avg_response_time_minutes": 7,
-      "instagram_posts_per_week": 4,
-      "customer_follow_up_rate": "100%",
+      "dm_response_rate": "100%",
+      "avg_response_time_minutes": 4,
+      "instagram_posts_per_week": 5,
+      "bookings_captured_per_week": 38,
       "monthly_marketing_hours": 0
     }
   }
