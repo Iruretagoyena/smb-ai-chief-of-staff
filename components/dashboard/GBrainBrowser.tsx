@@ -382,14 +382,21 @@ export default function GBrainBrowser() {
               isFolder ? toggleExpand(node.id) : handleSelect(node)
             }
             onFocus={() => setFocusedId(node.id)}
-            className={`w-full flex items-center gap-1.5 py-1 px-2 text-left text-xs rounded transition-colors ${
-              isSelected
-                ? "bg-brand-500/15 text-brand-500"
-                : isFocused
-                  ? "bg-white/[0.06] text-white"
-                  : "text-white/70 hover:bg-white/[0.04] hover:text-white"
+            className={`w-full flex items-center gap-1.5 py-1 px-2 text-left transition-colors ${
+              isFolder
+                ? `text-sm font-semibold text-white/90 ${isFocused ? "bg-white/[0.06]" : "hover:bg-white/[0.04]"}`
+                : isSelected
+                  ? "text-xs font-normal text-white"
+                  : isFocused
+                    ? "text-xs font-normal bg-white/[0.06] text-white/60"
+                    : "text-xs font-normal text-white/60 hover:bg-white/[0.04] hover:text-white"
             }`}
-            style={{ paddingLeft: depth * 16 + 8 }}
+            style={{
+              paddingLeft: depth * 16 + 8,
+              ...(isSelected && !isFolder
+                ? { boxShadow: "inset 2px 0 0 #ff6b1a" }
+                : {}),
+            }}
           >
             {isFolder ? (
               <span className="text-white/30 w-3 text-center text-[10px]">
@@ -401,7 +408,7 @@ export default function GBrainBrowser() {
             {isFolder && FOLDER_ICONS[node.id] && (
               <span className="text-sm">{FOLDER_ICONS[node.id]}</span>
             )}
-            <span className="truncate flex-1 font-medium">{node.label}</span>
+            <span className="truncate flex-1">{node.label}</span>
             {isFolder && node.itemCount != null && (
               <span className="text-[10px] text-white/30 tabular-nums shrink-0">
                 {node.itemCount}
@@ -421,7 +428,12 @@ export default function GBrainBrowser() {
 
   return (
     <div>
-      {/* Top bar */}
+      {/* Slim stats row */}
+      <div className="text-xs text-white/40 mb-2">
+        {totalItems} memories &middot; 6 providers &middot; 4.2 MB
+      </div>
+
+      {/* Search + filters */}
       <div className="flex flex-col sm:flex-row gap-3 mb-4">
         <div className="flex-1 relative">
           <input
@@ -429,7 +441,7 @@ export default function GBrainBrowser() {
             placeholder="Find anything Sofia has ever said or received..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full bg-white/[0.04] border border-white/[0.08] rounded-lg px-3 py-2 text-sm text-white placeholder:text-white/30 focus:outline-none focus:border-brand-500/40"
+            className="w-full bg-white/[0.04] border border-white/[0.08] rounded px-3 py-2 text-sm text-white placeholder:text-white/30 focus:outline-none focus:border-white/20"
           />
         </div>
         <div className="flex gap-2 items-center overflow-x-auto">
@@ -441,29 +453,20 @@ export default function GBrainBrowser() {
             <button
               key={f.id}
               onClick={() => setFilter(f.id)}
-              className={`px-2.5 py-1.5 rounded-md text-[11px] font-medium whitespace-nowrap transition-colors ${
+              className={`px-2.5 py-1.5 rounded text-[11px] font-medium whitespace-nowrap transition-colors ${
                 filter === f.id
-                  ? "bg-brand-500/15 text-brand-500"
-                  : "bg-white/[0.04] text-white/40 hover:text-white/60"
+                  ? "bg-white/10 border border-white/10 text-white/80"
+                  : "bg-white/5 text-white/40 hover:text-white/60"
               }`}
             >
               {f.label}
             </button>
           ))}
-          <div className="text-[11px] text-white/30 whitespace-nowrap ml-1">
-            {totalItems} memories &middot; 6 providers &middot; 4.2 MB
-          </div>
-          <button
-            onClick={() => setShowMeta(!showMeta)}
-            className="px-2 py-1.5 rounded-md text-[11px] bg-white/[0.04] text-white/40 hover:text-white/60 shrink-0 hidden lg:block"
-          >
-            {showMeta ? "Hide" : "Show"} metadata
-          </button>
         </div>
       </div>
 
       {/* 3-pane layout */}
-      <div className="flex rounded-xl border border-white/[0.06] overflow-hidden bg-white/[0.01]" style={{ minHeight: 520 }}>
+      <div className="flex rounded-md border border-white/[0.06] overflow-hidden bg-white/[0.01]" style={{ minHeight: 520 }}>
         {/* Pane 1: Tree */}
         <div
           ref={treeRef}
@@ -498,12 +501,38 @@ export default function GBrainBrowser() {
             className="w-80 shrink-0 border-l border-white/[0.06] overflow-y-auto p-4 hidden lg:block"
             style={{ maxHeight: 600 }}
           >
+            <div className="flex items-center justify-between mb-4">
+              <div className="text-[10px] uppercase tracking-wider text-white/40 font-semibold">
+                Metadata
+              </div>
+              <button
+                onClick={() => setShowMeta(false)}
+                className="text-white/25 hover:text-white/50 text-xs transition-colors"
+                title="Hide metadata"
+              >
+                ✕
+              </button>
+            </div>
             <MetadataPane
               node={selected}
               deleteConfirm={deleteConfirm}
               setDeleteConfirm={setDeleteConfirm}
             />
           </div>
+        )}
+
+        {/* Collapsed metadata strip */}
+        {!showMeta && selected && (
+          <button
+            onClick={() => setShowMeta(true)}
+            className="hidden lg:flex items-center justify-center w-8 shrink-0 border-l border-white/[0.06] text-white/25 hover:text-white/50 hover:bg-white/[0.02] transition-colors"
+            title="Show metadata"
+          >
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.5">
+              <rect x="1" y="1" width="12" height="12" rx="2" />
+              <line x1="9" y1="1" x2="9" y2="13" />
+            </svg>
+          </button>
         )}
       </div>
     </div>
@@ -544,12 +573,12 @@ function CallDetail({ data }: { data: Record<string, unknown> }) {
   return (
     <div className="p-5">
       {/* Waveform */}
-      <div className="rounded-lg bg-white/[0.03] border border-white/[0.06] p-4 mb-5">
+      <div className="rounded bg-white/[0.03] border border-white/[0.06] p-4 mb-5">
         <div className="flex items-end gap-[2px] h-10 mb-3">
           {bars.map((h, i) => (
             <div
               key={i}
-              className="flex-1 rounded-sm bg-brand-500/60"
+              className="flex-1 rounded-sm bg-white/25"
               style={{ height: h + "%" }}
             />
           ))}
@@ -586,7 +615,7 @@ function CallDetail({ data }: { data: Record<string, unknown> }) {
             <div
               className={`flex-1 text-sm leading-relaxed ${
                 turn.speaker === "ai"
-                  ? "text-brand-500/80"
+                  ? "text-white/60"
                   : turn.speaker === "system"
                     ? "text-white/30 italic"
                     : "text-white/70"
@@ -595,7 +624,7 @@ function CallDetail({ data }: { data: Record<string, unknown> }) {
               <span
                 className={`text-[10px] uppercase tracking-wider font-bold mr-2 ${
                   turn.speaker === "ai"
-                    ? "text-brand-500/50"
+                    ? "text-white/30"
                     : turn.speaker === "system"
                       ? "text-white/20"
                       : "text-white/30"
@@ -647,23 +676,23 @@ function DMDetail({ data }: { data: Record<string, unknown> }) {
               className={`flex ${isAI ? "justify-end" : "justify-start"}`}
             >
               <div
-                className={`max-w-[80%] rounded-2xl px-4 py-2.5 ${
+                className={`max-w-[75%] rounded-lg px-4 py-2.5 ${
                   isAI
-                    ? "bg-brand-500/15 border border-brand-500/20 rounded-br-md"
-                    : "bg-white/[0.06] border border-white/[0.08] rounded-bl-md"
+                    ? "bg-brand-500/8 border border-brand-500/25 rounded-br-sm"
+                    : "bg-white/5 border border-white/10 rounded-bl-sm"
                 }`}
               >
-                <p className="text-sm leading-relaxed text-white/80">
+                <p className={`text-sm leading-relaxed ${isAI ? "text-white/90" : "text-white/80"}`}>
                   {msg.text}
                 </p>
-                <div className="flex items-center gap-2 mt-1.5">
-                  <span className="text-[10px] text-white/25">
+                <div className="flex items-center gap-2 mt-2">
+                  <span className="text-xs text-white/35">
                     {formatTime(msg.time)}
                   </span>
                   {(() => {
                     const m = msg as Record<string, unknown>;
                     return "meta" in m && m.meta ? (
-                      <span className="text-[9px] text-brand-500/40">
+                      <span className="text-[9px] text-white/30">
                         {String(m.meta)}
                       </span>
                     ) : null;
@@ -713,22 +742,22 @@ function EmailDetail({ data }: { data: Record<string, unknown> }) {
       {/* Email as chat-style */}
       <div className="space-y-3">
         <div className="flex justify-start">
-          <div className="max-w-[85%] rounded-2xl rounded-bl-md px-4 py-3 bg-white/[0.06] border border-white/[0.08]">
+          <div className="max-w-[75%] rounded-lg rounded-bl-sm px-4 py-3 bg-white/5 border border-white/10">
             <p className="text-sm leading-relaxed text-white/80">
               {email.body}
             </p>
-            <div className="text-[10px] text-white/25 mt-1.5">
+            <div className="text-xs text-white/35 mt-2">
               {formatTime(email.date)}
             </div>
           </div>
         </div>
 
         <div className="flex justify-end">
-          <div className="max-w-[85%] rounded-2xl rounded-br-md px-4 py-3 bg-brand-500/10 border border-brand-500/20">
-            <p className="text-sm leading-relaxed text-white/70 italic">
+          <div className="max-w-[75%] rounded-lg rounded-br-sm px-4 py-3 bg-brand-500/8 border border-brand-500/25">
+            <p className="text-sm leading-relaxed text-white/90 italic">
               {aiReply}
             </p>
-            <div className="text-[9px] text-brand-500/40 mt-1.5">
+            <div className="text-[9px] text-brand-500/40 mt-2">
               Drafted by Claude via Pop &middot; 0.2s &middot; $0.001
             </div>
           </div>
@@ -781,7 +810,7 @@ function ReviewDetail({ data }: { data: Record<string, unknown> }) {
 
       <div className="border-t border-white/[0.06] pt-4">
         <div className="flex items-center gap-2 mb-3">
-          <div className="text-[10px] uppercase tracking-wider text-brand-500 font-bold">
+          <div className="text-[10px] uppercase tracking-wider text-white/50 font-bold">
             AI-drafted reply
           </div>
           <span className="text-[10px] px-1.5 py-0.5 rounded bg-amber-500/15 text-amber-400">
@@ -793,10 +822,10 @@ function ReviewDetail({ data }: { data: Record<string, unknown> }) {
         </p>
         {!review.replied && (
           <div className="flex gap-2">
-            <button className="px-3 py-1.5 rounded-lg bg-brand-500 hover:bg-brand-600 text-black text-xs font-bold transition-colors">
+            <button className="px-3 py-1.5 rounded bg-brand-500 hover:bg-brand-600 text-black text-xs font-bold transition-colors">
               Approve &amp; Post
             </button>
-            <button className="px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-white/50 text-xs font-medium transition-colors">
+            <button className="px-3 py-1.5 rounded bg-white/5 hover:bg-white/10 text-white/50 text-xs font-medium transition-colors">
               Edit
             </button>
           </div>
@@ -865,7 +894,7 @@ function CalendarDetail({ data }: { data: Record<string, unknown> }) {
             {crossRefs.map((ref, i) => (
               <button
                 key={i}
-                className="w-full text-left px-3 py-2 rounded-lg bg-white/[0.03] border border-white/[0.06] hover:border-brand-500/30 text-sm text-white/60 hover:text-brand-500 transition-colors"
+                className="w-full text-left px-3 py-2 rounded bg-white/[0.03] border border-white/[0.06] hover:border-white/15 text-sm text-white/60 hover:text-white/80 transition-colors"
               >
                 {ref.label} &rarr;
               </button>
@@ -902,7 +931,7 @@ function CopilotDetail({ data }: { data: Record<string, unknown> }) {
         <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-sm font-bold shrink-0">
           S
         </div>
-        <div className="flex-1 p-4 rounded-2xl rounded-bl-md bg-white/[0.05] border border-white/[0.08]">
+        <div className="flex-1 p-4 rounded-lg rounded-bl-sm bg-white/5 border border-white/10">
           <div className="text-[10px] text-white/30 uppercase tracking-wider mb-1">
             Sofia asked
           </div>
@@ -917,11 +946,11 @@ function CopilotDetail({ data }: { data: Record<string, unknown> }) {
         <div className="w-8 h-8 rounded-full bg-brand-500 flex items-center justify-center text-black font-black text-sm shrink-0">
           P
         </div>
-        <div className="flex-1 p-4 rounded-2xl rounded-br-md bg-brand-500/10 border border-brand-500/20">
-          <div className="text-[10px] text-brand-500/60 uppercase tracking-wider mb-1">
+        <div className="flex-1 p-4 rounded-lg rounded-br-sm bg-brand-500/8 border border-brand-500/25">
+          <div className="text-[10px] text-white/40 uppercase tracking-wider mb-1">
             Pop answered
           </div>
-          <p className="text-sm text-white/80 leading-relaxed whitespace-pre-line">
+          <p className="text-sm text-white/90 leading-relaxed whitespace-pre-line">
             {session.answer}
           </p>
           <div className="text-[9px] text-brand-500/40 mt-3">
@@ -940,7 +969,7 @@ function CopilotDetail({ data }: { data: Record<string, unknown> }) {
           {session.contextSources.map((src, i) => (
             <div
               key={i}
-              className="flex items-start gap-2 px-3 py-2 rounded-lg bg-white/[0.03] border border-white/[0.06]"
+              className="flex items-start gap-2 px-3 py-2 rounded bg-white/[0.03] border border-white/[0.06]"
             >
               <span className="text-sm">
                 {SOURCE_ICONS[src.type] ?? "\u{1F4C4}"}
@@ -964,10 +993,10 @@ function MetadataPane({
   setDeleteConfirm: (v: boolean) => void;
 }) {
   return (
-    <div className="space-y-5">
+    <div className="space-y-4">
       {/* Provenance */}
       <div>
-        <div className="text-[10px] uppercase tracking-wider text-white/30 mb-2">
+        <div className="text-[10px] uppercase tracking-wider text-white/40 font-semibold mb-2">
           Provenance
         </div>
         <div className="space-y-1.5 text-xs">
@@ -996,8 +1025,10 @@ function MetadataPane({
         </div>
       </div>
 
+      <hr className="border-white/5" />
+
       {/* Ownership */}
-      <div className="p-3 rounded-lg bg-emerald-500/5 border border-emerald-500/15">
+      <div className="p-3 rounded bg-emerald-500/5 border border-emerald-500/20">
         <div className="flex items-center gap-2 mb-1">
           <span className="text-sm">{"\u{1F512}"}</span>
           <span className="text-xs font-bold text-emerald-400">
@@ -1010,9 +1041,11 @@ function MetadataPane({
         </p>
       </div>
 
+      <hr className="border-white/5" />
+
       {/* Storage */}
       <div>
-        <div className="text-[10px] uppercase tracking-wider text-white/30 mb-2">
+        <div className="text-[10px] uppercase tracking-wider text-white/40 font-semibold mb-2">
           Storage
         </div>
         <div className="flex justify-between text-xs">
@@ -1023,9 +1056,11 @@ function MetadataPane({
         </div>
       </div>
 
+      <hr className="border-white/5" />
+
       {/* Export */}
       <div>
-        <div className="text-[10px] uppercase tracking-wider text-white/30 mb-2">
+        <div className="text-[10px] uppercase tracking-wider text-white/40 font-semibold mb-2">
           Export
         </div>
         <div className="space-y-1.5">
@@ -1033,7 +1068,7 @@ function MetadataPane({
             (label) => (
               <button
                 key={label}
-                className="w-full px-3 py-1.5 rounded-lg bg-white/[0.04] hover:bg-white/[0.08] text-xs text-white/50 hover:text-white text-left transition-colors"
+                className="w-full px-3 py-1.5 rounded bg-white/[0.04] hover:bg-white/[0.08] text-xs text-white/50 hover:text-white text-left transition-colors"
               >
                 {label}
               </button>
@@ -1042,9 +1077,11 @@ function MetadataPane({
         </div>
       </div>
 
+      <hr className="border-white/5" />
+
       {/* Portability */}
-      <div className="p-3 rounded-lg bg-brand-500/5 border border-brand-500/15">
-        <div className="text-xs text-brand-500/80 font-medium mb-1">
+      <div>
+        <div className="text-[10px] uppercase tracking-wider text-white/40 font-semibold mb-1">
           Provider portability
         </div>
         <p className="text-[10px] text-white/40">
@@ -1053,17 +1090,19 @@ function MetadataPane({
         </p>
       </div>
 
+      <hr className="border-white/5" />
+
       {/* Delete */}
       <div>
         {!deleteConfirm ? (
           <button
             onClick={() => setDeleteConfirm(true)}
-            className="w-full px-3 py-1.5 rounded-lg bg-red-500/5 border border-red-500/15 text-xs text-red-400/60 hover:text-red-400 hover:bg-red-500/10 transition-colors"
+            className="w-full px-3 py-1.5 rounded bg-red-500/5 border border-red-500/15 text-xs text-red-400/60 hover:text-red-400 hover:bg-red-500/10 transition-colors"
           >
             Delete this memory
           </button>
         ) : (
-          <div className="p-3 rounded-lg bg-red-500/10 border border-red-500/20">
+          <div className="p-3 rounded bg-red-500/10 border border-red-500/20">
             <p className="text-xs text-red-400 mb-2">
               Permanently delete? This cannot be undone.
             </p>
