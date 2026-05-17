@@ -5,7 +5,7 @@ import Link from "next/link";
 const SCOREBOARD = [
   { metric: "DM reply rate", without: "12%", with: "100%" },
   { metric: "Avg DM response", without: "2.4 days", with: "4 min" },
-  { metric: "Bridal leads converted", without: "47%", with: "81%" },
+  { metric: "New customer bookings", without: "47%", with: "81%" },
   { metric: "Reviews replied to", without: "6 of 18", with: "18 of 18" },
   { metric: "Hours/week on admin", without: "16", with: "3" },
 ];
@@ -26,7 +26,7 @@ const TOOLS = [
   {
     icon: "📧",
     name: "Front",
-    desc: "Shared inbox for the salon team",
+    desc: "Shared inbox for the shop team",
     integration: "Pop drafts replies in your voice",
   },
   {
