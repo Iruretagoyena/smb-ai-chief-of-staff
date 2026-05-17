@@ -1,0 +1,72 @@
+[
+  {
+    "handle": "@henry.cuevas",
+    "timestamp": "8:42 PM",
+    "outcome": "Booked Thursday 10am",
+    "messages": [
+      { "from": "customer", "text": "hi! my civic is making a grinding noise when I brake. how soon could you get me in?" },
+      { "from": "pop", "text": "Hi Henry! Sounds like brake pads — could be a safety issue. Earliest opening is Thursday 10am for full inspection + pad replacement, around $260. Want me to hold it?" },
+      { "from": "customer", "text": "yes please 🙏" },
+      { "from": "pop", "text": "Confirmed Thursday 10am. Texting you the confirmation now. Drive carefully until then. ✓" }
+    ]
+  },
+  {
+    "handle": "@marisol.aa",
+    "timestamp": "9:14 AM",
+    "outcome": "Booked Friday 9am",
+    "messages": [
+      { "from": "customer", "text": "Hi! Saw your shop on Yelp. Need a quote for timing belt replacement — 2018 Toyota Corolla." },
+      { "from": "pop", "text": "Hi Marisol! Good news — your 2018 Corolla has a timing CHAIN, not a belt. No replacement needed. When was your last service?" },
+      { "from": "customer", "text": "Oh wow, didn't know that. About 50k miles ago." },
+      { "from": "pop", "text": "Perfect — you're due for a 60k checkup, $180. Wednesday 2pm or Friday 9am?" },
+      { "from": "customer", "text": "Friday 9am" },
+      { "from": "pop", "text": "Booked ✓ See you Friday!" }
+    ]
+  },
+  {
+    "handle": "@davidk_sf",
+    "timestamp": "11:51 PM",
+    "outcome": "Booked emergency 8am",
+    "messages": [
+      { "from": "customer", "text": "is anyone awake?? my subaru is shifting really weird, almost stalled at a light" },
+      { "from": "pop", "text": "Hi David! I'm Sofía's after-hours assistant. CVT shifting issues — common in Subarus 2014–2018. Don't drive far. Can you bring it in at 8am tomorrow?" },
+      { "from": "customer", "text": "yes thank you omg" },
+      { "from": "pop", "text": "Booked 8am. Sofía will call you in the morning to confirm. Try not to drive until then. ✓" }
+    ]
+  },
+  {
+    "handle": "@andrea.morales",
+    "timestamp": "2:30 PM",
+    "outcome": "Booked Saturday 11am",
+    "messages": [
+      { "from": "customer", "text": "hi! first time customer — found you through my friend Maritza. she mentioned a new customer special?" },
+      { "from": "pop", "text": "Yes! Maritza is one of our favorites. First-timer special: $30 off any service over $100. What does your car need?" },
+      { "from": "customer", "text": "oil change + tire rotation for my Lexus IS" },
+      { "from": "pop", "text": "Lexus IS oil + rotation — $90 normally, $60 with the special. Saturday 11am or Monday 3pm?" },
+      { "from": "customer", "text": "Saturday please" },
+      { "from": "pop", "text": "Booked ✓ Tell Maritza Sofía says gracias!" }
+    ]
+  },
+  {
+    "handle": "@tom.wynn",
+    "timestamp": "4:18 PM",
+    "outcome": "Recovery call scheduled",
+    "messages": [
+      { "from": "customer", "text": "hey, I left a 1-star review last week. honestly wanted to give you a chance to make it right before I gave up" },
+      { "from": "pop", "text": "Tom, thank you for reaching out — that means a lot. I'm reading your review now… 25-minute wait, no urgency from staff. That's on us. Would you let Sofía call you tomorrow morning to talk through it?" },
+      { "from": "customer", "text": "yeah ok" },
+      { "from": "pop", "text": "Set — she'll call you at 9am. I'm also holding a free oil change slot at noon if she can't resolve it over the phone. ✓" }
+    ]
+  },
+  {
+    "handle": "@priyatown",
+    "timestamp": "7:02 PM",
+    "outcome": "Booked Wednesday 11am",
+    "messages": [
+      { "from": "customer", "text": "hi! do you work on hybrid batteries? my 2016 Honda Insight is showing the IMA light" },
+      { "from": "pop", "text": "Yes! IMA light on a 2016 Insight is usually the battery pack aging. We can run a diagnostic ($120) first, then decide on replacement ($1,800–$2,400) if needed. Diagnostic Wednesday 11am?" },
+      { "from": "customer", "text": "yes please" },
+      { "from": "pop", "text": "Booked ✓ See you Wednesday." }
+    ]
+  }
+]
