@@ -1,18 +1,8 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 import Link from "next/link";
-
-type CloneResult = {
-  ok: boolean;
-  business_name?: string;
-  competitor?: { name: string; tagline: string };
-  threat_analysis?: string;
-  week_one_actions?: { category: string; action: string; impact: string }[];
-  scoreboard?: { metric: string; you: string; competitor: string }[];
-  pop_recommendation?: string;
-  error?: string;
-};
+import { useRouter } from "next/navigation";
 
 const LOADING_STEPS = [
   { emoji: "⚙️", text: "Reading your Google Maps page..." },
@@ -54,17 +44,6 @@ const CHALLENGES = [
   { id: "operations", label: "Drowning in daily ops" },
 ];
 
-const CATEGORY_ICONS: Record<string, string> = {
-  Reviews: "⭐",
-  "After-Hours Calls": "📞",
-  "Quote Requests": "📋",
-  "Social Media": "📱",
-  "First-Timer Funnel": "🎯",
-  "Customer Retention": "🔄",
-  Invoicing: "💰",
-  Operations: "⚙️",
-};
-
 export default function LandingPage() {
   const [url, setUrl] = useState("");
   const [showManual, setShowManual] = useState(false);
@@ -75,14 +54,13 @@ export default function LandingPage() {
   const [monthlyRevenue, setMonthlyRevenue] = useState("");
   const [challenges, setChallenges] = useState<string[]>([]);
 
-  const [phase, setPhase] = useState<"idle" | "loading" | "results">("idle");
+  const router = useRouter();
+  const [phase, setPhase] = useState<"idle" | "loading">("idle");
   const [loadingStep, setLoadingStep] = useState(0);
   const [progress, setProgress] = useState(0);
-  const [result, setResult] = useState<CloneResult | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [submittedName, setSubmittedName] = useState("");
 
-  const resultsRef = useRef<HTMLDivElement>(null);
   const creatorRef = useRef<HTMLDivElement>(null);
 
   function toggleChallenge(id: string) {
@@ -128,7 +106,6 @@ export default function LandingPage() {
     setLoadingStep(0);
     setProgress(0);
     setError(null);
-    setResult(null);
 
     const fetchPromise = fetch("/api/clone-competitor", {
       method: "POST",
@@ -160,11 +137,9 @@ export default function LandingPage() {
     try {
       const [data] = await Promise.all([fetchPromise, animationPromise]);
       if (data.ok) {
-        setResult(data);
-        setPhase("results");
-        setTimeout(() => {
-          resultsRef.current?.scrollIntoView({ behavior: "smooth" });
-        }, 100);
+        sessionStorage.setItem("clone-result", JSON.stringify(data));
+        sessionStorage.setItem("clone-submitted-name", submittedName);
+        router.push("/clone");
       } else {
         setError(data.error ?? "Something went wrong");
         setPhase("idle");
@@ -173,16 +148,6 @@ export default function LandingPage() {
       setError(String(err));
       setPhase("idle");
     }
-  }
-
-  function handleReset() {
-    setPhase("idle");
-    setResult(null);
-    setError(null);
-    setUrl("");
-    setTimeout(() => {
-      creatorRef.current?.scrollIntoView({ behavior: "smooth" });
-    }, 100);
   }
 
   return (
@@ -426,118 +391,6 @@ export default function LandingPage() {
         </section>
       )}
 
-      {/* RESULTS */}
-      {phase === "results" && result && (
-        <section ref={resultsRef} className="px-6 md:px-12 lg:px-20 pb-20">
-          <div className="max-w-4xl mx-auto space-y-10">
-            {/* Competitor Header */}
-            <div className="rounded-2xl bg-gradient-to-br from-red-950/80 to-black border border-red-900/40 p-8">
-              <p className="uppercase tracking-[0.2em] text-xs text-red-400 font-bold mb-3">
-                Your new competitor
-              </p>
-              <h2 className="font-display font-black text-3xl md:text-5xl tracking-tight">
-                {result.competitor?.name}{" "}
-                <span className="text-white/40">vs</span>{" "}
-                {result.business_name || submittedName}
-              </h2>
-              <p className="text-white/60 mt-1">{result.competitor?.tagline}</p>
-              <p className="text-white/80 mt-6 text-lg leading-relaxed">
-                {result.threat_analysis}
-              </p>
-            </div>
-
-            {/* Scoreboard */}
-            {result.scoreboard && result.scoreboard.length > 0 && (
-              <div className="rounded-xl bg-black/40 overflow-hidden border border-white/10">
-                <div className="grid grid-cols-3 text-xs uppercase tracking-wider text-white/40 px-4 py-3 border-b border-white/10">
-                  <div></div>
-                  <div>{result.business_name || submittedName}</div>
-                  <div className="text-red-400">
-                    {result.competitor?.name?.split(" ")[0]}
-                  </div>
-                </div>
-                {result.scoreboard.map((row) => (
-                  <div
-                    key={row.metric}
-                    className="grid grid-cols-3 px-4 py-3 border-b border-white/5 last:border-0"
-                  >
-                    <div className="text-sm text-white/70">{row.metric}</div>
-                    <div className="font-mono font-bold text-white/80">{row.you}</div>
-                    <div className="font-mono font-bold text-red-400">{row.competitor}</div>
-                  </div>
-                ))}
-              </div>
-            )}
-
-            {/* Week One Actions */}
-            {result.week_one_actions && result.week_one_actions.length > 0 && (
-              <div>
-                <h3 className="font-display font-black text-2xl mb-4">
-                  What it did in week one
-                </h3>
-                <div className="grid gap-3">
-                  {result.week_one_actions.map((a, i) => (
-                    <div
-                      key={i}
-                      className="rounded-xl bg-white/5 border border-white/10 p-4"
-                    >
-                      <div className="flex items-center gap-2 mb-2">
-                        <span className="text-base">
-                          {CATEGORY_ICONS[a.category] || "⚡"}
-                        </span>
-                        <span className="text-xs font-bold uppercase tracking-wider text-red-400">
-                          {a.category}
-                        </span>
-                      </div>
-                      <div className="text-white/90">{a.action}</div>
-                      <div className="text-sm text-white/50 mt-2">{a.impact}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {/* Pop Recommendation */}
-            {result.pop_recommendation && (
-              <div className="rounded-2xl bg-brand-500/10 border border-brand-500/30 p-6">
-                <p className="text-brand-500 font-bold uppercase tracking-wider text-xs mb-2">
-                  What Pop would do for you
-                </p>
-                <p className="text-xl text-white/90 leading-relaxed">
-                  {result.pop_recommendation}
-                </p>
-              </div>
-            )}
-
-            {/* CTA Panel */}
-            <div className="rounded-2xl bg-gradient-to-br from-brand-500/20 to-brand-700/10 border border-brand-500/30 p-8 text-center">
-              <h3 className="font-display font-black text-2xl md:text-3xl mb-3">
-                Want this for YOUR business?
-              </h3>
-              <p className="text-white/60 mb-6 max-w-lg mx-auto">
-                Pop is your AI co-founder. Every review replied to, every call answered,
-                every customer retained — all in your voice, all owned by you.
-              </p>
-              <Link
-                href="/dashboard"
-                className="inline-block px-8 py-4 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-bold text-lg transition-colors"
-              >
-                Go to my Pop dashboard &rarr;
-              </Link>
-            </div>
-
-            {/* Reset */}
-            <div className="text-center">
-              <button
-                onClick={handleReset}
-                className="px-6 py-3 rounded-xl bg-white/5 border border-white/10 text-white/70 hover:text-white hover:border-white/20 transition-colors"
-              >
-                &larr; Try another business
-              </button>
-            </div>
-          </div>
-        </section>
-      )}
     </div>
   );
 }
