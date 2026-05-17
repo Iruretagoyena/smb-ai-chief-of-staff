@@ -153,7 +153,7 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen bg-[#0b0b0e] text-[#f6f3ee]">
       {/* HERO */}
-      <section className="min-h-[75vh] flex flex-col px-6 md:px-12 lg:px-20">
+      <section className="min-h-screen flex flex-col px-6 md:px-12 lg:px-20 pb-20">
         <nav className="flex items-center justify-between pt-6 pb-12">
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-lg bg-brand-500 flex items-center justify-center font-display font-black text-sm">
@@ -197,7 +197,7 @@ export default function LandingPage() {
       </section>
 
       {/* COMPETITOR CREATOR */}
-      <section ref={creatorRef} className="px-6 md:px-12 lg:px-20 pb-20">
+      <section ref={creatorRef} className="px-6 md:px-12 lg:px-20 py-24">
         <div className="max-w-3xl mx-auto">
           <div className="rounded-2xl bg-white/[0.04] border border-white/10 p-8 md:p-12">
             {/* URL Input */}
