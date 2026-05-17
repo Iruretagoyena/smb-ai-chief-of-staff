@@ -1,0 +1,12 @@
+[
+  { "from": "sofia", "text": "Hi, I just heard about Pop. Do you actually work for small businesses? I run a hair salon in the Mission.", "delay": 0 },
+  { "from": "pop", "text": "Hola Sofía 👋 Yes — Mom & Pop shops are exactly who I was built for. What's the biggest thing slipping right now?", "delay": 1500 },
+  { "from": "sofia", "text": "Everything. My Instagram DMs are 27 unread. I lost 3 bridal leads last month because I couldn't reply in time. And I haven't posted in 11 days.", "delay": 1800 },
+  { "from": "pop", "text": "I can fix that today. Can I read your @sol_y_trenza inbox?", "delay": 1500 },
+  { "from": "sofia", "text": "Yes 🙏", "delay": 1100 },
+  { "from": "pop", "text": "Done. I see 27 DMs — 9 booking requests, 6 bridal inquiries (one for September), 3 quinceañera follow-ups. I just drafted replies for all 27. Want to see them before I send?", "delay": 2200 },
+  { "from": "sofia", "text": "wait, you can do all that?", "delay": 1400 },
+  { "from": "pop", "text": "And more. I also looked at your Yelp + Google. 4 reviews are unreplied, including a 2-star from Stephanie about the booking process. I drafted a response that owns the problem and offers her a comp.", "delay": 2000 },
+  { "from": "sofia", "text": "ok this is unreal. what's the catch?", "delay": 1200 },
+  { "from": "pop", "text": "No catch. Everything I read goes into YOUR private GBrain — you own it forever. If you ever stop using me, you keep every conversation. Want to see what your week looks like with me?", "delay": 2300 }
+]
