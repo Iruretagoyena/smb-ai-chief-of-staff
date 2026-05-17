@@ -1,0 +1,53 @@
+{
+  "business_name": "Pat's Garage",
+  "business_type": "Japanese & Korean auto repair",
+  "location": "Dogpatch, San Francisco",
+  "since": 1986,
+  "rating": "5★ · 1,728 reviews",
+  "competitor": {
+    "name": "PitPilot Auto AI",
+    "tagline": "Same wrenches. Same neighborhood. Books service while you're under a hood."
+  },
+  "threat_analysis": "An AI-native version of Pat's Garage opened on Indiana St this week. It picks up every phone call during the noon lunch closure, replies to every Yelp and Google review in under 7 minutes, and runs a 4-post-per-week Instagram schedule showing real engine work. It auto-detects first-time visitors from quote requests and sends them the New Customer Special before Pat's even returns the call. Same shop, same mechanics. Different operations.",
+  "week_one_actions": [
+    {
+      "category": "Reviews",
+      "action": "Replied to 23 unresponded Yelp + Google reviews in under 7 minutes each — warm, technical, owner-signed.",
+      "impact": "Pat's 1,728-review reputation grows 18% faster when every review gets a reply."
+    },
+    {
+      "category": "After-Hours Calls",
+      "action": "Answered 31 phone calls during the noon lunch closure (12pm–1pm) and booked 9 service appointments.",
+      "impact": "Lunch-hour calls historically convert at 12%. Booking 9 = $4,500 in service revenue Pat's would have missed."
+    },
+    {
+      "category": "Quote Requests",
+      "action": "Auto-responded to 14 quote requests with model-specific estimates (Subaru CVT, Toyota timing belt, Lexus 90k service) within 4 minutes.",
+      "impact": "Quote response time under 1 hour wins the job 67% of the time vs <20% after 24 hours."
+    },
+    {
+      "category": "Social Media",
+      "action": "Posted 4 Instagram Reels: a Subaru head gasket replacement, a Lexus brake job before/after, a Honda hybrid battery swap, and a tour of the lift bays.",
+      "impact": "Mechanic shops with consistent IG presence get 2.3x more first-time customers from search."
+    },
+    {
+      "category": "First-Timer Funnel",
+      "action": "Auto-tagged 17 quote requests as 'first-time customer' and triggered the New Customer Special offer with a Calendly link.",
+      "impact": "Personalized first-timer outreach lifts conversion from 28% to 51% (Pat's existing program, automated)."
+    },
+    {
+      "category": "Customer Retention",
+      "action": "Identified 38 customers who haven't returned in 90+ days and sent personalized 'time for service?' nudges with their car's recommended service interval.",
+      "impact": "Service interval reminders recover 22–35% of lapsed customers — Pat's known these by VIN since 1986."
+    }
+  ],
+  "scoreboard": [
+    { "metric": "Reviews replied to", "you": "12%", "competitor": "100%" },
+    { "metric": "Avg review response time", "you": "Never", "competitor": "7 min" },
+    { "metric": "Phone calls answered during lunch closure", "you": "0", "competitor": "100%" },
+    { "metric": "Quote response time", "you": "1–3 days", "competitor": "4 min" },
+    { "metric": "Instagram posts / week", "you": "0", "competitor": "4" },
+    { "metric": "Hours Pat spent on this", "you": "0", "competitor": "0" }
+  ],
+  "pop_recommendation": "You don't need to become PitPilot Auto AI. You need a co-founder that catches the phone during lunch, replies to the next 23 reviews tonight, and pings every Subaru owner whose 90k service is overdue. Pop does that — every interaction stays in your private GBrain, and you keep your name on every reply. 1,728 reviews didn't happen by accident. Don't let the next 1,728 happen without you."
+}
