@@ -530,7 +530,6 @@ export default function DemoPage() {
   useEffect(() => {
     // ── State ──
     let cur = 0;
-    let flipped = false;
     let voiceRunning = false;
     let voiceDone = false;
     let transitioning = false;
@@ -562,10 +561,10 @@ export default function DemoPage() {
       const p2 = document.getElementById("p2")!;
 
       p0.innerHTML =
-        "An AI-native taqueria just opened next door to Maria.";
+        "Sofía owns a flower shop in the Mission.";
       p1.innerHTML =
-        'It replies to every review in <span class="stat">7 minutes</span>.<br>It posts on Instagram <span class="stat">4× a week</span>.<br>It chases <span class="stat">every overdue invoice</span>.';
-      p2.innerHTML = "Maria doesn't know it exists yet.";
+        'She struggles with managing inbound communications —<br><span class="stat">Email</span>, <span class="stat">Instagram DMs</span>, <span class="stat">WhatsApp</span> —<br>answering the phone 24/7, and prioritizing her work.';
+      p2.innerHTML = "She's never had a co-founder. Until now.";
 
       sched(() => {
         p0.style.animation = "fadeUp 0.6s ease forwards";
@@ -612,22 +611,17 @@ export default function DemoPage() {
         else if (i < cur) dots[i].classList.add("done");
       }
 
+      if (cur === 1) {
+        const s1a = document.getElementById("s1a")!;
+        const s1b = document.getElementById("s1b")!;
+        s1a.style.animation = "fadeUp 0.6s ease forwards";
+        sched(() => { s1b.style.animation = "fadeUp 0.6s ease forwards"; }, 500);
+      }
       if (cur === 2) resetVoice();
       if (cur === 3) {
         document.getElementById("closerLogo")!.classList.add("show");
         document.getElementById("closerText")!.classList.add("show");
       }
-    }
-
-    // ── Flip card ──
-    function flipCard() {
-      if (cur !== 1 || flipped) return;
-      flipped = true;
-      document.getElementById("flipCard")!.classList.add("flipped");
-      document.getElementById("flipBtn")!.classList.add("gone");
-      sched(() => {
-        document.getElementById("advanceHint")!.classList.add("show");
-      }, 1200);
     }
 
     // ── Voice sequence ──
@@ -685,7 +679,7 @@ export default function DemoPage() {
       sched(() => {
         typeText(
           document.getElementById("voiceText")!,
-          '"Who owes me money?"',
+          '“Who owes me money?”',
           50,
           () => {
             cursor.style.display = "none";
@@ -698,7 +692,7 @@ export default function DemoPage() {
                 document.getElementById("popResponse")!.classList.add("show");
                 typeText(
                   document.getElementById("popText")!,
-                  "Maria, you’re owed $2,270 right now. Mission Cultural Center has $1,850 outstanding — 22 days. Balmy Alley Tours owes $420 from last week. Want me to send follow-ups?",
+                  "Sofía, you’re owed $2,270 right now. The Presidio Heights wedding venue has $1,850 outstanding — 22 days. Balmy Alley Café owes $420 from last week’s arrangement. Want me to send follow-ups?",
                   20,
                   () => {
                     sched(() => {
@@ -724,33 +718,20 @@ export default function DemoPage() {
         goTo(cur + 1, false);
       } else if (e.key === "ArrowLeft") {
         e.preventDefault();
-        if (cur === 1) {
-          flipped = false;
-          document.getElementById("flipCard")!.classList.remove("flipped");
-          document.getElementById("flipBtn")!.classList.remove("gone");
-          document.getElementById("advanceHint")!.classList.remove("show");
-        }
         goTo(cur - 1, true);
       } else if (e.key === " ") {
         e.preventDefault();
         runVoice();
-      } else if (e.key === "f" || e.key === "F") {
-        e.preventDefault();
-        flipCard();
       }
     }
     document.addEventListener("keydown", onKey);
 
-    const flipBtn = document.getElementById("flipBtn")!;
     const idleMic = document.getElementById("idleMic")!;
-    const onFlipBtnClick = () => flipCard();
     const onIdleMicClick = () => runVoice();
-    flipBtn.addEventListener("click", onFlipBtnClick);
     idleMic.addEventListener("click", onIdleMicClick);
 
     return () => {
       document.removeEventListener("keydown", onKey);
-      flipBtn.removeEventListener("click", onFlipBtnClick);
       idleMic.removeEventListener("click", onIdleMicClick);
       cleanupTimers.forEach((t) => clearTimeout(t));
     };
@@ -780,69 +761,20 @@ export default function DemoPage() {
           </div>
         </div>
 
-        {/* ── Screen 1: Mirror + 3D Flip (D6, D7, D9, D10) ── */}
+        {/* ── Screen 1: We fix all that ── */}
         <div className="screen" id="screen1">
-          <div className="flip-container" data-decision="7">
-            <div className="flip-card" id="flipCard">
-              <div className="flip-face flip-front" data-decision="6">
-                <div className="card-eyebrow red">⚡ AI-NATIVE COMPETITOR</div>
-                <div className="card-title">TacoBot Cantina</div>
-                <div className="card-subtitle">
-                  Same neighborhood. AI-native operations.
-                </div>
-                <div className="stats-row">
-                  <div className="stat-box">
-                    <div className="stat-value red">100%</div>
-                    <div className="stat-label">Reply rate</div>
-                  </div>
-                  <div className="stat-box">
-                    <div className="stat-value red">7 min</div>
-                    <div className="stat-label">Avg response</div>
-                  </div>
-                  <div className="stat-box">
-                    <div className="stat-value red">4/wk</div>
-                    <div className="stat-label">Instagram</div>
-                  </div>
-                  <div className="stat-box">
-                    <div className="stat-value red">100%</div>
-                    <div className="stat-label">Invoice follow-up</div>
-                  </div>
-                </div>
-              </div>
-              <div className="flip-face flip-back" data-decision="10">
-                <div className="card-eyebrow orange">
-                  🤝 YOUR AI CHIEF OF STAFF
-                </div>
-                <div className="card-title">Pop</div>
-                <div className="card-subtitle">
-                  Same brain. Now it works for you.
-                </div>
-                <div className="stats-row">
-                  <div className="stat-box">
-                    <div className="stat-value orange">100%</div>
-                    <div className="stat-label">Reply rate</div>
-                  </div>
-                  <div className="stat-box">
-                    <div className="stat-value orange">7 min</div>
-                    <div className="stat-label">Avg response</div>
-                  </div>
-                  <div className="stat-box">
-                    <div className="stat-value orange">4/wk</div>
-                    <div className="stat-label">Instagram</div>
-                  </div>
-                  <div className="stat-box spotlight">
-                    <div className="stat-value orange">100%</div>
-                    <div className="stat-label">Invoice follow-up</div>
-                    <div className="stat-bonus">$1,850 recovered</div>
-                  </div>
-                </div>
-              </div>
+          <div style={{ textAlign: "center", maxWidth: 700 }}>
+            <div className="pitch-hero" id="s1a" style={{ marginBottom: 32 }}>
+              We fix <span className="stat">all</span> of that.
+            </div>
+            <div className="pitch-line" id="s1b" style={{ fontSize: 22, lineHeight: 1.7 }}>
+              Pop is an AI co-founder that handles every manual operation —
+              replies to DMs, answers the phone, drafts review responses,
+              chases invoices, posts on social — so Sofía can focus on
+              what she does best.
             </div>
           </div>
-          <button className="flip-btn" id="flipBtn">
-            What if Maria had one too?
-          </button>
-          <div className="advance-hint" id="advanceHint">
+          <div className="advance-hint show" style={{ marginTop: 40 }}>
             press <kbd>→</kbd> to continue
           </div>
         </div>
@@ -878,12 +810,12 @@ export default function DemoPage() {
             </div>
             <div className="invoice-cards" id="invoiceCards">
               <div className="invoice-card">
-                <div className="invoice-client">Mission Cultural Center</div>
+                <div className="invoice-client">Presidio Heights Wedding Venue</div>
                 <div className="invoice-amount">$1,850</div>
                 <div className="invoice-overdue severe">22 days overdue</div>
               </div>
               <div className="invoice-card">
-                <div className="invoice-client">Balmy Alley Tours</div>
+                <div className="invoice-client">Balmy Alley Café</div>
                 <div className="invoice-amount">$420</div>
                 <div className="invoice-overdue moderate">6 days overdue</div>
               </div>
@@ -897,15 +829,14 @@ export default function DemoPage() {
             Pop
           </div>
           <div className="closer-text" id="closerText">
-            Maria&apos;s been running this taqueria for <em>15 years</em>.
+            Sofía&apos;s been running her flower shop for <em>12 years</em>.
             <br />
-            She&apos;s never had a chief of staff.
+            She&apos;s never had a co-founder.
             <br />
             <br />
-            Now the same AI that could have put her out of business
+            Now every DM, every call, every review, every invoice
             <br />
-            works for her — for less than what she{" "}
-            <em>tips her dishwasher</em>.
+            is handled — so she can focus on <em>the flowers</em>.
             <br />
             <br />
             That&apos;s Pop.
@@ -921,9 +852,6 @@ export default function DemoPage() {
           </span>
           <span>
             <kbd>Space</kbd> Voice
-          </span>
-          <span>
-            <kbd>F</kbd> Flip
           </span>
         </div>
       </div>
