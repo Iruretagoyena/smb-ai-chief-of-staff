@@ -33,40 +33,5 @@
       { "from": "customer", "text": "yes thank you omg" },
       { "from": "pop", "text": "Booked 8am. Sofía will call you in the morning to confirm. Try not to drive until then. ✓" }
     ]
-  },
-  {
-    "handle": "@andrea.morales",
-    "timestamp": "2:30 PM",
-    "outcome": "Booked Saturday 11am",
-    "messages": [
-      { "from": "customer", "text": "hi! first time customer — found you through my friend Maritza. she mentioned a new customer special?" },
-      { "from": "pop", "text": "Yes! Maritza is one of our favorites. First-timer special: $30 off any service over $100. What does your car need?" },
-      { "from": "customer", "text": "oil change + tire rotation for my Lexus IS" },
-      { "from": "pop", "text": "Lexus IS oil + rotation — $90 normally, $60 with the special. Saturday 11am or Monday 3pm?" },
-      { "from": "customer", "text": "Saturday please" },
-      { "from": "pop", "text": "Booked ✓ Tell Maritza Sofía says gracias!" }
-    ]
-  },
-  {
-    "handle": "@tom.wynn",
-    "timestamp": "4:18 PM",
-    "outcome": "Recovery call scheduled",
-    "messages": [
-      { "from": "customer", "text": "hey, I left a 1-star review last week. honestly wanted to give you a chance to make it right before I gave up" },
-      { "from": "pop", "text": "Tom, thank you for reaching out — that means a lot. I'm reading your review now… 25-minute wait, no urgency from staff. That's on us. Would you let Sofía call you tomorrow morning to talk through it?" },
-      { "from": "customer", "text": "yeah ok" },
-      { "from": "pop", "text": "Set — she'll call you at 9am. I'm also holding a free oil change slot at noon if she can't resolve it over the phone. ✓" }
-    ]
-  },
-  {
-    "handle": "@priyatown",
-    "timestamp": "7:02 PM",
-    "outcome": "Booked Wednesday 11am",
-    "messages": [
-      { "from": "customer", "text": "hi! do you work on hybrid batteries? my 2016 Honda Insight is showing the IMA light" },
-      { "from": "pop", "text": "Yes! IMA light on a 2016 Insight is usually the battery pack aging. We can run a diagnostic ($120) first, then decide on replacement ($1,800–$2,400) if needed. Diagnostic Wednesday 11am?" },
-      { "from": "customer", "text": "yes please" },
-      { "from": "pop", "text": "Booked ✓ See you Wednesday." }
-    ]
   }
 ]

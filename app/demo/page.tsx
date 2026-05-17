@@ -54,18 +54,17 @@ function ConvoCard({
 /* ── Summary metrics bar ── */
 function MetricsBar() {
   const stats = [
-    { value: "6", label: "customers handled" },
+    { value: "3", label: "customers handled" },
     { value: "100%", label: "reply rate" },
     { value: "3 min", label: "avg response time" },
-    { value: "72 min", label: "time saved today" },
-    { value: "6", label: "bookings confirmed" },
-    { value: "$1,490", label: "revenue captured today" },
-    { value: "1", label: "recovered 1-star reviewer" },
+    { value: "36 min", label: "time saved today" },
+    { value: "3", label: "bookings confirmed" },
+    { value: "$700", label: "revenue captured today" },
   ];
 
   return (
     <div className="rounded-2xl bg-white/[0.04] border border-white/10 p-6 mt-8">
-      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
         {stats.map((s) => (
           <div key={s.label} className="text-center lg:border-r lg:border-white/5 last:border-0">
             <div className="text-2xl font-black text-[#ff6b1a]">{s.value}</div>
@@ -201,7 +200,7 @@ export default function DemoPage() {
                 Pop replied to every customer.
               </h2>
               <p className="text-lg text-white/50 mt-4 max-w-2xl mx-auto leading-relaxed">
-                Six new conversations. All handled while Sof&iacute;a was under a hood.
+                Three new conversations. All handled while Sof&iacute;a was under a hood.
                 Here&apos;s everything that happened today.
               </p>
             </div>
