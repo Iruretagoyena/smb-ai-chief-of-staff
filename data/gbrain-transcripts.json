@@ -10,20 +10,20 @@
       "provider": "Synthflow",
       "model": "synthflow-v2",
       "cost": 0.04,
-      "outcome": "Booked Wednesday 2pm — balayage touch-up",
+      "outcome": "Booked Wednesday 2pm — brake pad replacement",
       "sizeKB": 18.4,
       "transcript": [
-        {"time": "00:00", "speaker": "ai", "text": "Sol & Trenza, this is Sofia's assistant. How can I help you today?"},
-        {"time": "00:04", "speaker": "caller", "text": "Hi, I'd like to book an appointment for a color refresh. I have some balayage highlights that need touching up."},
-        {"time": "00:12", "speaker": "ai", "text": "I'd love to help with that! Sofia specializes in color work, especially on curly and textured hair. When were you hoping to come in?"},
+        {"time": "00:00", "speaker": "ai", "text": "Reyes Auto Repair, this is Sofía's assistant. How can I help you today?"},
+        {"time": "00:04", "speaker": "caller", "text": "Hi, I'd like to book an appointment for a brake job. My brakes have been squealing and I think the pads need replacing."},
+        {"time": "00:12", "speaker": "ai", "text": "I'd love to help with that! Sofía specializes in brake service, especially on older and high-mileage vehicles. When were you hoping to bring it in?"},
         {"time": "00:20", "speaker": "caller", "text": "Sometime this week? Wednesday or Thursday would be ideal."},
         {"time": "00:25", "speaker": "ai", "text": "Let me check the schedule... Wednesday at 2pm or Thursday at 10am are both open. Which works better for you?"},
         {"time": "00:33", "speaker": "caller", "text": "Wednesday at 2 is perfect."},
-        {"time": "00:36", "speaker": "ai", "text": "Great! I have you down for Wednesday at 2pm for a balayage touch-up. Can I get your name?"},
+        {"time": "00:36", "speaker": "ai", "text": "Great! I have you down for Wednesday at 2pm for a brake pad replacement. Can I get your name?"},
         {"time": "00:42", "speaker": "caller", "text": "Rachel. Rachel Kim."},
-        {"time": "00:45", "speaker": "ai", "text": "Wonderful, Rachel. Just so you know, balayage touch-ups usually take about two to two and a half hours. Sofia will do a consultation at the start to check your current color. Should I send a confirmation text to this number?"},
-        {"time": "00:58", "speaker": "caller", "text": "Yes please! And can you tell her I'm trying to go a little lighter this time? Like a warm caramel."},
-        {"time": "01:06", "speaker": "ai", "text": "Absolutely, I'll note that — warm caramel tones for this session. Sofia will love that. Anything else I can help with?"},
+        {"time": "00:45", "speaker": "ai", "text": "Wonderful, Rachel. Just so you know, brake pad replacements usually take about one to two hours depending on the vehicle. Sofía will do an inspection at the start to check the rotors and calipers too. Should I send a confirmation text to this number?"},
+        {"time": "00:58", "speaker": "caller", "text": "Yes please! And can you tell her it's a 2019 Honda Civic? The front brakes are the ones making noise."},
+        {"time": "01:06", "speaker": "ai", "text": "Absolutely, I'll note that — 2019 Honda Civic, front brake pads. Sofía knows those well. Anything else I can help with?"},
         {"time": "01:13", "speaker": "caller", "text": "No, that's it. Thank you so much!"},
         {"time": "01:16", "speaker": "ai", "text": "You're welcome, Rachel! See you Wednesday at 2. Have a wonderful day!"}
       ]
@@ -38,12 +38,12 @@
       "provider": "ElevenLabs Voice",
       "model": "eleven-v2",
       "cost": 0.02,
-      "outcome": "Voicemail — asked about walk-in availability",
+      "outcome": "Voicemail — asked about walk-in oil change",
       "sizeKB": 4.1,
       "transcript": [
-        {"time": "00:00", "speaker": "ai", "text": "Sol & Trenza, this is Sofia's assistant. How can I help you?"},
-        {"time": "00:06", "speaker": "caller", "text": "Oh hi, um, I was just walking by the salon and it looks really cute. I was wondering if you take walk-ins? I need a trim and maybe some layers. Anyway, call me back? My number is 415-555-0217. Thanks!"},
-        {"time": "00:38", "speaker": "ai", "text": "Thank you for calling! We're appointment-only right now but I can help you find a time. I'll have Sofia call you back today. Have a great day!"}
+        {"time": "00:00", "speaker": "ai", "text": "Reyes Auto Repair, this is Sofía's assistant. How can I help you?"},
+        {"time": "00:06", "speaker": "caller", "text": "Oh hi, um, I was just driving by the shop and it looks really legit. I was wondering if you take walk-ins? I need an oil change and maybe a tire rotation. Anyway, call me back? My number is 415-555-0217. Thanks!"},
+        {"time": "00:38", "speaker": "ai", "text": "Thank you for calling! We're appointment-only right now but I can help you find a time. I'll have Sofía call you back today. Have a great day!"}
       ]
     },
     {
@@ -56,42 +56,42 @@
       "provider": "Synthflow",
       "model": "synthflow-v2",
       "cost": 0.03,
-      "outcome": "Confirmed bridal booking July 18, invoice reminder noted",
+      "outcome": "Confirmed fleet vehicle repair July 18, invoice reminder noted",
       "sizeKB": 12.2,
       "transcript": [
-        {"time": "00:00", "speaker": "ai", "text": "Sol & Trenza, this is Sofia's assistant. How can I help you today?"},
-        {"time": "00:05", "speaker": "caller", "text": "Hi! This is Adriana Morales. I had my bridal trial with Sofia last month and it was incredible. I wanted to confirm my July 18th booking?"},
-        {"time": "00:15", "speaker": "ai", "text": "Hi Adriana! Congratulations on the upcoming wedding! Yes, I can see your booking — July 18th, full bridal session starting at 11am. All confirmed."},
-        {"time": "00:25", "speaker": "caller", "text": "Amazing. And can my mom come? She really wants to be there for the styling."},
-        {"time": "00:30", "speaker": "ai", "text": "Of course! Family is always welcome. Sofia loves having family there — it makes the day even more special."},
-        {"time": "00:38", "speaker": "caller", "text": "Perfect. Oh, and I'm so sorry about the invoice — I completely forgot. I'll Venmo it tonight, I promise."},
-        {"time": "00:46", "speaker": "ai", "text": "No worries at all, Adriana. I'll make a note that payment is on the way. Is there anything else you need for the big day?"},
-        {"time": "00:54", "speaker": "caller", "text": "Actually — do you think Sofia could do a quick touch-up the morning of? Like, I'll already be styled but just in case anything shifts overnight."},
-        {"time": "01:04", "speaker": "ai", "text": "That's a great idea. I'll note that as a request and have Sofia reach out to discuss timing. She usually recommends starting early on wedding mornings."},
+        {"time": "00:00", "speaker": "ai", "text": "Reyes Auto Repair, this is Sofía's assistant. How can I help you today?"},
+        {"time": "00:05", "speaker": "caller", "text": "Hi! This is Adriana Morales. Sofía did the full fleet inspection on our delivery vans last month and it was incredible. I wanted to confirm our July 18th booking for the next round of service?"},
+        {"time": "00:15", "speaker": "ai", "text": "Hi Adriana! Glad to hear the fleet inspection went well! Yes, I can see your booking — July 18th, full fleet service starting at 8am. All confirmed."},
+        {"time": "00:25", "speaker": "caller", "text": "Amazing. And can our driver drop off the vans the night before? That way Sofía can start first thing."},
+        {"time": "00:30", "speaker": "ai", "text": "Of course! We have secure overnight parking. Sofía actually prefers early starts on fleet jobs — it gives her more time for thorough diagnostics."},
+        {"time": "00:38", "speaker": "caller", "text": "Perfect. Oh, and I'm so sorry about the invoice — I completely forgot. I'll send the payment tonight, I promise."},
+        {"time": "00:46", "speaker": "ai", "text": "No worries at all, Adriana. I'll make a note that payment is on the way. Is there anything else you need for the fleet service?"},
+        {"time": "00:54", "speaker": "caller", "text": "Actually — do you think Sofía could do a quick check on the brakes that morning too? One of the vans has been pulling to the left."},
+        {"time": "01:04", "speaker": "ai", "text": "That's a great idea. I'll note that as a priority item and have Sofía look at it first. She usually recommends addressing brake issues before anything else for safety."},
         {"time": "01:14", "speaker": "caller", "text": "You're the best. Thank you!"},
-        {"time": "01:17", "speaker": "ai", "text": "You're so welcome! We can't wait for July 18th. Have a beautiful day, Adriana!"}
+        {"time": "01:17", "speaker": "ai", "text": "You're so welcome! We can't wait for July 18th. Have a great day, Adriana!"}
       ]
     },
     {
       "id": "vc4",
       "date": "2026-05-13T10:30:00Z",
       "caller": "+1-510-555-0301",
-      "callerName": "Salon Republic (vendor)",
+      "callerName": "AutoZone Pro (vendor)",
       "duration": "1m 45s",
       "durationSec": 105,
       "provider": "OpenAI Realtime",
       "model": "gpt-4o-realtime",
       "cost": 0.03,
-      "outcome": "Vendor payment confirmed by May 23, sample kit requested",
+      "outcome": "Vendor payment confirmed by May 23, new Bosch catalog requested",
       "sizeKB": 8.7,
       "transcript": [
-        {"time": "00:00", "speaker": "ai", "text": "Sol & Trenza, this is Sofia's assistant. How can I help you?"},
-        {"time": "00:04", "speaker": "caller", "text": "Hi, this is Marcus from Salon Republic. I'm calling about invoice SR-4421 — the color restock for $740. Just checking in on payment status."},
-        {"time": "00:14", "speaker": "ai", "text": "Hi Marcus! Thanks for calling. I have a note that Sofia plans to process that payment before the May 23rd due date. Everything is on track."},
-        {"time": "00:24", "speaker": "caller", "text": "Great, that's what I needed. Also, we've got a new Wella Koleston shade line launching in June. Want me to send over a sample kit?"},
-        {"time": "00:33", "speaker": "ai", "text": "Sofia would love that! She mentioned being interested. Should I confirm the salon address for shipping?"},
+        {"time": "00:00", "speaker": "ai", "text": "Reyes Auto Repair, this is Sofía's assistant. How can I help you?"},
+        {"time": "00:04", "speaker": "caller", "text": "Hi, this is Marcus from AutoZone Pro. I'm calling about invoice AZ-4421 — the parts restock for $1,240. Just checking in on payment status."},
+        {"time": "00:14", "speaker": "ai", "text": "Hi Marcus! Thanks for calling. I have a note that Sofía plans to process that payment before the May 23rd due date. Everything is on track."},
+        {"time": "00:24", "speaker": "caller", "text": "Great, that's what I needed. Also, we've got a new Bosch brake pad line launching in June. Want me to send over a catalog and some samples?"},
+        {"time": "00:33", "speaker": "ai", "text": "Sofía would love that! She mentioned being interested in the new Bosch ceramics. Should I confirm the shop address for shipping?"},
         {"time": "00:40", "speaker": "caller", "text": "I've got 2691 Mission St, SF 94110 — that still right?"},
-        {"time": "00:45", "speaker": "ai", "text": "That's correct! I'll let Sofia know the samples are coming. Thanks so much, Marcus."},
+        {"time": "00:45", "speaker": "ai", "text": "That's correct! I'll let Sofía know the catalog and samples are coming. Thanks so much, Marcus."},
         {"time": "00:51", "speaker": "caller", "text": "Perfect. Have a good one!"}
       ]
     },
@@ -105,22 +105,22 @@
       "provider": "Synthflow",
       "model": "synthflow-v2",
       "cost": 0.06,
-      "outcome": "Took bridal details for Isabella Cruz Sept 5 wedding, Sofia to call back",
+      "outcome": "Took details for Isabella Cruz's car — overheating issue, Sofía to call back",
       "sizeKB": 22.8,
       "transcript": [
-        {"time": "00:00", "speaker": "ai", "text": "Sol & Trenza, this is Sofia's assistant. How can I help you today?"},
-        {"time": "00:05", "speaker": "caller", "text": "Hola, hi — I'm calling about my daughter's wedding. Her name is Isabella Cruz. She sent an email a few days ago but hasn't heard back."},
-        {"time": "00:16", "speaker": "ai", "text": "Hi! Yes, I can see Isabella's email about her September 5th wedding at Cavallo Point. Sofia has been meaning to reply — she's been very busy this week. I'm so sorry for the delay."},
-        {"time": "00:28", "speaker": "caller", "text": "Oh good, you got it! Yes, it's five of us — Isabella and four bridesmaids. Todas tenemos pelo rizado, that's why we want Sofia specifically."},
-        {"time": "00:40", "speaker": "ai", "text": "That's exactly Sofia's specialty — curly bridal hair is what she's known for. For a party of five, she usually recommends starting very early on the wedding day and doing a trial about six to eight weeks before."},
-        {"time": "00:54", "speaker": "caller", "text": "Ay, perfecto. Isabella was thinking mid-July for the trial? Like July 12 or 15?"},
-        {"time": "01:03", "speaker": "ai", "text": "Both of those dates look possible. I'll have Sofia check her schedule and call Isabella directly to discuss the trial and the full bridal package details. Does that work?"},
-        {"time": "01:14", "speaker": "caller", "text": "Yes, please. And can you tell Sofia — my daughter saw her quinceañera work on Instagram and she actually cried. Es una artista."},
-        {"time": "01:26", "speaker": "ai", "text": "That is so sweet! I'll definitely pass that along. Sofia will be thrilled to hear it. Can I confirm the best number for Isabella?"},
-        {"time": "01:35", "speaker": "caller", "text": "Yes — her cell is 415-555-0199. And my name is Carmen, I'm the mother of the bride."},
-        {"time": "01:44", "speaker": "ai", "text": "Got it — Carmen, mother of the bride. Isabella at 415-555-0199. Sofia will reach out within 24 hours."},
+        {"time": "00:00", "speaker": "ai", "text": "Reyes Auto Repair, this is Sofía's assistant. How can I help you today?"},
+        {"time": "00:05", "speaker": "caller", "text": "Hola, hi — I'm calling about my daughter's car. Her name is Isabella Cruz. She sent an email a few days ago but hasn't heard back."},
+        {"time": "00:16", "speaker": "ai", "text": "Hi! Yes, I can see Isabella's email about her 2018 Toyota Corolla overheating on the freeway. Sofía has been meaning to reply — she's been very busy this week. I'm so sorry for the delay."},
+        {"time": "00:28", "speaker": "caller", "text": "Oh good, you got it! Yes, the car keeps overheating and the check engine light is on. Todos nuestros carros son Toyota, that's why we want Sofía specifically."},
+        {"time": "00:40", "speaker": "ai", "text": "That's exactly Sofía's specialty — Toyota and Honda diagnostics are what she's known for. For an overheating issue, she usually recommends bringing it in as soon as possible so it doesn't cause engine damage."},
+        {"time": "00:54", "speaker": "caller", "text": "Ay, perfecto. Isabella was thinking she could bring it in this week? Like Thursday or Friday?"},
+        {"time": "01:03", "speaker": "ai", "text": "Both of those days look possible. I'll have Sofía check her schedule and call Isabella directly to discuss the diagnostic and repair options. Does that work?"},
+        {"time": "01:14", "speaker": "caller", "text": "Yes, please. And can you tell Sofía — my daughter saw her work on a friend's car and she was so impressed. Es una experta."},
+        {"time": "01:26", "speaker": "ai", "text": "That is so kind! I'll definitely pass that along. Sofía will be glad to hear it. Can I confirm the best number for Isabella?"},
+        {"time": "01:35", "speaker": "caller", "text": "Yes — her cell is 415-555-0199. And my name is Carmen, I'm her mom."},
+        {"time": "01:44", "speaker": "ai", "text": "Got it — Carmen, Isabella's mom. Isabella at 415-555-0199. Sofía will reach out within 24 hours."},
         {"time": "01:53", "speaker": "caller", "text": "Muchas gracias. You've been so helpful. I feel better already!"},
-        {"time": "01:58", "speaker": "ai", "text": "De nada, Carmen! We're so honored Isabella chose Sol & Trenza. Sofia will take such good care of her. Have a wonderful day!"}
+        {"time": "01:58", "speaker": "ai", "text": "De nada, Carmen! We're so glad Isabella chose Reyes Auto Repair. Sofía will take great care of her car. Have a wonderful day!"}
       ]
     },
     {
@@ -136,7 +136,7 @@
       "outcome": "Missed call — no voicemail left",
       "sizeKB": 1.2,
       "transcript": [
-        {"time": "00:00", "speaker": "ai", "text": "Sol & Trenza, this is Sofia's assistant. How can I help —"},
+        {"time": "00:00", "speaker": "ai", "text": "Reyes Auto Repair, this is Sofía's assistant. How can I help —"},
         {"time": "00:04", "speaker": "system", "text": "[caller hung up]"}
       ]
     },
@@ -153,9 +153,9 @@
       "outcome": "Wrong number — caller looking for a taqueria",
       "sizeKB": 2.3,
       "transcript": [
-        {"time": "00:00", "speaker": "ai", "text": "Sol & Trenza, this is Sofia's assistant. How can I help you?"},
+        {"time": "00:00", "speaker": "ai", "text": "Reyes Auto Repair, this is Sofía's assistant. How can I help you?"},
         {"time": "00:04", "speaker": "caller", "text": "Uh, is this the taqueria? La Taqueria on Mission?"},
-        {"time": "00:08", "speaker": "ai", "text": "No, this is Sol & Trenza — it's a hair salon on Mission Street. La Taqueria is a few blocks down. Their number is 415-285-7117."},
+        {"time": "00:08", "speaker": "ai", "text": "No, this is Reyes Auto Repair — it's an auto shop on Mission Street. La Taqueria is a few blocks down. Their number is 415-285-7117."},
         {"time": "00:17", "speaker": "caller", "text": "Oh sorry! Wrong number. Thanks though!"},
         {"time": "00:20", "speaker": "ai", "text": "No problem! Enjoy your tacos!"}
       ]
@@ -164,26 +164,26 @@
       "id": "vc8",
       "date": "2026-05-10T17:05:00Z",
       "caller": "+1-415-555-0276",
-      "callerName": "Gloria Delgado (Estela's mom)",
+      "callerName": "Gloria Delgado (fleet manager)",
       "duration": "3m 05s",
       "durationSec": 185,
       "provider": "ElevenLabs Voice",
       "model": "eleven-v2",
       "cost": 0.04,
-      "outcome": "Confirmed 6 updos July 12 quinceañera, deposit info sent",
+      "outcome": "Confirmed 6 vehicles July 12 fleet maintenance, deposit info sent",
       "sizeKB": 16.1,
       "transcript": [
-        {"time": "00:00", "speaker": "ai", "text": "Sol & Trenza, this is Sofia's assistant. How can I help you?"},
-        {"time": "00:05", "speaker": "caller", "text": "Hola, soy Gloria, la mama de Estela. Sofia hizo el peinado de mi otra hija para su quinceañera y quiero lo mismo para Estela."},
-        {"time": "00:18", "speaker": "ai", "text": "¡Hola Gloria! Sofia would love to work with Estela. Tell me about the quinceañera — when is it and how many people need styling?"},
-        {"time": "00:28", "speaker": "caller", "text": "Es el 12 de julio, at the Galleria. Six girls total — Estela plus five damas. All updos."},
-        {"time": "00:38", "speaker": "ai", "text": "July 12th at the Galleria — that's going to be beautiful. For six updos, Sofia usually starts at 8am so everyone is picture-perfect by the ceremony. Should I put you down?"},
+        {"time": "00:00", "speaker": "ai", "text": "Reyes Auto Repair, this is Sofía's assistant. How can I help you?"},
+        {"time": "00:05", "speaker": "caller", "text": "Hola, soy Gloria, la encargada de la flota de Delgado Landscaping. Sofía hizo el mantenimiento de nuestros camiones el año pasado y quiero lo mismo para este verano."},
+        {"time": "00:18", "speaker": "ai", "text": "¡Hola Gloria! Sofía would love to work with you again. Tell me about the fleet service — when is it and how many vehicles need maintenance?"},
+        {"time": "00:28", "speaker": "caller", "text": "Es el 12 de julio, before our busy season starts. Six trucks total — oil changes, brake inspections, and tire rotations on all of them."},
+        {"time": "00:38", "speaker": "ai", "text": "July 12th before the busy season — that's smart planning. For six vehicles, Sofía usually starts at 8am so everything is done by end of day. Should I put you down?"},
         {"time": "00:50", "speaker": "caller", "text": "Si, si! And how much for six? La otra vez fue cuatro and it was $800."},
-        {"time": "00:58", "speaker": "ai", "text": "For six updos, the package is $1,200. That includes a trial session for Estela beforehand and touch-up pins for the event. There's a $300 deposit to hold the date."},
+        {"time": "00:58", "speaker": "ai", "text": "For six vehicles, the fleet maintenance package is $1,200. That includes oil changes, brake inspections, tire rotations, and a multi-point check on each vehicle. There's a $300 deposit to hold the date."},
         {"time": "01:12", "speaker": "caller", "text": "OK, that's fair. Can I Zelle the deposit?"},
         {"time": "01:16", "speaker": "ai", "text": "Absolutely! I'll send you the Zelle details by text right after this call. Once we receive the deposit, July 12th is locked in."},
-        {"time": "01:26", "speaker": "caller", "text": "Perfecto. Dile a Sofia que Estela esta muy emocionada. She's been practicing her waltz!"},
-        {"time": "01:35", "speaker": "ai", "text": "How exciting! Sofia is going to make Estela look absolutely stunning. We'll send the deposit info right away. Gracias, Gloria!"},
+        {"time": "01:26", "speaker": "caller", "text": "Perfecto. Dile a Sofía que mis choferes estan muy contentos con su trabajo. They trust her with the trucks!"},
+        {"time": "01:35", "speaker": "ai", "text": "That's great to hear! Sofía is going to make sure every truck is in top shape. We'll send the deposit info right away. Gracias, Gloria!"},
         {"time": "01:43", "speaker": "caller", "text": "Gracias a ti. Bye bye!"}
       ]
     },
@@ -200,13 +200,13 @@
       "outcome": "Rescheduled Thursday to Saturday 11am",
       "sizeKB": 6.8,
       "transcript": [
-        {"time": "00:00", "speaker": "ai", "text": "Sol & Trenza, this is Sofia's assistant. How can I help you?"},
+        {"time": "00:00", "speaker": "ai", "text": "Reyes Auto Repair, this is Sofía's assistant. How can I help you?"},
         {"time": "00:04", "speaker": "caller", "text": "Hi, this is Priya Sharma. I have an appointment Thursday but something came up at work. Can I move it to Saturday?"},
         {"time": "00:13", "speaker": "ai", "text": "Hi Priya! Let me check Saturday for you... I have 11am or 3pm available. Which do you prefer?"},
         {"time": "00:21", "speaker": "caller", "text": "11am would be great."},
-        {"time": "00:24", "speaker": "ai", "text": "Done — I've moved you from Thursday to Saturday at 11am. Same service, curl cut and trim?"},
-        {"time": "00:31", "speaker": "caller", "text": "Yes, exactly. Thank you! Sofia always remembers my formula which is so nice."},
-        {"time": "00:38", "speaker": "ai", "text": "She really does — your file is detailed! See you Saturday at 11, Priya. Have a great week!"}
+        {"time": "00:24", "speaker": "ai", "text": "Done — I've moved you from Thursday to Saturday at 11am. Same service, oil change and tire rotation?"},
+        {"time": "00:31", "speaker": "caller", "text": "Yes, exactly. Thank you! Sofía always keeps detailed notes on my car which is so nice."},
+        {"time": "00:38", "speaker": "ai", "text": "She really does — your vehicle file is thorough! See you Saturday at 11, Priya. Have a great week!"}
       ]
     },
     {
@@ -219,18 +219,18 @@
       "provider": "Synthflow",
       "model": "synthflow-v2",
       "cost": 0.04,
-      "outcome": "Booked consultation Friday 3pm — new client, curly specialist search",
+      "outcome": "Booked consultation Friday 3pm — new client, trusted mechanic search",
       "sizeKB": 14.3,
       "transcript": [
-        {"time": "00:00", "speaker": "ai", "text": "Sol & Trenza, this is Sofia's assistant. How can I help you today?"},
-        {"time": "00:05", "speaker": "caller", "text": "Hi! I'm looking for someone who actually understands curly hair. I've been to like five places in SF and they always straighten it or just don't get it."},
-        {"time": "00:16", "speaker": "ai", "text": "You're calling the right place! Sofia has been specializing in curly and textured hair for over twelve years. She's known in the Mission for her curl work. Would you like to book a consultation?"},
+        {"time": "00:00", "speaker": "ai", "text": "Reyes Auto Repair, this is Sofía's assistant. How can I help you today?"},
+        {"time": "00:05", "speaker": "caller", "text": "Hi! I'm looking for someone who actually knows what they're doing with transmissions. I've been to like five shops in SF and they either overcharge or misdiagnose the issue."},
+        {"time": "00:16", "speaker": "ai", "text": "You're calling the right place! Sofía has been specializing in engine diagnostics and transmission repair for over ten years. She's known in the Mission for honest, reliable work. Would you like to book a diagnostic appointment?"},
         {"time": "00:28", "speaker": "caller", "text": "Oh my God, really? Yes! Do you have anything this week?"},
-        {"time": "00:33", "speaker": "ai", "text": "I have Friday at 3pm open for a consultation. It's about 30 minutes — Sofia will look at your curl pattern, discuss what you want, and build a plan."},
-        {"time": "00:44", "speaker": "caller", "text": "That sounds amazing. My name is Daniela Vega. I have 3B curls and I've been trying to grow them out but the ends are so damaged."},
-        {"time": "00:55", "speaker": "ai", "text": "Sofia is great with 3B curls and damaged ends. She'll probably suggest a plan that saves as much length as possible. I'll note everything for her. Friday at 3 — see you then, Daniela!"},
-        {"time": "01:06", "speaker": "caller", "text": "I'm literally so excited. Can I bring reference photos?"},
-        {"time": "01:10", "speaker": "ai", "text": "Absolutely, please do! Photos are super helpful. We'll see you Friday!"}
+        {"time": "00:33", "speaker": "ai", "text": "I have Friday at 3pm open for a diagnostic. It's about 45 minutes — Sofía will run a full scan, check the transmission fluid, and give you an honest assessment."},
+        {"time": "00:44", "speaker": "caller", "text": "That sounds amazing. My name is Daniela Vega. I have a 2017 Subaru Outback and it's been slipping between gears really badly."},
+        {"time": "00:55", "speaker": "ai", "text": "Sofía is great with Subaru transmissions and gear-slipping issues. She'll probably run a diagnostic and give you options that save you from a full rebuild. I'll note everything for her. Friday at 3 — see you then, Daniela!"},
+        {"time": "01:06", "speaker": "caller", "text": "I'm literally so relieved. Can I bring the maintenance records from the other shops?"},
+        {"time": "01:10", "speaker": "ai", "text": "Absolutely, please do! Previous records are super helpful. We'll see you Friday!"}
       ]
     },
     {
@@ -243,11 +243,11 @@
       "provider": "Synthflow",
       "model": "synthflow-v2-afterhours",
       "cost": 0.02,
-      "outcome": "After-hours — booked Tuesday 11am, curl cut",
+      "outcome": "After-hours — booked Tuesday 11am, oil change",
       "sizeKB": 5.9,
       "transcript": [
-        {"time": "00:00", "speaker": "ai", "text": "Hi, you've reached Sol & Trenza. We're closed right now — our hours are Tuesday through Saturday, 10 to 7, and Sunday 11 to 5. But I can help you book an appointment!"},
-        {"time": "00:12", "speaker": "caller", "text": "Oh okay. Can I book for sometime next week? I just need a cut."},
+        {"time": "00:00", "speaker": "ai", "text": "Hi, you've reached Reyes Auto Repair. We're closed right now — our hours are Monday through Saturday, 8am to 6pm. But I can help you book an appointment!"},
+        {"time": "00:12", "speaker": "caller", "text": "Oh okay. Can I book for sometime next week? I just need an oil change."},
         {"time": "00:18", "speaker": "ai", "text": "Of course! I have openings Tuesday at 11am, Wednesday at 2pm, or Thursday at 10am. What works for you?"},
         {"time": "00:27", "speaker": "caller", "text": "Tuesday at 11 works. My name is Jasmine."},
         {"time": "00:31", "speaker": "ai", "text": "Perfect, Jasmine — you're booked for Tuesday at 11am. We'll send a confirmation text to this number. See you then!"},
@@ -264,16 +264,16 @@
       "provider": "OpenAI Realtime",
       "model": "gpt-4o-realtime",
       "cost": 0.03,
-      "outcome": "Product recommendation — Olaplex No. 3, will order",
+      "outcome": "Part recommendation — Bosch cabin air filter, will order",
       "sizeKB": 7.4,
       "transcript": [
-        {"time": "00:00", "speaker": "ai", "text": "Sol & Trenza, this is Sofia's assistant. How can I help you?"},
-        {"time": "00:04", "speaker": "caller", "text": "Hi! It's Bianca. I was in last week and Sofia used this amazing product on my curls — I can't remember the name. Something with a number?"},
-        {"time": "00:14", "speaker": "ai", "text": "Hi Bianca! Based on your last visit, Sofia used Olaplex No. 3 as a treatment — it's a bond-building hair perfector. Is that the one?"},
+        {"time": "00:00", "speaker": "ai", "text": "Reyes Auto Repair, this is Sofía's assistant. How can I help you?"},
+        {"time": "00:04", "speaker": "caller", "text": "Hi! It's Bianca. I was in last week and Sofía mentioned a really good cabin air filter I should get — I can't remember the brand. Something German?"},
+        {"time": "00:14", "speaker": "ai", "text": "Hi Bianca! Based on your last visit, Sofía recommended the Bosch cabin air filter for your Accord — it's a high-efficiency particulate filter. Is that the one?"},
         {"time": "00:24", "speaker": "caller", "text": "Yes! That's it! Can I buy it from you guys?"},
-        {"time": "00:28", "speaker": "ai", "text": "We don't currently carry it in the salon but Sofia can order it for you. The retail size is $30. Want me to have her set one aside for your next visit?"},
+        {"time": "00:28", "speaker": "ai", "text": "We don't currently stock that one but Sofía can order it for you. The retail price is $28. Want me to have her set one aside for your next visit?"},
         {"time": "00:40", "speaker": "caller", "text": "Yes please! I have an appointment next month. Can she just add it to my bill?"},
-        {"time": "00:46", "speaker": "ai", "text": "Absolutely, I'll add it to your file. Olaplex No. 3, $30, added to next visit. Anything else, Bianca?"},
+        {"time": "00:46", "speaker": "ai", "text": "Absolutely, I'll add it to your file. Bosch cabin air filter, $28, added to next visit. Anything else, Bianca?"},
         {"time": "00:54", "speaker": "caller", "text": "Nope, that's perfect. Thanks so much!"},
         {"time": "00:57", "speaker": "ai", "text": "You're welcome! See you at your next appointment. Have a great day!"}
       ]
@@ -284,7 +284,7 @@
       "id": "ig1",
       "handle": "@amber_m_sf",
       "name": "Amber M.",
-      "topic": "prom booking",
+      "topic": "pre-road-trip inspection",
       "messageCount": 11,
       "startDate": "2026-05-14T16:30:00Z",
       "lastDate": "2026-05-15T09:14:00Z",
@@ -293,25 +293,25 @@
       "model": "claude-sonnet-4-6",
       "cost": 0.003,
       "sizeKB": 5.2,
-      "outcome": "Booked Saturday 2pm — prom color for niece",
+      "outcome": "Booked Saturday 2pm — pre-road-trip inspection for niece's car",
       "messages": [
-        {"time": "2026-05-14T16:30:00Z", "sender": "them", "text": "hi! is there any way I can book for next Saturday for color? prom for my niece 🫶"},
-        {"time": "2026-05-14T16:30:18Z", "sender": "ai", "text": "Hi Amber! Yes — Saturday at 11am or 2pm both open for color. I'll save the 2pm for your niece if that works. So exciting for prom!", "meta": "Drafted by Claude via Pop · 0.3s · $0.001"},
+        {"time": "2026-05-14T16:30:00Z", "sender": "them", "text": "hi! is there any way I can book for next Saturday for an inspection? my niece is driving to LA for the first time 🫶"},
+        {"time": "2026-05-14T16:30:18Z", "sender": "ai", "text": "Hi Amber! Yes — Saturday at 11am or 2pm both open for a pre-road-trip inspection. I'll save the 2pm for your niece if that works. So exciting for her first big drive!", "meta": "Drafted by Claude via Pop · 0.3s · $0.001"},
         {"time": "2026-05-14T16:31:02Z", "sender": "them", "text": "omg that was so fast! yes 2pm please. her name is Maya"},
-        {"time": "2026-05-14T16:31:20Z", "sender": "ai", "text": "Done! Maya is booked for Saturday at 2pm. What color is she thinking? Sofia loves doing prom looks!", "meta": "Drafted by Claude via Pop · 0.2s · $0.001"},
-        {"time": "2026-05-14T16:33:45Z", "sender": "them", "text": "she wants to do like a dark cherry red? is that possible on dark brown hair?"},
-        {"time": "2026-05-14T16:34:02Z", "sender": "ai", "text": "Absolutely! Dark cherry on brown hair is gorgeous and one of Sofia's favorites. She'll probably do a gloss or semi-permanent so it's vibrant for prom but grows out naturally.", "meta": "Drafted by Claude via Pop · 0.4s · $0.001"},
-        {"time": "2026-05-14T16:35:11Z", "sender": "them", "text": "perfect!! can she also do a blowout style? Maya has 2C curls"},
-        {"time": "2026-05-14T16:35:28Z", "sender": "ai", "text": "Yes! Sofia can do a bouncy blowout on 2C curls that'll last all night. I'd budget about 2.5 hours total for color + style. Sound good?", "meta": "Drafted by Claude via Pop · 0.3s · $0.001"},
+        {"time": "2026-05-14T16:31:20Z", "sender": "ai", "text": "Done! Maya is booked for Saturday at 2pm. What kind of car is she driving? Sofía loves doing thorough pre-trip checks!", "meta": "Drafted by Claude via Pop · 0.2s · $0.001"},
+        {"time": "2026-05-14T16:33:45Z", "sender": "them", "text": "she has a 2015 Honda Fit. it's got like 80K miles on it. should we be worried about anything?"},
+        {"time": "2026-05-14T16:34:02Z", "sender": "ai", "text": "At 80K miles, Sofía will definitely check the brakes, tires, coolant, belts, and fluids. Honda Fits are super reliable but it's smart to catch anything before a long drive. She'll do a full multi-point inspection.", "meta": "Drafted by Claude via Pop · 0.4s · $0.001"},
+        {"time": "2026-05-14T16:35:11Z", "sender": "them", "text": "perfect!! can she also top off the fluids and check the AC? Maya's AC has been weak"},
+        {"time": "2026-05-14T16:35:28Z", "sender": "ai", "text": "Yes! Sofía can check the AC refrigerant levels and top off all fluids as part of the inspection. I'd budget about 1.5 hours total for inspection + AC check. Sound good?", "meta": "Drafted by Claude via Pop · 0.3s · $0.001"},
         {"time": "2026-05-14T16:36:50Z", "sender": "them", "text": "sounds amazing. how much will it be?"},
-        {"time": "2026-05-14T16:37:05Z", "sender": "ai", "text": "For the cherry red color plus blowout styling, it'll be around $180-$200. There's a $50 deposit to hold the slot — I can send a booking link!", "meta": "Drafted by Claude via Pop · 0.3s · $0.001"},
-        {"time": "2026-05-15T09:14:00Z", "sender": "them", "text": "just sent the deposit! Maya is SO excited. see you Saturday!! 💕"}
+        {"time": "2026-05-14T16:37:05Z", "sender": "ai", "text": "For the full pre-trip inspection plus AC check and fluid top-off, it'll be around $150-$180. There's no deposit needed — just bring the car in Saturday at 2!", "meta": "Drafted by Claude via Pop · 0.3s · $0.001"},
+        {"time": "2026-05-15T09:14:00Z", "sender": "them", "text": "perfect! Maya is SO relieved to know the car will be checked before her trip. see you Saturday!! 💕"}
       ]
     },
     {
       "id": "ig2",
-      "handle": "@brides.of.sf",
-      "name": "Brides of SF (blog)",
+      "handle": "@bay.area.gearheads",
+      "name": "Bay Area Gearheads (blog)",
       "topic": "sponsorship / feature",
       "messageCount": 4,
       "startDate": "2026-05-13T10:15:00Z",
@@ -321,19 +321,19 @@
       "model": "claude-sonnet-4-6",
       "cost": 0.002,
       "sizeKB": 3.1,
-      "outcome": "Feature opportunity — awaiting Sofia's review",
+      "outcome": "Feature opportunity — awaiting Sofía's review",
       "messages": [
-        {"time": "2026-05-13T10:15:00Z", "sender": "them", "text": "Hi Sofia! We're a bridal blog based in SF and we'd love to feature your curly bridal work. We saw the Jasmine T. photos and they're STUNNING. Would you be open to a quick interview + photo feature?"},
-        {"time": "2026-05-13T10:15:30Z", "sender": "ai", "text": "Hi! Thank you so much for reaching out — Sofia would be thrilled! She's incredibly passionate about curly bridal hair. Let me check her schedule and get back to you with some times for the interview. Can you share more about the feature format?", "meta": "Drafted by Claude via Pop · 0.4s · $0.001"},
-        {"time": "2026-05-13T14:40:00Z", "sender": "them", "text": "It would be a 30-min Zoom interview + we'd use 6-8 of her bridal portfolio photos (with client permission). The feature goes to our 12K email subscribers and 8K Instagram followers. We don't charge anything — it's editorial!"},
-        {"time": "2026-05-14T08:22:00Z", "sender": "ai", "text": "That sounds wonderful! I've shared the details with Sofia and she's very interested. She'll reach out this week to schedule the Zoom. Thanks for thinking of Sol & Trenza!", "meta": "Drafted by Claude via Pop · 0.3s · $0.001"}
+        {"time": "2026-05-13T10:15:00Z", "sender": "them", "text": "Hi Sofía! We're an auto blog based in SF and we'd love to feature your shop. We saw the fleet maintenance photos and they're IMPRESSIVE. Would you be open to a quick interview + photo feature?"},
+        {"time": "2026-05-13T10:15:30Z", "sender": "ai", "text": "Hi! Thank you so much for reaching out — Sofía would be thrilled! She's incredibly passionate about quality auto repair and honest service. Let me check her schedule and get back to you with some times for the interview. Can you share more about the feature format?", "meta": "Drafted by Claude via Pop · 0.4s · $0.001"},
+        {"time": "2026-05-13T14:40:00Z", "sender": "them", "text": "It would be a 30-min Zoom interview + we'd use 6-8 of her shop and project photos (with client permission). The feature goes to our 12K email subscribers and 8K Instagram followers. We don't charge anything — it's editorial!"},
+        {"time": "2026-05-14T08:22:00Z", "sender": "ai", "text": "That sounds wonderful! I've shared the details with Sofía and she's very interested. She'll reach out this week to schedule the Zoom. Thanks for thinking of Reyes Auto Repair!", "meta": "Drafted by Claude via Pop · 0.3s · $0.001"}
       ]
     },
     {
       "id": "ig3",
-      "handle": "@chloe_bride_2026",
+      "handle": "@greenleaf_delivery",
       "name": "Chloe Mendez",
-      "topic": "bridal inquiry — Oct 4",
+      "topic": "fleet inquiry — 6 vehicles",
       "messageCount": 8,
       "startDate": "2026-05-15T07:22:00Z",
       "lastDate": "2026-05-16T06:40:00Z",
@@ -342,23 +342,23 @@
       "model": "claude-sonnet-4-6",
       "cost": 0.004,
       "sizeKB": 4.8,
-      "outcome": "Bridal trial tentatively Aug 10, awaiting confirmation",
+      "outcome": "Fleet service tentatively booked Aug 10, awaiting confirmation",
       "messages": [
-        {"time": "2026-05-15T07:22:00Z", "sender": "them", "text": "Hi! I'm getting married Oct 4 and need someone for my bridal party (6 girls). Do you do on-location?"},
-        {"time": "2026-05-15T07:22:25Z", "sender": "ai", "text": "Hi Chloe! Congratulations! Yes, Sofia does on-location for bridal parties. For 6 people she'd start early — around 5:30-6am — to make sure everyone is gorgeous by ceremony time. Where's the venue?", "meta": "Drafted by Claude via Pop · 0.3s · $0.001"},
-        {"time": "2026-05-15T07:25:00Z", "sender": "them", "text": "It's at the Presidio Officers' Club! And all 6 of us have curly hair which is why I specifically want Sofia"},
-        {"time": "2026-05-15T07:25:20Z", "sender": "ai", "text": "The Presidio — beautiful choice! And six curly girls is literally Sofia's dream job. Her bridal package for 6 is $1,400 including a trial for you. Want to set up a trial for August?", "meta": "Drafted by Claude via Pop · 0.3s · $0.001"},
+        {"time": "2026-05-15T07:22:00Z", "sender": "them", "text": "Hi! We run a delivery company and need someone for our fleet (6 vans). Do you do fleet service?"},
+        {"time": "2026-05-15T07:22:25Z", "sender": "ai", "text": "Hi Chloe! Yes, Sofía does fleet service for delivery and commercial vehicles. For 6 vans she'd start early — around 7-8am — to make sure everything is done by end of day. What kind of service do you need?", "meta": "Drafted by Claude via Pop · 0.3s · $0.001"},
+        {"time": "2026-05-15T07:25:00Z", "sender": "them", "text": "Oil changes, brake inspections, and tire rotations on all 6. That's why I specifically want Sofía — everyone says she's thorough and honest"},
+        {"time": "2026-05-15T07:25:20Z", "sender": "ai", "text": "That's exactly what Sofía is known for! Her fleet maintenance package for 6 vehicles is $1,400 including a full multi-point inspection on each. Want to set up a service day in August?", "meta": "Drafted by Claude via Pop · 0.3s · $0.001"},
         {"time": "2026-05-15T08:10:00Z", "sender": "them", "text": "yes!! August works. maybe around the 10th?"},
-        {"time": "2026-05-15T08:10:18Z", "sender": "ai", "text": "August 10th looks open! I'll pencil that in for your bridal trial. It's about 2 hours — Sofia will try different looks until you find The One. $100 trial fee applies toward the final package.", "meta": "Drafted by Claude via Pop · 0.2s · $0.001"},
+        {"time": "2026-05-15T08:10:18Z", "sender": "ai", "text": "August 10th looks open! I'll pencil that in for the fleet service. It's a full day — Sofía will work through all 6 vans systematically. $200 deposit to hold the date.", "meta": "Drafted by Claude via Pop · 0.2s · $0.001"},
         {"time": "2026-05-15T08:14:00Z", "sender": "them", "text": "perfect! can you send me a booking link or should I just come by?"},
-        {"time": "2026-05-16T06:40:00Z", "sender": "ai", "text": "I'll send you a booking link with the deposit details! $200 deposit to hold Oct 4 + the trial on Aug 10. Let me know if you have any questions — Sofia is so excited to meet you!", "meta": "Drafted by Claude via Pop · 0.3s · $0.001"}
+        {"time": "2026-05-16T06:40:00Z", "sender": "ai", "text": "I'll send you a booking link with the deposit details! $200 deposit to hold Aug 10 for the fleet service. Let me know if you have any questions — Sofía is excited to take care of your fleet!", "meta": "Drafted by Claude via Pop · 0.3s · $0.001"}
       ]
     },
     {
       "id": "ig4",
-      "handle": "@nat_curls",
+      "handle": "@nat_drives",
       "name": "Natalia",
-      "topic": "curl cut booking",
+      "topic": "oil change booking",
       "messageCount": 6,
       "startDate": "2026-05-15T06:11:00Z",
       "lastDate": "2026-05-15T18:30:00Z",
@@ -367,21 +367,21 @@
       "model": "claude-sonnet-4-6",
       "cost": 0.002,
       "sizeKB": 3.4,
-      "outcome": "Booked Thursday 2pm — curl cut",
+      "outcome": "Booked Thursday 2pm — oil change",
       "messages": [
-        {"time": "2026-05-15T06:11:00Z", "sender": "them", "text": "hey sofia! love your page. do you have any openings for a curl cut this week?"},
-        {"time": "2026-05-15T06:11:22Z", "sender": "ai", "text": "Hi Natalia! Thank you! I have Thursday at 2pm or Saturday at 10am open for a curl cut. Which works better?", "meta": "Drafted by Claude via Pop · 0.2s · $0.001"},
-        {"time": "2026-05-15T09:45:00Z", "sender": "them", "text": "Thursday at 2! how much is a curl cut?"},
-        {"time": "2026-05-15T09:45:15Z", "sender": "ai", "text": "Curl cuts start at $85 for a wash, cut and style. If you want a deep conditioning treatment added, that's $115. Sofia does everything on dry hair first to see how your curls naturally fall.", "meta": "Drafted by Claude via Pop · 0.2s · $0.001"},
-        {"time": "2026-05-15T10:02:00Z", "sender": "them", "text": "ooh the deep conditioning sounds nice. let's do $115. book me in!"},
-        {"time": "2026-05-15T18:30:00Z", "sender": "ai", "text": "You're all set! Thursday at 2pm — curl cut + deep conditioning ($115). See you then, Natalia! 💫", "meta": "Drafted by Claude via Pop · 0.2s · $0.001"}
+        {"time": "2026-05-15T06:11:00Z", "sender": "them", "text": "hey sofía! love your page. do you have any openings for an oil change this week?"},
+        {"time": "2026-05-15T06:11:22Z", "sender": "ai", "text": "Hi Natalia! Thank you! I have Thursday at 2pm or Saturday at 10am open for an oil change. Which works better?", "meta": "Drafted by Claude via Pop · 0.2s · $0.001"},
+        {"time": "2026-05-15T09:45:00Z", "sender": "them", "text": "Thursday at 2! how much is an oil change?"},
+        {"time": "2026-05-15T09:45:15Z", "sender": "ai", "text": "Standard oil changes start at $65 for conventional oil. If you want synthetic, that's $95 and includes a filter replacement. Sofía always does a quick multi-point check while the car is up on the lift.", "meta": "Drafted by Claude via Pop · 0.2s · $0.001"},
+        {"time": "2026-05-15T10:02:00Z", "sender": "them", "text": "ooh the synthetic sounds good for my car. let's do $95. book me in!"},
+        {"time": "2026-05-15T18:30:00Z", "sender": "ai", "text": "You're all set! Thursday at 2pm — synthetic oil change + multi-point check ($95). See you then, Natalia! 💫", "meta": "Drafted by Claude via Pop · 0.2s · $0.001"}
       ]
     },
     {
       "id": "ig5",
-      "handle": "@quince_luisa",
+      "handle": "@flota_luisa",
       "name": "Luisa Fernandez",
-      "topic": "quinceañera — Aug 2",
+      "topic": "multi-vehicle service — Aug 2",
       "messageCount": 7,
       "startDate": "2026-05-14T22:45:00Z",
       "lastDate": "2026-05-15T15:20:00Z",
@@ -390,12 +390,12 @@
       "model": "claude-sonnet-4-6",
       "cost": 0.003,
       "sizeKB": 4.1,
-      "outcome": "Quoted $800 for 4 updos, trial TBD",
+      "outcome": "Quoted $800 for 4 vehicles, service date TBD",
       "messages": [
-        {"time": "2026-05-14T22:45:00Z", "sender": "them", "text": "Hola Sofia! Mi hija tiene su quinceañera el 2 de agosto. Necesitamos peinados para 4 chicas."},
-        {"time": "2026-05-14T22:45:25Z", "sender": "ai", "text": "¡Hola Luisa! Que emocion! Para 4 chicas, lo ideal es que vengan el sabado anterior para una prueba. ¿Les queda bien el 26 de julio? El paquete para 4 es $800.", "meta": "Drafted by Claude via Pop · 0.3s · $0.001"},
-        {"time": "2026-05-14T23:10:00Z", "sender": "them", "text": "perfecto! y incluye la prueba?"},
-        {"time": "2026-05-14T23:10:20Z", "sender": "ai", "text": "Si! La prueba para la quinceañera esta incluida. Sofia hara dos o tres looks diferentes hasta encontrar el perfecto.", "meta": "Drafted by Claude via Pop · 0.2s · $0.001"},
+        {"time": "2026-05-14T22:45:00Z", "sender": "them", "text": "Hola Sofía! Mi familia tiene 4 carros y todos necesitan servicio antes del verano. ¿Pueden hacer los 4 el mismo dia?"},
+        {"time": "2026-05-14T22:45:25Z", "sender": "ai", "text": "¡Hola Luisa! Que buena idea hacerlos todos juntos! Para 4 carros, lo ideal es dejarlos temprano en la mañana. ¿Les queda bien el 2 de agosto? El paquete para 4 vehiculos es $800.", "meta": "Drafted by Claude via Pop · 0.3s · $0.001"},
+        {"time": "2026-05-14T23:10:00Z", "sender": "them", "text": "perfecto! y que incluye el paquete?"},
+        {"time": "2026-05-14T23:10:20Z", "sender": "ai", "text": "Incluye cambio de aceite, rotacion de llantas, inspeccion de frenos, y revision de fluidos en cada carro. Sofía hace una inspeccion completa de todo.", "meta": "Drafted by Claude via Pop · 0.2s · $0.001"},
         {"time": "2026-05-15T08:00:00Z", "sender": "them", "text": "que bueno. y necesitan deposito?"},
         {"time": "2026-05-15T08:00:18Z", "sender": "ai", "text": "Si, un deposito de $200 para reservar la fecha. Se puede pagar por Zelle o en persona. ¿Le mando los datos?", "meta": "Drafted by Claude via Pop · 0.2s · $0.001"},
         {"time": "2026-05-15T15:20:00Z", "sender": "them", "text": "si por favor! le voy a comentar a mi esposo y te confirmo esta semana 🙏"}
@@ -403,9 +403,9 @@
     },
     {
       "id": "ig6",
-      "handle": "@jenny.weds.sf",
+      "handle": "@jenny.drives.sf",
       "name": "Jenny Park",
-      "topic": "bridal inquiry — Aug 23",
+      "topic": "transmission repair inquiry",
       "messageCount": 5,
       "startDate": "2026-05-14T19:30:00Z",
       "lastDate": "2026-05-15T11:00:00Z",
@@ -414,20 +414,20 @@
       "model": "claude-sonnet-4-6",
       "cost": 0.002,
       "sizeKB": 3.0,
-      "outcome": "Sent bridal package info, awaiting response",
+      "outcome": "Sent transmission repair info, awaiting response",
       "messages": [
-        {"time": "2026-05-14T19:30:00Z", "sender": "them", "text": "Hi! My fiance and I just got engaged 💍 Looking for someone for Aug 23. You do curly hair right?"},
-        {"time": "2026-05-14T19:30:22Z", "sender": "ai", "text": "Hi Jenny! Congratulations on the engagement! Yes, curly bridal hair is Sofia's specialty — she's done over 50 curly weddings. August 23 is available!", "meta": "Drafted by Claude via Pop · 0.3s · $0.001"},
-        {"time": "2026-05-14T19:35:00Z", "sender": "them", "text": "omg 50?! ok I'm definitely in. how much for just me? my bridesmaids are doing their own hair"},
-        {"time": "2026-05-14T19:35:18Z", "sender": "ai", "text": "For a solo bride, the bridal package is $350 — that includes a trial 6-8 weeks before and the wedding day styling. Plus a touch-up kit for the reception!", "meta": "Drafted by Claude via Pop · 0.2s · $0.001"},
-        {"time": "2026-05-15T11:00:00Z", "sender": "them", "text": "that sounds really reasonable. let me talk to my fiance and I'll get back to you this week!"}
+        {"time": "2026-05-14T19:30:00Z", "sender": "them", "text": "Hi! My car has been making a weird grinding noise when shifting gears. Looking for someone trustworthy. You do transmission work right?"},
+        {"time": "2026-05-14T19:30:22Z", "sender": "ai", "text": "Hi Jenny! Yes, transmission repair is one of Sofía's specialties — she's done hundreds of transmission jobs over the past ten years. What kind of car do you have?", "meta": "Drafted by Claude via Pop · 0.3s · $0.001"},
+        {"time": "2026-05-14T19:35:00Z", "sender": "them", "text": "it's a 2016 Mazda 3 with about 95K miles. how much would a diagnostic cost?"},
+        {"time": "2026-05-14T19:35:18Z", "sender": "ai", "text": "For a transmission diagnostic, it's $120 — that includes a full scan, fluid check, and test drive. Sofía will give you an honest assessment and a repair estimate before doing any work.", "meta": "Drafted by Claude via Pop · 0.2s · $0.001"},
+        {"time": "2026-05-15T11:00:00Z", "sender": "them", "text": "that sounds really reasonable. let me check my schedule and I'll get back to you this week!"}
       ]
     },
     {
       "id": "ig7",
       "handle": "@marisol_aa",
       "name": "Marisol A.",
-      "topic": "balayage question",
+      "topic": "engine diagnostic question",
       "messageCount": 4,
       "startDate": "2026-05-14T15:12:00Z",
       "lastDate": "2026-05-14T15:25:00Z",
@@ -436,17 +436,17 @@
       "model": "claude-sonnet-4-6",
       "cost": 0.001,
       "sizeKB": 2.2,
-      "outcome": "Consultation booked next Wednesday",
+      "outcome": "Diagnostic booked next Wednesday",
       "messages": [
-        {"time": "2026-05-14T15:12:00Z", "sender": "them", "text": "do you do balayage on dark curly hair? I want to go lighter but I'm scared of damage"},
-        {"time": "2026-05-14T15:12:20Z", "sender": "ai", "text": "Hi Marisol! Great question — balayage on dark curly hair is one of Sofia's specialties! She uses bond-protecting treatments like Olaplex to keep curls healthy. Want to book a consultation?", "meta": "Drafted by Claude via Pop · 0.3s · $0.001"},
+        {"time": "2026-05-14T15:12:00Z", "sender": "them", "text": "my check engine light keeps coming on and off. should I be worried? I don't want to get ripped off somewhere"},
+        {"time": "2026-05-14T15:12:20Z", "sender": "ai", "text": "Hi Marisol! That's a common concern — an intermittent check engine light can be anything from a loose gas cap to a sensor issue. Sofía uses professional-grade diagnostic tools to pinpoint the exact problem. Want to book a diagnostic appointment?", "meta": "Drafted by Claude via Pop · 0.3s · $0.001"},
         {"time": "2026-05-14T15:18:00Z", "sender": "them", "text": "yes! what days do you have open?"},
-        {"time": "2026-05-14T15:25:00Z", "sender": "ai", "text": "Next Wednesday at 11am or Friday at 4pm are open for a 30-min consultation ($0 — it's free). Sofia will look at your hair and create a custom plan. Which day works?", "meta": "Drafted by Claude via Pop · 0.2s · $0.001"}
+        {"time": "2026-05-14T15:25:00Z", "sender": "ai", "text": "Next Wednesday at 11am or Friday at 4pm are open for a diagnostic ($85 — includes full OBD-II scan and visual inspection). Sofía will explain exactly what's going on. Which day works?", "meta": "Drafted by Claude via Pop · 0.2s · $0.001"}
       ]
     },
     {
       "id": "ig8",
-      "handle": "@textured.by.tay",
+      "handle": "@driver.tay",
       "name": "Tay",
       "topic": "walk-in question",
       "messageCount": 3,
@@ -459,16 +459,16 @@
       "sizeKB": 1.8,
       "outcome": "Offered same-day appointment, no response",
       "messages": [
-        {"time": "2026-05-14T12:33:00Z", "sender": "them", "text": "do you take walk-ins? I'm in the mission rn and desperately need a trim"},
+        {"time": "2026-05-14T12:33:00Z", "sender": "them", "text": "do you take walk-ins? I'm in the mission rn and my car is making a weird noise"},
         {"time": "2026-05-14T12:33:15Z", "sender": "ai", "text": "Hey Tay! We're appointment-only but I actually have a spot today at 3pm if that works? Let me know and I'll save it for you!", "meta": "Drafted by Claude via Pop · 0.2s · $0.001"},
         {"time": "2026-05-14T12:40:00Z", "sender": "them", "text": "ugh 3 is too late I have to be somewhere. maybe next week?"}
       ]
     },
     {
       "id": "ig9",
-      "handle": "@bridal.diana.sf",
+      "handle": "@diana.drives.sf",
       "name": "Diana Reyes",
-      "topic": "bridal trial — Oct 18",
+      "topic": "emergency repair — car won't start",
       "messageCount": 6,
       "startDate": "2026-05-14T09:55:00Z",
       "lastDate": "2026-05-15T07:30:00Z",
@@ -477,20 +477,20 @@
       "model": "claude-sonnet-4-6",
       "cost": 0.003,
       "sizeKB": 3.8,
-      "outcome": "Trial booked June 14, deposit pending",
+      "outcome": "Diagnostic booked June 14, deposit pending",
       "messages": [
-        {"time": "2026-05-14T09:55:00Z", "sender": "them", "text": "Sofia! My wedding is October 18 and I need a trial ASAP. Your bridal work is STUNNING. Please tell me you're available!"},
-        {"time": "2026-05-14T09:55:22Z", "sender": "ai", "text": "Hi Diana! Thank you so much! October 18 is available and Sofia would love to do your bridal hair! For the trial, how about June 7 or June 14? Plenty of time to find the perfect look.", "meta": "Drafted by Claude via Pop · 0.3s · $0.001"},
-        {"time": "2026-05-14T10:15:00Z", "sender": "them", "text": "June 14 works! I have 3A curls and I want something that's elegant but still shows off my natural texture"},
-        {"time": "2026-05-14T10:15:18Z", "sender": "ai", "text": "Sofia is amazing with 3A curls — she loves creating looks that enhance your natural texture rather than fighting it. June 14 trial is penciled in! The bridal package is $350 (trial + wedding day). $100 deposit to lock it in.", "meta": "Drafted by Claude via Pop · 0.3s · $0.001"},
-        {"time": "2026-05-14T12:00:00Z", "sender": "them", "text": "can I bring my mom and MOH? they want to see the trial looks too"},
-        {"time": "2026-05-15T07:30:00Z", "sender": "ai", "text": "Of course! The more the merrier. Sofia loves having the crew there for feedback. I'll block 2.5 hours for the trial so there's no rush. Sending the deposit link now!", "meta": "Drafted by Claude via Pop · 0.2s · $0.001"}
+        {"time": "2026-05-14T09:55:00Z", "sender": "them", "text": "Sofía! My car has been stalling randomly and this morning it wouldn't start at all. Your reviews are AMAZING. Please tell me you can help!"},
+        {"time": "2026-05-14T09:55:22Z", "sender": "ai", "text": "Hi Diana! I'm sorry about the car trouble! Sofía would love to take a look — that sounds like it could be a starter, alternator, or battery issue. For a full diagnostic, how about June 7 or June 14? She'll find the root cause.", "meta": "Drafted by Claude via Pop · 0.3s · $0.001"},
+        {"time": "2026-05-14T10:15:00Z", "sender": "them", "text": "June 14 works! It's a 2014 Nissan Altima and I've been having electrical issues for months. I just want someone honest who won't upsell me on stuff I don't need"},
+        {"time": "2026-05-14T10:15:18Z", "sender": "ai", "text": "Sofía is known for honest diagnostics — she'll only recommend what's truly needed. Nissan electrical issues are something she sees regularly. June 14 is penciled in! The diagnostic is $95. $50 deposit to lock it in.", "meta": "Drafted by Claude via Pop · 0.3s · $0.001"},
+        {"time": "2026-05-14T12:00:00Z", "sender": "them", "text": "can my dad come too? he wants to understand what's wrong with the car"},
+        {"time": "2026-05-15T07:30:00Z", "sender": "ai", "text": "Of course! Sofía always takes time to explain everything so you and your dad understand exactly what's going on. I'll block extra time so there's no rush. Sending the deposit link now!", "meta": "Drafted by Claude via Pop · 0.2s · $0.001"}
       ]
     },
     {
       "id": "ig10",
-      "handle": "@sf.hair.inspo",
-      "name": "SF Hair Inspo (blog)",
+      "handle": "@sf.auto.scene",
+      "name": "SF Auto Scene (blog)",
       "topic": "repost request",
       "messageCount": 3,
       "startDate": "2026-05-12T14:20:00Z",
@@ -502,16 +502,16 @@
       "sizeKB": 1.6,
       "outcome": "Approved repost with credit",
       "messages": [
-        {"time": "2026-05-12T14:20:00Z", "sender": "them", "text": "Hi! We love your quinceañera updos post from April. Can we repost with credit to @sol_y_trenza? We have 22K followers focused on SF hair artists."},
-        {"time": "2026-05-12T14:20:20Z", "sender": "ai", "text": "Hi! Thank you so much! Sofia would be honored. Yes, please feel free to repost with credit to @sol_y_trenza. Would you also be able to tag the salon location?", "meta": "Drafted by Claude via Pop · 0.3s · $0.001"},
+        {"time": "2026-05-12T14:20:00Z", "sender": "them", "text": "Hi! We love your fleet maintenance post from April. Can we repost with credit to @reyesautorepair? We have 22K followers focused on SF auto shops and mechanics."},
+        {"time": "2026-05-12T14:20:20Z", "sender": "ai", "text": "Hi! Thank you so much! Sofía would be honored. Yes, please feel free to repost with credit to @reyesautorepair. Would you also be able to tag the shop location?", "meta": "Drafted by Claude via Pop · 0.3s · $0.001"},
         {"time": "2026-05-12T14:35:00Z", "sender": "them", "text": "Absolutely! We'll tag both the account and the location. Posting tomorrow morning. Thank you! 🙌"}
       ]
     },
     {
       "id": "ig11",
-      "handle": "@curly.queen.maria",
+      "handle": "@hybrid.driver.maria",
       "name": "Maria Santos",
-      "topic": "product recommendation",
+      "topic": "hybrid/EV service question",
       "messageCount": 5,
       "startDate": "2026-05-11T16:45:00Z",
       "lastDate": "2026-05-12T09:00:00Z",
@@ -520,13 +520,13 @@
       "model": "claude-sonnet-4-6",
       "cost": 0.002,
       "sizeKB": 2.9,
-      "outcome": "Product advice given, booked appointment",
+      "outcome": "Hybrid service advice given, booked appointment",
       "messages": [
-        {"time": "2026-05-11T16:45:00Z", "sender": "them", "text": "Sofia! I need help. My curls are SO dry after winter. What products do you recommend for 3C curls?"},
-        {"time": "2026-05-11T16:45:22Z", "sender": "ai", "text": "Hi Maria! For dry 3C curls, Sofia usually recommends a three-step routine: 1) Olaplex No. 3 treatment once a week, 2) a deep conditioner like Mielle Pomegranate & Honey mask, 3) a leave-in cream — she loves Kinky-Curly Knot Today. The key is moisture, moisture, moisture!", "meta": "Drafted by Claude via Pop · 0.5s · $0.001"},
-        {"time": "2026-05-11T17:00:00Z", "sender": "them", "text": "omg thank you!! this is so detailed. do you sell any of these at the salon?"},
-        {"time": "2026-05-11T17:00:18Z", "sender": "ai", "text": "We can order the Olaplex for you ($30). The others are available at Target/Ulta. But if you come in for a treatment, Sofia can apply everything and show you the technique — it makes a huge difference!", "meta": "Drafted by Claude via Pop · 0.3s · $0.001"},
-        {"time": "2026-05-12T09:00:00Z", "sender": "them", "text": "ok I want to come in for a treatment! when's the next opening?"}
+        {"time": "2026-05-11T16:45:00Z", "sender": "them", "text": "Sofía! I just got a Toyota Prius hybrid and I have no idea how to maintain it. Do you work on hybrids?"},
+        {"time": "2026-05-11T16:45:22Z", "sender": "ai", "text": "Hi Maria! Yes, Sofía works on hybrids! For a Prius, maintenance is actually simpler than you'd think: 1) Regular oil changes every 5K miles with synthetic, 2) Brake inspection — hybrids use regenerative braking so pads last longer, 3) Coolant system check — hybrids have two coolant loops. The battery rarely needs service before 150K miles!", "meta": "Drafted by Claude via Pop · 0.5s · $0.001"},
+        {"time": "2026-05-11T17:00:00Z", "sender": "them", "text": "omg thank you!! this is so helpful. do you do a first-time hybrid owner inspection?"},
+        {"time": "2026-05-11T17:00:18Z", "sender": "ai", "text": "Sofía does a comprehensive hybrid health check for $110. She'll go through the battery system, regenerative brakes, both coolant loops, and all the standard maintenance items. She'll also set up a maintenance schedule for you!", "meta": "Drafted by Claude via Pop · 0.3s · $0.001"},
+        {"time": "2026-05-12T09:00:00Z", "sender": "them", "text": "ok I want to come in for the hybrid check! when's the next opening?"}
       ]
     },
     {
@@ -544,17 +544,17 @@
       "sizeKB": 2.4,
       "outcome": "Photo walk scheduled for next week",
       "messages": [
-        {"time": "2026-05-10T11:00:00Z", "sender": "them", "text": "Hey Sofia! We're doing a \"Women of Mission Street\" photo series for our page (45K followers). Would Sol & Trenza be interested in being featured?"},
-        {"time": "2026-05-10T11:00:25Z", "sender": "ai", "text": "Hi! What an amazing project! Sofia has been on Mission Street for 12 years and would love to be part of this. When are you shooting?", "meta": "Drafted by Claude via Pop · 0.3s · $0.001"},
-        {"time": "2026-05-10T14:00:00Z", "sender": "them", "text": "We're flexible! Ideally a weekday morning when the salon has good light. We'd do a 20-min photo walk of the salon + a quick Q&A about her journey."},
-        {"time": "2026-05-11T09:15:00Z", "sender": "ai", "text": "That sounds perfect. Tuesday or Wednesday mornings have the best light in the salon. Sofia is available next Tuesday at 9:30am before her first client. Does that work?", "meta": "Drafted by Claude via Pop · 0.3s · $0.001"}
+        {"time": "2026-05-10T11:00:00Z", "sender": "them", "text": "Hey Sofía! We're doing a \"Women of Mission Street\" photo series for our page (45K followers). Would Reyes Auto Repair be interested in being featured?"},
+        {"time": "2026-05-10T11:00:25Z", "sender": "ai", "text": "Hi! What an amazing project! Sofía has been on Mission Street for 10 years and would love to be part of this. When are you shooting?", "meta": "Drafted by Claude via Pop · 0.3s · $0.001"},
+        {"time": "2026-05-10T14:00:00Z", "sender": "them", "text": "We're flexible! Ideally a weekday morning when the shop has good light. We'd do a 20-min photo walk of the shop + a quick Q&A about her journey."},
+        {"time": "2026-05-11T09:15:00Z", "sender": "ai", "text": "That sounds perfect. Tuesday or Wednesday mornings have the best light in the shop. Sofía is available next Tuesday at 9:30am before her first appointment. Does that work?", "meta": "Drafted by Claude via Pop · 0.3s · $0.001"}
       ]
     },
     {
       "id": "ig13",
-      "handle": "@wedding.planner.rosa",
-      "name": "Rosa (Mariposa Events)",
-      "topic": "vendor partnership — summer quinceaneras",
+      "handle": "@sf.fleet.solutions",
+      "name": "Rosa (SF Fleet Solutions)",
+      "topic": "vendor partnership — summer fleet contracts",
       "messageCount": 6,
       "startDate": "2026-05-09T13:30:00Z",
       "lastDate": "2026-05-10T16:00:00Z",
@@ -563,19 +563,19 @@
       "model": "claude-sonnet-4-6",
       "cost": 0.002,
       "sizeKB": 3.6,
-      "outcome": "3 summer quinceañeras tentatively booked",
+      "outcome": "3 summer fleet contracts tentatively booked",
       "messages": [
-        {"time": "2026-05-09T13:30:00Z", "sender": "them", "text": "Sofi! Las niñas de la Galleria quince quedaron preciosas. Tengo 3 quinces mas este verano — julio, agosto, y septiembre. Quieres ser nuestra hair stylist oficial?"},
-        {"time": "2026-05-09T13:30:30Z", "sender": "ai", "text": "¡Hola Rosa! Que honor! Sofia encantada de ser la estilista oficial de Mariposa Events. ¿Cuantas chicas por evento? Le paso las fechas para ver disponibilidad.", "meta": "Drafted by Claude via Pop · 0.4s · $0.001"},
-        {"time": "2026-05-09T15:00:00Z", "sender": "them", "text": "Julio 26 (5 chicas), agosto 16 (4 chicas), septiembre 6 (6 chicas). Mismos precios que la ultima vez?"},
-        {"time": "2026-05-09T15:00:22Z", "sender": "ai", "text": "Las tres fechas estan abiertas! Para paquete de verano con Mariposa: $200/persona (incluye prueba). Julio: $1,000, agosto: $800, sept: $1,200. Total: $3,000. ¿Le parece bien? Puedo hacer descuento del 10% por las tres juntas.", "meta": "Drafted by Claude via Pop · 0.4s · $0.001"},
-        {"time": "2026-05-10T10:00:00Z", "sender": "them", "text": "el 10% descuento me encanta! o sea $2,700 por las tres? perfecto. te mando deposito esta semana"},
-        {"time": "2026-05-10T16:00:00Z", "sender": "ai", "text": "Exacto, $2,700 total con deposito de $800 para reservar las tres fechas. Le mando los datos de Zelle. ¡Va a ser un verano increible! 💃", "meta": "Drafted by Claude via Pop · 0.3s · $0.001"}
+        {"time": "2026-05-09T13:30:00Z", "sender": "them", "text": "Sofi! Los camiones de la Galleria quedaron perfectos. Tengo 3 clientes mas este verano — julio, agosto, y septiembre. Quieres ser nuestra mecanica oficial?"},
+        {"time": "2026-05-09T13:30:30Z", "sender": "ai", "text": "¡Hola Rosa! Que honor! Sofía encantada de ser la mecanica oficial de SF Fleet Solutions. ¿Cuantos vehiculos por contrato? Le paso las fechas para ver disponibilidad.", "meta": "Drafted by Claude via Pop · 0.4s · $0.001"},
+        {"time": "2026-05-09T15:00:00Z", "sender": "them", "text": "Julio 26 (5 vehiculos), agosto 16 (4 vehiculos), septiembre 6 (6 vehiculos). Mismos precios que la ultima vez?"},
+        {"time": "2026-05-09T15:00:22Z", "sender": "ai", "text": "Las tres fechas estan abiertas! Para paquete de verano con SF Fleet Solutions: $200/vehiculo (incluye inspeccion completa). Julio: $1,000, agosto: $800, sept: $1,200. Total: $3,000. ¿Le parece bien? Puedo hacer descuento del 10% por los tres contratos juntos.", "meta": "Drafted by Claude via Pop · 0.4s · $0.001"},
+        {"time": "2026-05-10T10:00:00Z", "sender": "them", "text": "el 10% descuento me encanta! o sea $2,700 por los tres? perfecto. te mando deposito esta semana"},
+        {"time": "2026-05-10T16:00:00Z", "sender": "ai", "text": "Exacto, $2,700 total con deposito de $800 para reservar las tres fechas. Le mando los datos de Zelle. ¡Va a ser un verano increible! 🔧", "meta": "Drafted by Claude via Pop · 0.3s · $0.001"}
       ]
     },
     {
       "id": "ig14",
-      "handle": "@elena_sf_hair",
+      "handle": "@elena_sf_wheels",
       "name": "Elena Gutierrez",
       "topic": "referral from friend",
       "messageCount": 4,
@@ -586,19 +586,19 @@
       "model": "claude-sonnet-4-6",
       "cost": 0.001,
       "sizeKB": 2.1,
-      "outcome": "Booked consultation, referred by Bianca R.",
+      "outcome": "Booked diagnostic, referred by Bianca R.",
       "messages": [
-        {"time": "2026-05-08T18:20:00Z", "sender": "them", "text": "Hi Sofia! My friend Bianca R. told me you're amazing with curly hair. I have 4A coils and I've never found a stylist who gets it. Do you have availability?"},
-        {"time": "2026-05-08T18:20:20Z", "sender": "ai", "text": "Hi Elena! We love Bianca — she's wonderful! Sofia has extensive experience with 4A coils and would be thrilled to work with you. Would you like to start with a consultation? They're free and about 30 minutes.", "meta": "Drafted by Claude via Pop · 0.3s · $0.001"},
+        {"time": "2026-05-08T18:20:00Z", "sender": "them", "text": "Hi Sofía! My friend Bianca R. told me you're amazing with cars. I have a 2013 VW Jetta that keeps overheating and I've never found a mechanic I trust. Do you have availability?"},
+        {"time": "2026-05-08T18:20:20Z", "sender": "ai", "text": "Hi Elena! We love Bianca — she's wonderful! Sofía has extensive experience with VW cooling systems and would be glad to take a look. Would you like to start with a diagnostic? They're $85 and take about 45 minutes.", "meta": "Drafted by Claude via Pop · 0.3s · $0.001"},
         {"time": "2026-05-08T20:00:00Z", "sender": "them", "text": "yes please! I'm free most afternoons"},
-        {"time": "2026-05-09T10:45:00Z", "sender": "ai", "text": "How about next Wednesday at 3pm? Sofia will look at your coil pattern, discuss your goals, and create a personalized plan. Bring any inspo photos you have!", "meta": "Drafted by Claude via Pop · 0.2s · $0.001"}
+        {"time": "2026-05-09T10:45:00Z", "sender": "ai", "text": "How about next Wednesday at 3pm? Sofía will run a full diagnostic, check the cooling system, and give you an honest assessment. Bring any maintenance records you have!", "meta": "Drafted by Claude via Pop · 0.2s · $0.001"}
       ]
     },
     {
       "id": "ig15",
-      "handle": "@prom.queen.2026",
+      "handle": "@road.trip.2026",
       "name": "Samira J.",
-      "topic": "last-minute prom styling",
+      "topic": "last-minute emergency repair",
       "messageCount": 5,
       "startDate": "2026-05-15T20:00:00Z",
       "lastDate": "2026-05-16T08:15:00Z",
@@ -607,13 +607,13 @@
       "model": "claude-sonnet-4-6",
       "cost": 0.002,
       "sizeKB": 2.7,
-      "outcome": "Booked Friday 4pm — prom updo",
+      "outcome": "Booked Friday 4pm — emergency brake repair",
       "messages": [
-        {"time": "2026-05-15T20:00:00Z", "sender": "them", "text": "HELP my prom is Saturday and my original stylist cancelled on me 😭 do you have ANYTHING available Friday or Saturday morning??"},
-        {"time": "2026-05-15T20:00:15Z", "sender": "ai", "text": "Oh no! Don't worry — let me check. I have Friday at 4pm open. Sofia can do a beautiful updo in about 90 minutes. Would that work?", "meta": "Drafted by Claude via Pop · 0.2s · $0.001"},
-        {"time": "2026-05-15T20:01:00Z", "sender": "them", "text": "YES PLEASE. I have really thick 3B curls and I want an updo that shows off the curl texture not hides it"},
-        {"time": "2026-05-15T20:01:18Z", "sender": "ai", "text": "That's literally Sofia's signature look — curly updos that celebrate the texture! She'll use pins and a light hold spray so the curls stay bouncy. $95 for a prom updo. Want me to book it?", "meta": "Drafted by Claude via Pop · 0.3s · $0.001"},
-        {"time": "2026-05-16T08:15:00Z", "sender": "them", "text": "BOOKED. you literally saved my prom night. see you tomorrow at 4!! 🙏🙏🙏"}
+        {"time": "2026-05-15T20:00:00Z", "sender": "them", "text": "HELP my brakes started grinding today and I have a road trip Saturday. my regular mechanic is booked solid 😭 do you have ANYTHING available Friday or Saturday morning??"},
+        {"time": "2026-05-15T20:00:15Z", "sender": "ai", "text": "Oh no! Don't worry — let me check. I have Friday at 4pm open. Sofía can do a brake inspection and pad replacement in about 90 minutes. Would that work?", "meta": "Drafted by Claude via Pop · 0.2s · $0.001"},
+        {"time": "2026-05-15T20:01:00Z", "sender": "them", "text": "YES PLEASE. it's a 2020 Honda CR-V and the grinding is really loud, especially when braking downhill"},
+        {"time": "2026-05-15T20:01:18Z", "sender": "ai", "text": "That sounds like the pads are worn down to the metal — Sofía will check the rotors too to make sure they're not damaged. Honda CR-V brake jobs are straightforward for her. $180-$220 for pads and rotor resurfacing if needed. Want me to book it?", "meta": "Drafted by Claude via Pop · 0.3s · $0.001"},
+        {"time": "2026-05-16T08:15:00Z", "sender": "them", "text": "BOOKED. you literally saved my road trip. see you tomorrow at 4!! 🙏🙏🙏"}
       ]
     }
   ],
@@ -622,7 +622,7 @@
       "id": "cp1",
       "date": "2026-05-16T07:45:00Z",
       "question": "Pop, what should I do first today?",
-      "answer": "Three things, Sofia. First — Mara needs an answer by Friday or she takes another offer; my read is yes, hire her. Second — you had twenty-seven DMs this morning; I replied to twenty-four and booked eleven of them already. Third — I held back three bridal inquiries because they need your voice, not mine. And by the way, I sent the friendly nudge to Adriana for the trial invoice. She just paid.",
+      "answer": "Three things, Sofía. First — Diego needs an answer by Friday or he takes another offer; my read is yes, hire him. Second — you had twenty-seven DMs this morning; I replied to twenty-four and booked eleven of them already. Third — I held back three fleet service inquiries because they need your voice, not mine. And by the way, I sent the friendly nudge to Adriana for the invoice. She just paid.",
       "provider": "Anthropic Claude",
       "model": "claude-sonnet-4-6",
       "cost": 0.008,
@@ -630,16 +630,16 @@
       "sizeKB": 3.4,
       "contextSources": [
         {"type": "instagram", "icon": "instagram", "detail": "27 unread DMs scanned, 24 auto-replied"},
-        {"type": "gmail", "icon": "gmail", "detail": "41 emails prioritized, 3 bridal flagged"},
-        {"type": "calendar", "icon": "calendar", "detail": "Today's schedule: Maritza 10am, Isabella 1:30pm"},
-        {"type": "business", "icon": "business", "detail": "Open commitments: 5 pending, Mara deadline Friday"}
+        {"type": "gmail", "icon": "gmail", "detail": "41 emails prioritized, 3 fleet inquiries flagged"},
+        {"type": "calendar", "icon": "calendar", "detail": "Today's schedule: Maritza's Camry 10am, Isabella's Corolla 1:30pm"},
+        {"type": "business", "icon": "business", "detail": "Open commitments: 5 pending, Diego deadline Friday"}
       ]
     },
     {
       "id": "cp2",
       "date": "2026-05-15T08:30:00Z",
       "question": "How much revenue am I losing from unanswered DMs?",
-      "answer": "Based on the last 30 days: you had 83 DMs that mentioned booking. Of those, 27 went unanswered for more than 24 hours. Industry data says 60% of unanswered booking DMs go to competitors. At your average ticket of $120, that's roughly $1,944 in potential lost revenue this month alone. The three bridal inquiries you missed last month were worth $1,050 combined. Good news: since I started handling DMs two days ago, response time is under 30 seconds and zero have gone unanswered.",
+      "answer": "Based on the last 30 days: you had 83 DMs that mentioned booking. Of those, 27 went unanswered for more than 24 hours. Industry data says 60% of unanswered booking DMs go to competitors. At your average ticket of $185, that's roughly $2,997 in potential lost revenue this month alone. The three fleet inquiries you missed last month were worth $3,200 combined. Good news: since I started handling DMs two days ago, response time is under 30 seconds and zero have gone unanswered.",
       "provider": "Anthropic Claude",
       "model": "claude-sonnet-4-6",
       "cost": 0.012,
@@ -647,7 +647,7 @@
       "sizeKB": 4.1,
       "contextSources": [
         {"type": "instagram", "icon": "instagram", "detail": "83 booking-related DMs in last 30 days analyzed"},
-        {"type": "business", "icon": "business", "detail": "Average ticket: $120, monthly revenue: $38K"},
+        {"type": "business", "icon": "business", "detail": "Average ticket: $185, monthly revenue: $42K"},
         {"type": "reviews", "icon": "reviews", "detail": "3 reviews mention slow DM response as complaint"},
         {"type": "industry", "icon": "industry", "detail": "SMB response-rate benchmarks from 2026 data"}
       ]
@@ -655,16 +655,16 @@
     {
       "id": "cp3",
       "date": "2026-05-14T12:00:00Z",
-      "question": "Should I hire Mara? Give me the pros and cons.",
-      "answer": "Pros: Mara has 6 years of experience with curly hair specifically. She's bilingual. She interviewed well — you liked her energy. Your busiest months are June through September and you're already turning away clients. With Mara, you could take 12 more appointments per week, which at $120 average is $1,440/week in new revenue. Cons: Payroll adds roughly $3,200/month. You're also considering the second chair lease at $1,400/month. Together that's $4,600 in new fixed costs. But your current wait-list has 30+ people, and you lost 3 bridal bookings last month from slow replies. My recommendation: hire Mara. The revenue upside far outweighs the cost, especially heading into wedding season.",
+      "question": "Should I hire Diego? Give me the pros and cons.",
+      "answer": "Pros: Diego has 8 years of experience as a mechanic and is ASE-certified. He's bilingual. He interviewed well — you liked his work ethic. Your busiest months are June through September and you're already turning away vehicles. With Diego, you could take 12 more jobs per week, which at $185 average is $2,220/week in new revenue. Cons: Payroll adds roughly $4,000/month. You're also considering the second bay lease at $1,800/month. Together that's $5,800 in new fixed costs. But your current wait-list has 30+ vehicles, and you lost 3 fleet contracts last month from slow replies. My recommendation: hire Diego. The revenue upside far outweighs the cost, especially heading into summer when cars break down more.",
       "provider": "Anthropic Claude",
       "model": "claude-sonnet-4-6",
       "cost": 0.015,
       "duration": "2.1s",
       "sizeKB": 5.2,
       "contextSources": [
-        {"type": "gmail", "icon": "gmail", "detail": "Mara's interview follow-up email analyzed"},
-        {"type": "business", "icon": "business", "detail": "Revenue: $38K/mo, staff: 3, wait-list: 30+"},
+        {"type": "gmail", "icon": "gmail", "detail": "Diego's interview follow-up email analyzed"},
+        {"type": "business", "icon": "business", "detail": "Revenue: $42K/mo, staff: 3, wait-list: 30+"},
         {"type": "calendar", "icon": "calendar", "detail": "June-Sept bookings projected at 140% capacity"},
         {"type": "phone", "icon": "phone", "detail": "3 calls from potential clients turned away this week"}
       ]
@@ -673,7 +673,7 @@
       "id": "cp4",
       "date": "2026-05-13T16:00:00Z",
       "question": "Draft a response to that bad Yelp review from Stephanie K.",
-      "answer": "Here's what I'd suggest:\n\n\"Hi Stephanie — thank you so much for the kind words about your color work! I'm really sorry about the booking experience. You're absolutely right that our DM response time hasn't been where it should be, and the mix-up with the appointment book is on us. We're implementing a new booking system right now to make sure this never happens again. I'd love to make it right — next time you come in, your deep conditioning treatment is on me. Just mention this review. Thank you for giving us a chance to improve. — Sofia\"\n\nThis acknowledges the issue, doesn't make excuses, offers a specific make-good, and shows you're fixing the root cause. Want me to post it, or do you want to edit first?",
+      "answer": "Here's what I'd suggest:\n\n\"Hi Stephanie — thank you so much for the kind words about the brake work! I'm really sorry about the scheduling experience. You're absolutely right that our wait times have been longer than they should be, and the mix-up with the appointment book is on us. We're implementing a new booking system right now to make sure this never happens again. I'd love to make it right — next time you come in, your multi-point inspection is on me. Just mention this review. Thank you for giving us a chance to improve. — Sofía\"\n\nThis acknowledges the issue, doesn't make excuses, offers a specific make-good, and shows you're fixing the root cause. Want me to post it, or do you want to edit first?",
       "provider": "Anthropic Claude",
       "model": "claude-sonnet-4-6",
       "cost": 0.010,
@@ -683,14 +683,14 @@
         {"type": "reviews", "icon": "reviews", "detail": "Stephanie K. — 3-star Yelp review, May 11"},
         {"type": "instagram", "icon": "instagram", "detail": "DM response history: avg 18hr before Pop"},
         {"type": "business", "icon": "business", "detail": "Current booking system: paper-based"},
-        {"type": "reviews", "icon": "reviews", "detail": "2 other reviews mention booking difficulty"}
+        {"type": "reviews", "icon": "reviews", "detail": "2 other reviews mention scheduling difficulty"}
       ]
     },
     {
       "id": "cp5",
       "date": "2026-05-12T07:30:00Z",
       "question": "What's my schedule look like this week?",
-      "answer": "Here's your week, Sofia:\n\nTuesday (today): Maritza at 10am (color refresh), then open afternoon — I blocked 2pm-3pm for you to review the 3 bridal DM responses I drafted.\n\nWednesday: Full day — 4 clients back to back, 10am to 6pm. I moved your supplier payment reminder to Thursday so you're not stressed.\n\nThursday: Lighter day — 2 clients morning, then Mara's trial day starts at 11am. This is important — watch how she handles the 3B curl cut.\n\nFriday: 3 clients, then Daniela Vega consultation at 3pm (new client, found us by phone).\n\nSaturday: Walk-through at 2693 Mission at 2pm with Patricia (second chair lease). I prepped a cost analysis for you.\n\nSunday: Just one client at 11am, then you're free.\n\nBiggest thing to watch: Mara needs an answer by Friday. And the 3 bridal DMs are time-sensitive — brides book fast.",
+      "answer": "Here's your week, Sofía:\n\nTuesday (today): Maritza's Camry at 10am (oil change + brake check), then open afternoon — I blocked 2pm-3pm for you to review the 3 fleet DM responses I drafted.\n\nWednesday: Full day — 4 vehicles back to back, 8am to 5pm. I moved your parts order reminder to Thursday so you're not stressed.\n\nThursday: Lighter day — 2 vehicles morning, then Diego's trial day starts at 11am. This is important — watch how he handles the transmission diagnostic.\n\nFriday: 3 vehicles, then Daniela Vega diagnostic at 3pm (new client, found us by phone).\n\nSaturday: Walk-through at 2693 Mission at 2pm with Patricia (second bay lease). I prepped a cost analysis for you.\n\nBiggest thing to watch: Diego needs an answer by Friday. And the 3 fleet DMs are time-sensitive — fleet managers book fast.",
       "provider": "Anthropic Claude",
       "model": "claude-sonnet-4-6",
       "cost": 0.010,
@@ -698,50 +698,50 @@
       "sizeKB": 4.5,
       "contextSources": [
         {"type": "calendar", "icon": "calendar", "detail": "12 events loaded for May 12-18"},
-        {"type": "gmail", "icon": "gmail", "detail": "Mara follow-up email flagged as deadline Friday"},
-        {"type": "instagram", "icon": "instagram", "detail": "3 bridal DMs pending Sofia's voice"},
-        {"type": "phone", "icon": "phone", "detail": "Daniela Vega consultation from phone booking"}
+        {"type": "gmail", "icon": "gmail", "detail": "Diego follow-up email flagged as deadline Friday"},
+        {"type": "instagram", "icon": "instagram", "detail": "3 fleet DMs pending Sofía's voice"},
+        {"type": "phone", "icon": "phone", "detail": "Daniela Vega diagnostic from phone booking"}
       ]
     },
     {
       "id": "cp6",
       "date": "2026-05-11T14:00:00Z",
-      "question": "Can I afford the second chair lease? Be honest.",
-      "answer": "Let me run the numbers honestly.\n\nCurrent: $38K/month revenue, roughly $22K after supplies, rent, and payroll for 3 staff. That leaves about $16K margin.\n\nThe lease is $1,400/month. If you also hire Mara ($3,200/month), you're adding $4,600 in fixed costs. New margin: $11,400.\n\nBUT — with an extra chair and Mara, you could serve 12 more clients/week. At $120 average, that's $5,760/month in new revenue. Net gain: roughly $1,160/month even in the worst case.\n\nWedding season (June-Sept) will push that much higher. You have 30+ people on a wait-list right now.\n\nMy honest take: you can afford it, but do them in sequence. Hire Mara first (May), see how June goes, then sign the lease for July 1. That de-risks it. Patricia said the unit is available June 1, but I bet you can negotiate a July start.",
+      "question": "Can I afford the second bay lease? Be honest.",
+      "answer": "Let me run the numbers honestly.\n\nCurrent: $42K/month revenue, roughly $24K after parts, rent, and payroll for 3 staff. That leaves about $18K margin.\n\nThe lease is $1,800/month. If you also hire Diego ($4,000/month), you're adding $5,800 in fixed costs. New margin: $12,200.\n\nBUT — with an extra lift bay and Diego, you could service 12 more vehicles/week. At $185 average, that's $8,880/month in new revenue. Net gain: roughly $3,080/month even in the worst case.\n\nSummer heat (June-Sept) will push that much higher — AC repairs and overheating issues spike. You have 30+ vehicles on a wait-list right now.\n\nMy honest take: you can afford it, but do them in sequence. Hire Diego first (May), see how June goes, then sign the lease for July 1. That de-risks it. Patricia said the unit is available June 1, but I bet you can negotiate a July start.",
       "provider": "OpenAI GPT",
       "model": "gpt-4o",
       "cost": 0.014,
       "duration": "2.0s",
       "sizeKB": 5.8,
       "contextSources": [
-        {"type": "business", "icon": "business", "detail": "Revenue $38K, costs estimated, margin analyzed"},
-        {"type": "gmail", "icon": "gmail", "detail": "Mission Properties lease email — $1,400/mo, 280 sqft"},
-        {"type": "calendar", "icon": "calendar", "detail": "Wedding season June-Sept, current capacity 85%"},
+        {"type": "business", "icon": "business", "detail": "Revenue $42K, costs estimated, margin analyzed"},
+        {"type": "gmail", "icon": "gmail", "detail": "Mission Properties lease email — $1,800/mo, 400 sqft"},
+        {"type": "calendar", "icon": "calendar", "detail": "Summer season June-Sept, current capacity 85%"},
         {"type": "phone", "icon": "phone", "detail": "3 turn-away calls this week, wait-list growing"}
       ]
     },
     {
       "id": "cp7",
       "date": "2026-05-10T09:00:00Z",
-      "question": "Help me respond to Isabella's bridal inquiry. She emailed in English but her mom just called in Spanish. I want to reply warmly in both.",
-      "answer": "I'll draft both:\n\nEmail to Isabella (English):\n\"Hi Isabella! I am so excited about your September 5th wedding at Cavallo Point — what a beautiful venue! I specialize in curly bridal hair and would love to work with you and your 4 bridesmaids. For a party of 5, the package is $1,400 including a trial. I have July 12 or 15 open for the trial. Your mom Carmen called today and she was so lovely — she said you cried when you saw our quinceañera work. That made my whole day! Let's make September 5th unforgettable. — Sofia\"\n\nText to Carmen (Spanish):\n\"Hola Carmen! Fue un placer hablar contigo hoy. Le acabo de mandar un email a Isabella con todos los detalles. Estoy emocionada de trabajar con ella — va a quedar hermosa. Gracias por pensar en nosotras. Un abrazo, Sofia\"\n\nWant me to send both?",
+      "question": "Help me respond to Isabella's car repair inquiry. She emailed in English but her mom just called in Spanish. I want to reply warmly in both.",
+      "answer": "I'll draft both:\n\nEmail to Isabella (English):\n\"Hi Isabella! I took a look at the details about your 2018 Corolla overheating — that's definitely something we want to address quickly before it causes engine damage. I specialize in Toyota diagnostics and would love to help. I have Thursday or Friday open this week for a diagnostic. Your mom Carmen called today and she was so sweet — she said you were really impressed by our work on a friend's car. That made my day! Let's get your Corolla running perfectly again. — Sofía\"\n\nText to Carmen (Spanish):\n\"Hola Carmen! Fue un placer hablar contigo hoy. Le acabo de mandar un email a Isabella con todos los detalles. Voy a cuidar bien su carrito — no se preocupe. Gracias por pensar en nosotras. Un abrazo, Sofía\"\n\nWant me to send both?",
       "provider": "OpenAI GPT",
       "model": "gpt-4o",
       "cost": 0.012,
       "duration": "1.7s",
       "sizeKB": 4.9,
       "contextSources": [
-        {"type": "gmail", "icon": "gmail", "detail": "Isabella Cruz email — bridal inquiry Sept 5"},
-        {"type": "phone", "icon": "phone", "detail": "Carmen Cruz call — 4m 12s, took bridal details"},
-        {"type": "business", "icon": "business", "detail": "Bridal package pricing: $1,400 for party of 5"},
-        {"type": "calendar", "icon": "calendar", "detail": "July 12, 15 open for trial; Sept 5 available"}
+        {"type": "gmail", "icon": "gmail", "detail": "Isabella Cruz email — overheating 2018 Corolla"},
+        {"type": "phone", "icon": "phone", "detail": "Carmen Cruz call — 4m 12s, took car details"},
+        {"type": "business", "icon": "business", "detail": "Diagnostic pricing: $95 for full scan"},
+        {"type": "calendar", "icon": "calendar", "detail": "Thursday, Friday open for diagnostic slots"}
       ]
     },
     {
       "id": "cp8",
       "date": "2026-05-09T20:00:00Z",
       "question": "What are my competitors doing on Instagram that I'm not?",
-      "answer": "I looked at 5 curly-hair salons within 3 miles of you:\n\n1. Posting frequency: They average 4-5 posts/week. You've posted 0 in 11 days. The algorithm rewards consistency — your reach has dropped 40% in the last month.\n\n2. Before/after reels: 3 of 5 competitors post transformation reels that get 3-5x more engagement than static photos. You haven't posted a reel in 6 weeks.\n\n3. Booking links in bio: All 5 competitors have a direct booking link in their Instagram bio. You don't have online booking at all — your bio just says \"DM to book\" but DMs go unanswered.\n\n4. Review responses: 4 of 5 respond to every Google/Yelp review within 48 hours. You have 7 unanswered reviews.\n\nThe good news: your work is genuinely better than theirs. Your problem isn't quality — it's visibility and responsiveness. I can auto-post your transformation photos if you take them. Want me to set that up?",
+      "answer": "I looked at 5 auto repair shops within 3 miles of you:\n\n1. Posting frequency: They average 4-5 posts/week. You've posted 0 in 11 days. The algorithm rewards consistency — your reach has dropped 40% in the last month.\n\n2. Before/after reels: 3 of 5 competitors post transformation reels showing rusted brakes vs. new pads, dirty vs. clean engines. Those get 3-5x more engagement than static photos. You haven't posted a reel in 6 weeks.\n\n3. Booking links in bio: All 5 competitors have a direct booking link in their Instagram bio. You don't have online booking at all — your bio just says \"DM to book\" but DMs go unanswered.\n\n4. Review responses: 4 of 5 respond to every Google/Yelp review within 48 hours. You have 7 unanswered reviews.\n\nThe good news: your work is genuinely better than theirs. Your problem isn't quality — it's visibility and responsiveness. I can auto-post your repair transformation photos if you take them. Want me to set that up?",
       "provider": "OpenAI GPT",
       "model": "gpt-4o",
       "cost": 0.018,
@@ -751,7 +751,7 @@
         {"type": "instagram", "icon": "instagram", "detail": "5 competitor accounts analyzed, 30-day metrics"},
         {"type": "reviews", "icon": "reviews", "detail": "7 unanswered reviews across Yelp + Google"},
         {"type": "business", "icon": "business", "detail": "Last Instagram post: 11 days ago"},
-        {"type": "industry", "icon": "industry", "detail": "2026 salon social media benchmarks"}
+        {"type": "industry", "icon": "industry", "detail": "2026 auto shop social media benchmarks"}
       ]
     }
   ],
@@ -759,46 +759,46 @@
     {
       "id": "e11",
       "date": "2026-05-15T14:20:00Z",
-      "from": "editor@bayareabridalmagazine.com",
-      "to": "sofia@solytrenza.com",
-      "subject": "Feature request — Bay Area Bridal Magazine",
-      "body": "Hi Sofia! We're putting together our Fall 2026 issue focused on curly bridal hair and your work keeps coming up in our research. Would you be interested in a feature? We'd need 8-10 high-res photos and a short interview. Deadline is June 20. — Megan, Editor",
+      "from": "editor@bayareaautomag.com",
+      "to": "sofia@reyesautorepair.com",
+      "subject": "Feature request — Bay Area Auto Magazine",
+      "body": "Hi Sofía! We're putting together our Fall 2026 issue focused on women-owned auto shops and your work keeps coming up in our research. Would you be interested in a feature? We'd need 8-10 high-res photos and a short interview. Deadline is June 20. — Megan, Editor",
       "tag": "press"
     },
     {
       "id": "e12",
       "date": "2026-05-14T09:30:00Z",
       "from": "events@missioncommunity.org",
-      "to": "sofia@solytrenza.com",
+      "to": "sofia@reyesautorepair.com",
       "subject": "Mission Street Block Party — vendor booth available",
-      "body": "Hi Sofia! The annual Mission Street Block Party is June 14. We have a vendor booth available for Sol & Trenza — great exposure to 2,000+ attendees. Booth fee is $150. Interested? — Mission Community Alliance",
+      "body": "Hi Sofía! The annual Mission Street Block Party is June 14. We have a vendor booth available for Reyes Auto Repair — great exposure to 2,000+ attendees. Booth fee is $150. Interested? — Mission Community Alliance",
       "tag": "community"
     },
     {
       "id": "e13",
       "date": "2026-05-12T16:45:00Z",
-      "from": "rep@wellahairpro.com",
-      "to": "sofia@solytrenza.com",
-      "subject": "New Wella Koleston Perfect ME+ launch — exclusive preview",
-      "body": "Sofia, as a valued Wella partner, we'd like to invite you to an exclusive virtual preview of our new Koleston Perfect ME+ line. The launch event is May 28 at 11am PT. RSVP here. Includes a free sample box shipped to your salon. — Wella Professional",
+      "from": "rep@boschautopro.com",
+      "to": "sofia@reyesautorepair.com",
+      "subject": "New Bosch brake pad line launch — exclusive preview",
+      "body": "Sofía, as a valued Bosch partner, we'd like to invite you to an exclusive virtual preview of our new ceramic brake pad line. The launch event is May 28 at 11am PT. RSVP here. Includes a free sample kit shipped to your shop. — Bosch Automotive Professional",
       "tag": "vendor"
     },
     {
       "id": "e14",
       "date": "2026-05-10T11:15:00Z",
       "from": "bianca.reyes.sf@gmail.com",
-      "to": "sofia@solytrenza.com",
+      "to": "sofia@reyesautorepair.com",
       "subject": "Referring my friend Elena!",
-      "body": "Hi Sofia! I just sent my friend Elena your way — she has 4A coils and has had terrible experiences everywhere else. I told her you're the only one I trust. She might DM you on Instagram. Take good care of her! — Bianca",
+      "body": "Hi Sofía! I just sent my friend Elena your way — she has a VW Jetta that keeps overheating and she's had terrible experiences at other shops. I told her you're the only mechanic I trust. She might DM you on Instagram. Take good care of her! — Bianca",
       "tag": "referral"
     },
     {
       "id": "e15",
       "date": "2026-05-08T13:00:00Z",
-      "from": "info@sfbeautyacademy.edu",
-      "to": "sofia@solytrenza.com",
-      "subject": "Guest instructor opportunity — Curly Hair Masterclass",
-      "body": "Dear Sofia, SF Beauty Academy is launching a Curly Hair Masterclass series this fall. Based on your reputation, we'd love to have you as a guest instructor for 2-3 sessions. Compensation is $500/session plus exposure to 60+ students. Interested? — Dr. Patel, Director",
+      "from": "info@sftradeacademy.edu",
+      "to": "sofia@reyesautorepair.com",
+      "subject": "Guest instructor opportunity — Auto Repair Workshop",
+      "body": "Dear Sofía, SF Trade Academy is launching an Auto Repair Workshop series this fall. Based on your reputation, we'd love to have you as a guest instructor for 2-3 sessions covering brake service and engine diagnostics. Compensation is $500/session plus exposure to 60+ students. Interested? — Dr. Patel, Director",
       "tag": "teaching"
     }
   ]

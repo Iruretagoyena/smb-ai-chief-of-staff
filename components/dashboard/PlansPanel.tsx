@@ -17,36 +17,36 @@ interface KanbanCard {
 const INITIAL_CARDS: KanbanCard[] = [
   {
     id: "k1",
-    title: "Respond to Mara — she has other offers (Friday deadline)",
+    title: "Respond to Diego — he has other offers (Friday deadline)",
     category: "hiring",
     popAction:
-      "Flagged as urgent. Drafted response inviting Mara for trial day Monday.",
+      "Flagged as urgent. Drafted response inviting Diego for trial day Monday.",
     popActionTime: "1h ago",
     nextStep: "Send reply + confirm trial day",
     column: "today",
   },
   {
     id: "k2",
-    title: "Reply to Isabella Cruz — bridal inquiry, Sept 5",
-    category: "bridal",
-    popAction: "Drafted warm reply with July trial dates. Ready in Inbox.",
+    title: "Reply to Henry Cuevas — brake grinding, needs inspection",
+    category: "service",
+    popAction: "Drafted reply with Thursday 10am slot. Ready in Inbox.",
     popActionTime: "2h ago",
     nextStep: "Review and send draft",
     column: "today",
   },
   {
     id: "k3",
-    title: "Chase Adriana’s invoice ($180 — 24d overdue)",
+    title: "Chase Carlos’s invoice ($280 — 24d overdue)",
     category: "finance",
     popAction:
-      "Sent friendly nudge. Adriana replied she’ll pay tonight.",
+      "Sent friendly nudge. Carlos replied he’ll pay tonight.",
     popActionTime: "3h ago",
     nextStep: "Confirm payment received",
     column: "today",
   },
   {
     id: "k4",
-    title: "Chase Lucia’s invoice ($180 — 12d overdue)",
+    title: "Chase Lisa’s invoice ($180 — 12d overdue)",
     category: "finance",
     popAction: "Sent 2nd reminder with payment link yesterday.",
     popActionTime: "1d ago",
@@ -55,8 +55,8 @@ const INITIAL_CARDS: KanbanCard[] = [
   },
   {
     id: "k5",
-    title: "Reply to 3 bridal DM inquiries",
-    category: "bridal",
+    title: "Reply to 3 fleet service DM inquiries",
+    category: "service",
     popAction: "Drafted 3 personalized replies. Ready in Inbox for review.",
     popActionTime: "2h ago",
     nextStep: "Review and approve all 3",
@@ -64,16 +64,16 @@ const INITIAL_CARDS: KanbanCard[] = [
   },
   {
     id: "k6",
-    title: "Confirm Estela’s quinceañera — 6 updos, July 12",
-    category: "bridal",
-    popAction: "Prepared confirmation message for Estela’s mom.",
+    title: "Confirm Martinez fleet — 3 vehicles, July 12",
+    category: "service",
+    popAction: "Prepared confirmation message for Martinez family.",
     popActionTime: "4h ago",
     nextStep: "Send confirmation + collect deposit",
     column: "week",
   },
   {
     id: "k7",
-    title: "Walk through 2693 Mission (2nd chair lease)",
+    title: "Walk through 2693 Mission (2nd bay lease)",
     category: "ops",
     popAction: "Confirmed Saturday 2pm with Patricia at Mission Properties.",
     popActionTime: "1d ago",
@@ -82,7 +82,7 @@ const INITIAL_CARDS: KanbanCard[] = [
   },
   {
     id: "k8",
-    title: "Pay Salon Republic $740 (due May 23)",
+    title: "Pay AutoZone Pro $1,240 (due May 23)",
     category: "finance",
     popAction: "Set payment reminder for May 22.",
     popActionTime: "2d ago",
@@ -91,7 +91,7 @@ const INITIAL_CARDS: KanbanCard[] = [
   },
   {
     id: "k9",
-    title: "Decide on third stylist — 2 candidates",
+    title: "Decide on third mechanic — 2 candidates",
     category: "hiring",
     popAction:
       "Compiled interview notes + comparison for both candidates.",
@@ -101,10 +101,10 @@ const INITIAL_CARDS: KanbanCard[] = [
   },
   {
     id: "k10",
-    title: "Renew cosmetology license (July 30 deadline)",
+    title: "Renew ASE certification (August 15 deadline)",
     category: "compliance",
     popAction:
-      "Found 2 online CE courses ($45 total, covers 32hrs requirement).",
+      "Found 2 online CE courses ($60 total, covers 20hrs requirement).",
     popActionTime: "5d ago",
     nextStep: "Register for CE courses",
     column: "backlog",
@@ -113,17 +113,17 @@ const INITIAL_CARDS: KanbanCard[] = [
     id: "k11",
     title: "Reply to Yelp 3-star review (Stephanie K.)",
     category: "review",
-    popAction: "Drafted apologetic reply addressing booking issue.",
+    popAction: "Drafted apologetic reply addressing scheduling issue.",
     popActionTime: "3h ago",
     nextStep: "Review and post reply",
     column: "backlog",
   },
   {
     id: "k12",
-    title: "Set up online booking system",
+    title: "Set up online scheduling system",
     category: "ops",
     popAction:
-      "Researched 3 options: Acuity ($16/mo), Square (free), Booksy ($30/mo).",
+      "Researched 3 options: Acuity ($16/mo), Square (free), Shopmonkey ($199/mo).",
     popActionTime: "1d ago",
     nextStep: "Review recommendations",
     column: "backlog",
@@ -138,7 +138,7 @@ const COLUMNS: { id: Column; label: string; dotClass: string }[] = [
 ];
 
 const CATEGORY_STYLE: Record<string, string> = {
-  bridal: "bg-pink-500/15 text-pink-400",
+  service: "bg-emerald-500/15 text-emerald-400",
   ops: "bg-blue-500/15 text-blue-400",
   hiring: "bg-purple-500/15 text-purple-400",
   finance: "bg-amber-500/15 text-amber-400",

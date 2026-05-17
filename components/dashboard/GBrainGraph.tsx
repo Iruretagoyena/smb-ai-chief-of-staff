@@ -21,11 +21,11 @@ const SOURCES: DataSource[] = [
     color: "#ef4444",
     stats: [
       { label: "Emails ingested", value: "341" },
-      { label: "Bridal inquiries identified", value: "12" },
+      { label: "Service requests identified", value: "12" },
       { label: "Auto-replies drafted", value: "28" },
       { label: "Payment reminders sent", value: "6" },
     ],
-    summary: "Monitoring sofia@solytrenza.com. Last sync: 4 min ago.",
+    summary: "Monitoring sofia@reyesautorepair.com. Last sync: 4 min ago.",
   },
   {
     id: "instagram",
@@ -36,10 +36,10 @@ const SOURCES: DataSource[] = [
     stats: [
       { label: "DMs ingested", value: "27" },
       { label: "Bookings recognized", value: "8" },
-      { label: "Bridal opportunities", value: "3" },
+      { label: "Fleet opportunities", value: "3" },
       { label: "Auto-responses sent", value: "24" },
     ],
-    summary: "Connected to @sol_y_trenza. 4,180 followers tracked.",
+    summary: "Connected to @reyesautorepair. 4,180 followers tracked.",
   },
   {
     id: "yelp",
@@ -53,7 +53,7 @@ const SOURCES: DataSource[] = [
       { label: "Negative reviews flagged", value: "3" },
       { label: "Reply drafts ready", value: "2" },
     ],
-    summary: "Monitoring Sol & Trenza Yelp page. Alert on <4 stars.",
+    summary: "Monitoring Reyes Auto Repair Yelp page. Alert on <4 stars.",
   },
   {
     id: "google",
@@ -95,7 +95,7 @@ const SOURCES: DataSource[] = [
       { label: "Conflicts detected", value: "1" },
       { label: "Auto-blocks created", value: "4" },
     ],
-    summary: "Synced with Sofia's calendar. Next: Maritza at 10am today.",
+    summary: "Synced with Sofía's calendar. Next: Maritza at 10am today.",
   },
 ];
 

@@ -31,7 +31,7 @@ export default function DashboardPage() {
               <div className="font-display font-black text-lg leading-none group-hover:text-brand-500 transition-colors">
                 Pop
               </div>
-              <div className="text-xs text-white/40">Sol & Trenza</div>
+              <div className="text-xs text-white/40">Reyes Auto Repair</div>
             </div>
           </a>
         </div>

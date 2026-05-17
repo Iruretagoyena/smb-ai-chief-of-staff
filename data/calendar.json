@@ -1,16 +1,16 @@
 {
   "events": [
-    {"date": "2026-05-16", "time": "10:00", "title": "First client — Maritza (color refresh)", "type": "client"},
-    {"date": "2026-05-16", "time": "13:30", "title": "Bridal consultation — Isabella Cruz (if she gets a reply)", "type": "bridal"},
-    {"date": "2026-05-17", "time": "14:00", "title": "Walk through 2693 Mission (potential second chair)", "type": "ops"},
-    {"date": "2026-05-18", "time": "09:00", "title": "Block 30 min: reply to bridal DMs (3 backlog)", "type": "admin"},
-    {"date": "2026-05-19", "time": "11:00", "title": "Mara (stylist candidate) — trial day", "type": "hiring"},
-    {"date": "2026-05-20", "time": "16:00", "title": "Estela's mom — quinceañera confirmation (6 updos July 12)", "type": "booking"},
-    {"date": "2026-05-23", "time": "23:59", "title": "DEADLINE: Pay Salon Republic $740", "type": "deadline"},
-    {"date": "2026-05-25", "time": "23:59", "title": "DEADLINE: Decide on third stylist (Mara waiting on response)", "type": "deadline"},
-    {"date": "2026-06-15", "time": "23:59", "title": "Submit cosmetology CE hours + $50 license renewal", "type": "deadline"},
-    {"date": "2026-07-12", "time": "08:00", "title": "Estela's quinceañera — 6 updos at Galleria", "type": "event"},
-    {"date": "2026-07-18", "time": "11:00", "title": "Adriana Morales — bridal day", "type": "bridal"},
-    {"date": "2026-09-05", "time": "07:00", "title": "Isabella Cruz wedding — Cavallo Point (if booked)", "type": "bridal"}
+    {"date": "2026-05-16", "time": "10:00", "title": "First customer — Maritza (oil change + tire rotation)", "type": "client"},
+    {"date": "2026-05-16", "time": "13:30", "title": "Henry Cuevas — brake inspection (if he gets a reply)", "type": "service"},
+    {"date": "2026-05-17", "time": "14:00", "title": "Walk through 2693 Mission (potential second bay)", "type": "ops"},
+    {"date": "2026-05-18", "time": "09:00", "title": "Block 30 min: reply to fleet service DMs (3 backlog)", "type": "admin"},
+    {"date": "2026-05-19", "time": "11:00", "title": "Diego (mechanic candidate) — trial day", "type": "hiring"},
+    {"date": "2026-05-20", "time": "16:00", "title": "Martinez family — fleet maintenance confirmation (3 vehicles July 12)", "type": "booking"},
+    {"date": "2026-05-23", "time": "23:59", "title": "DEADLINE: Pay AutoZone Pro $1,240", "type": "deadline"},
+    {"date": "2026-05-25", "time": "23:59", "title": "DEADLINE: Decide on third mechanic (Diego waiting on response)", "type": "deadline"},
+    {"date": "2026-06-15", "time": "23:59", "title": "Submit ASE continuing education + $80 certification renewal", "type": "deadline"},
+    {"date": "2026-07-12", "time": "08:00", "title": "Martinez fleet — 3 vehicles at shop", "type": "event"},
+    {"date": "2026-07-18", "time": "11:00", "title": "Carlos Mendez — full transmission service", "type": "service"},
+    {"date": "2026-09-05", "time": "07:00", "title": "Bay Area Delivery — quarterly fleet service (if contracted)", "type": "service"}
   ]
 }

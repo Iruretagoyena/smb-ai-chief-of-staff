@@ -1,53 +1,53 @@
 {
   "business": {
-    "name": "Sol & Trenza",
+    "name": "Reyes Auto Repair",
     "owner": "Sofía Reyes",
     "address": "2691 Mission St, San Francisco, CA 94110",
     "phone": "+1-415-555-0188",
-    "founded": "2014-06-01",
-    "employees": 3,
+    "founded": "2016-03-01",
+    "employees": 4,
     "google_rating": 4.7,
     "google_reviews_count": 312,
     "yelp_rating": 4.5,
     "yelp_reviews_count": 184,
-    "instagram_handle": "@sol_y_trenza",
+    "instagram_handle": "@reyesautorepair",
     "instagram_followers": 4180,
     "instagram_dms_unread": 27,
     "inbox_unread": 41,
-    "monthly_revenue_usd": 38000,
-    "hours": "Tue-Sat 10am-7pm, Sun 11am-5pm, closed Mon",
-    "specialty": "Curly + textured hair, color, quinceañera/wedding updos"
+    "monthly_revenue_usd": 52000,
+    "hours": "Mon-Sat 8am-6pm, closed Sun",
+    "specialty": "Brake service, engine diagnostics, transmission repair, oil changes, general maintenance"
   },
   "owner_profile": {
     "name": "Sofía Reyes",
     "age": 41,
     "english_proficiency": "fluent (bilingual)",
-    "primary_language": "Spanish at home, English at salon",
+    "primary_language": "Spanish at home, English at shop",
     "tech_comfort": "low — uses Instagram and WhatsApp, nothing else",
     "personal_priorities": [
-      "Hiring a third stylist before wedding season (June-Sept)",
-      "Migrating from paper booking to something digital",
-      "Saving for a second chair lease ($1,400/mo)",
-      "Renewing her cosmetology license before July 30"
+      "Hiring a third mechanic before summer rush",
+      "Migrating from paper scheduling to something digital",
+      "Saving for a second lift bay lease ($2,400/mo)",
+      "Renewing her ASE certification before August 15"
     ],
     "stress_points": [
-      "27 unread Instagram DMs — most are booking requests",
-      "Inbox is 41 unread — wedding inquiries are buried in there",
-      "Lost 3 bridal bookings last month because she didn't reply in time",
-      "Hasn't posted a transformation photo in 11 days",
-      "Two clients haven't paid for their bridal trial sessions"
+      "27 unread Instagram DMs — most are service requests",
+      "Inbox is 41 unread — fleet contract inquiries buried in there",
+      "Lost 3 fleet service contracts last month because she didn't reply in time",
+      "Hasn't posted a before/after repair photo in 11 days",
+      "Two customers haven't paid for their diagnostic sessions"
     ]
   },
   "open_commitments": [
-    {"id": "c1", "date": "2026-05-18", "owner": "Sofía", "task": "Reply to 3 bridal inquiries from last week (all in DMs)"},
-    {"id": "c2", "date": "2026-05-20", "owner": "Sofía", "task": "Confirm with Estela's quinceañera party — 6 updos, July 12"},
-    {"id": "c3", "date": "2026-05-23", "owner": "Sofía", "task": "Pay supplier (Salon Republic) $740 for color stock"},
-    {"id": "c4", "date": "2026-05-25", "owner": "Sofía", "task": "Decide on third stylist — interviewed two, both viable"},
-    {"id": "c5", "date": "2026-06-15", "owner": "Sofía", "task": "Renew cosmetology license (expires July 30)"}
+    {"id": "c1", "date": "2026-05-18", "owner": "Sofía", "task": "Reply to 3 fleet service inquiries from last week (all in DMs)"},
+    {"id": "c2", "date": "2026-05-20", "owner": "Sofía", "task": "Confirm with Martinez family — 3-vehicle fleet maintenance, July 12"},
+    {"id": "c3", "date": "2026-05-23", "owner": "Sofía", "task": "Pay supplier (AutoZone Pro) $1,240 for parts restock"},
+    {"id": "c4", "date": "2026-05-25", "owner": "Sofía", "task": "Decide on third mechanic — interviewed two, both viable"},
+    {"id": "c5", "date": "2026-06-15", "owner": "Sofía", "task": "Renew ASE certification (expires August 15)"}
   ],
   "outstanding_invoices": [
-    {"client": "Adriana M. (bridal trial)", "amount_usd": 180, "invoiced": "2026-04-22", "days_overdue": 24, "service": "Bridal hair trial + consultation"},
-    {"client": "Lucia P. (bridal trial)", "amount_usd": 180, "invoiced": "2026-05-04", "days_overdue": 12, "service": "Bridal hair trial + consultation"},
-    {"client": "Mariposa Events Co.", "amount_usd": 1200, "invoiced": "2026-05-08", "days_overdue": 8, "service": "Quinceañera updos for 6 (Galleria event)"}
+    {"client": "Carlos M. (transmission diagnostic)", "amount_usd": 280, "invoiced": "2026-04-22", "days_overdue": 24, "service": "Transmission diagnostic + fluid check"},
+    {"client": "Lisa P. (brake inspection)", "amount_usd": 180, "invoiced": "2026-05-04", "days_overdue": 12, "service": "Full brake inspection + pad measurement"},
+    {"client": "Bay Area Delivery Co.", "amount_usd": 2400, "invoiced": "2026-05-08", "days_overdue": 8, "service": "Fleet maintenance — 4 vans, oil + brake service"}
   ]
 }

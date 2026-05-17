@@ -33,59 +33,59 @@ const EMAIL_META: Record<
 > = {
   e1: {
     urgency: "urgent",
-    urgencyLabel: "Bridal",
+    urgencyLabel: "Service",
     timeAgo: "1d ago",
     aiReply:
-      "Hi Isabella! Congratulations! September 5 at Cavallo Point sounds gorgeous. I'd love to do your curly bridal party — for 5 people I suggest a trial mid-July. I have July 12 or 15 open. Can you share some curl pattern photos? — Sofia",
+      "Hi Henry! Sounds like brake pads — could be a safety issue. Earliest opening is Thursday 10am for a full inspection + pad replacement, around $260. Want me to hold it? Drive carefully until then. — Sofia",
   },
   e2: {
     urgency: "action",
     urgencyLabel: "Payment",
     timeAgo: "2d ago",
     aiReply:
-      "¡Gracias Rosa! Confirmo que recibi el pago. Las ninas quedaron hermosas. Me encantaria trabajar con ustedes este verano — tengo disponibilidad en julio y agosto. — Sofia",
+      "¡Gracias Roberto! Confirmo que recibí el pago. Me alegra que las vans anden bien. Me encantaría hacer el mantenimiento trimestral — tengo disponibilidad en julio y agosto. — Sofia",
   },
   e4: {
     urgency: "action",
     urgencyLabel: "Supplier",
     timeAgo: "3d ago",
     aiReply:
-      "Hi! Thanks for the reminder — I'll process the $740 payment this week. And yes, I'd love the new Wella Koleston sample kit! — Sofia",
+      "Hi! Thanks for the reminder — I'll process the $1,240 payment this week. And yes, I'd love the new Bosch brake pad sample set! — Sofia",
   },
   e5: {
     urgency: "urgent",
     urgencyLabel: "Hiring",
     timeAgo: "4d ago",
     aiReply:
-      "Hi Mara! So glad you're interested. I'd love to schedule a trial day — how about Monday the 19th? We can see how it feels for both of us. Let me know! — Sofia",
+      "Hi Diego! So glad you're interested. I'd love to schedule a trial day — how about Monday the 19th? We can see how it feels for both of us. Let me know! — Sofia",
   },
   e6: {
     urgency: "urgent",
     urgencyLabel: "Review",
     timeAgo: "5d ago",
     aiReply:
-      "Hi Stephanie, thank you for the kind words about your color! I'm so sorry about the booking experience — we're implementing a better system right now. I'd love to make it right with a complimentary deep conditioning on your next visit. — Sofia",
+      "Hi Stephanie, thank you for the kind words about your brake job! I'm so sorry about the scheduling experience — we're implementing a better system right now. I'd love to make it right with a free oil change on your next visit. — Sofia",
   },
   e7: {
     urgency: "action",
     urgencyLabel: "Compliance",
     timeAgo: "6d ago",
     aiReply:
-      "Pop suggests: Register for 2 online CE courses ($45 total, 32hrs) and pay $50 renewal fee. Deadline: July 30. Want me to sign you up?",
+      "Pop suggests: Register for 2 online CE courses ($60 total, 20hrs) and pay $80 renewal fee. Deadline: August 15. Want me to sign you up?",
   },
   e8: {
     urgency: "urgent",
     urgencyLabel: "Leads",
     timeAgo: "7d ago",
     aiReply:
-      "Pop drafted 3 personalized replies highlighting your curly hair specialty and bridal portfolio. Ready for review in Plans.",
+      "Pop drafted 3 personalized replies highlighting your diagnostic expertise and fleet service capabilities. Ready for review in Plans.",
   },
   e9: {
     urgency: "action",
     urgencyLabel: "Payment",
     timeAgo: "8d ago",
     aiReply:
-      "Thanks Adriana! No worries at all. So glad you and your mom loved the trial! See you July 18 — it's going to be beautiful. — Sofia",
+      "Thanks Carlos! No worries at all. Glad the transmission is running smooth! See you next month for the oil change. — Sofia",
   },
   e10: {
     urgency: "fyi",
@@ -99,94 +99,94 @@ const EMAIL_META: Record<
 const MOCK_DMS: InboxItem[] = [
   {
     id: "dm1",
-    sender: "@chloe_bride_2026",
+    sender: "@davidk_sf",
     preview:
-      "Hi! I'm getting married Oct 4 and need someone for my bridal party (6 girls). Do you do on-location?",
+      "is anyone awake?? my subaru is shifting really weird, almost stalled at a light",
     channel: "instagram",
     urgency: "urgent",
-    urgencyLabel: "Bridal",
+    urgencyLabel: "Emergency",
     timestamp: "2026-05-16T07:22:00Z",
     timeAgo: "2h ago",
     aiReply:
-      "Hi Chloe! Congratulations! Yes, I do on-location for bridal parties. For 6 people I'd start early to make sure everyone's perfect. Want to schedule a trial in August? I'll send you my bridal package details! — Sofia",
+      "Hi David! CVT shifting issues — common in Subarus 2014-2018. Don't drive far. Can you bring it in at 8am tomorrow? Sofía will take a look first thing. — Sofia",
   },
   {
     id: "dm2",
-    sender: "@nat_curls",
+    sender: "@henry.cuevas",
     preview:
-      "hey sofia! love your page. do you have any openings for a curl cut this week?",
+      "hi! my civic is making a grinding noise when I brake. how soon could you get me in?",
     channel: "instagram",
-    urgency: "fyi",
-    urgencyLabel: "Booking",
+    urgency: "urgent",
+    urgencyLabel: "Service",
     timestamp: "2026-05-16T06:11:00Z",
     timeAgo: "3h ago",
     aiReply:
-      "Hi Natalia! Thank you so much! I'd love to help with your curl cut. I have openings Thursday at 2pm or Saturday at 10am — which works for you? — Sofia",
+      "Hi Henry! Sounds like brake pads — could be a safety issue. Earliest opening is Thursday 10am for full inspection + pad replacement, around $260. Want me to hold it? — Sofia",
   },
   {
     id: "dm3",
-    sender: "@quince_luisa",
+    sender: "@martinez.fleet",
     preview:
-      "Hola Sofia! Mi hija tiene su quinceañera el 2 de agosto. Necesitamos peinados para 4 chicas.",
+      "Hola Sofia! Tenemos 3 vans que necesitan servicio antes de julio. ¿Tienes disponibilidad?",
     channel: "instagram",
     urgency: "urgent",
-    urgencyLabel: "Quinceanera",
+    urgencyLabel: "Fleet",
     timestamp: "2026-05-15T22:45:00Z",
     timeAgo: "10h ago",
     aiReply:
-      "¡Hola Luisa! Que emocion la quinceañera de tu hija! Para 4 chicas, lo ideal es que vengan el sabado anterior para una prueba. ¿Les queda bien el 26 de julio? — Sofia",
+      "¡Hola! Para 3 vans, lo ideal es traerlas una por una. ¿Les queda bien empezar el 12 de julio? Puedo reservar toda la semana. — Sofia",
   },
   {
     id: "dm4",
-    sender: "@jenny.weds.sf",
+    sender: "@marisol.aa",
     preview:
-      "Hi! My fiance and I just got engaged. Looking for someone for Aug 23. You do curly hair right?",
-    channel: "instagram",
-    urgency: "urgent",
-    urgencyLabel: "Bridal",
-    timestamp: "2026-05-15T19:30:00Z",
-    timeAgo: "13h ago",
-    aiReply:
-      "Hi Jenny! Congratulations on the engagement! Yes, I specialize in curly bridal hair and would love to work with you. August 23 is available — let me send you my bridal package info! — Sofia",
-  },
-  {
-    id: "dm5",
-    sender: "@marisol_aa",
-    preview:
-      "do you do balayage on dark curly hair? I want to go lighter but I'm scared of damage",
+      "Hi! Saw your shop on Yelp. Need a quote for timing belt replacement — 2018 Toyota Corolla.",
     channel: "instagram",
     urgency: "fyi",
     urgencyLabel: "Inquiry",
-    timestamp: "2026-05-15T15:12:00Z",
-    timeAgo: "18h ago",
+    timestamp: "2026-05-15T19:30:00Z",
+    timeAgo: "13h ago",
     aiReply:
-      "Hi Marisol! Great question — balayage on dark curly hair is one of my specialties! I use bond-protecting treatments to keep your curls healthy. Want to book a consultation? I have openings next week! — Sofia",
+      "Hi Marisol! Good news — your 2018 Corolla has a timing CHAIN, not a belt. No replacement needed. When was your last service? You might be due for a 60k checkup ($180). — Sofia",
   },
   {
-    id: "dm6",
-    sender: "@textured.by.tay",
+    id: "dm5",
+    sender: "@andrea.morales",
     preview:
-      "do you take walk-ins? I'm in the mission rn and desperately need a trim",
+      "hi! first time customer — found you through my friend Maritza. she mentioned a new customer special?",
     channel: "instagram",
     urgency: "fyi",
     urgencyLabel: "Booking",
+    timestamp: "2026-05-15T15:12:00Z",
+    timeAgo: "18h ago",
+    aiReply:
+      "Hi Andrea! We love Maritza. First-timer special: $30 off any service over $100. What does your car need? I have Saturday 11am or Monday 3pm open. — Sofia",
+  },
+  {
+    id: "dm6",
+    sender: "@tom.wynn",
+    preview:
+      "hey, I left a 1-star review last week. honestly wanted to give you a chance to make it right before I gave up",
+    channel: "instagram",
+    urgency: "urgent",
+    urgencyLabel: "Review",
     timestamp: "2026-05-15T12:33:00Z",
     timeAgo: "20h ago",
     aiReply:
-      "Hey Tay! We're appointment-only but I actually have a spot this afternoon at 3pm if that works? Let me know and I'll save it for you! — Sofia",
+      "Tom, thank you for reaching out — that means a lot. I read your review about the 25-minute wait. That's on us. Would you let Sofía call you tomorrow to talk through it? I'm also holding a free oil change slot. — Sofia",
   },
   {
     id: "dm7",
-    sender: "@bridal.diana.sf",
+    sender: "@priyatown",
     preview:
-      "Sofia! My wedding is October 18 and I need a trial ASAP. Your bridal work is STUNNING. Please tell me you're available!",
+      "hi! do you work on hybrid batteries? my 2016 Honda Insight is showing the IMA light",
     channel: "instagram",
-    urgency: "urgent",
-    urgencyLabel: "Bridal",
+    urgency: "fyi",
+    urgencyLabel: "Inquiry",
     timestamp: "2026-05-15T09:55:00Z",
     timeAgo: "23h ago",
     aiReply:
-      "Hi Diana! Thank you so much! I'd love to do your bridal trial! I have availability in June — how about June 7 or 14? Your October wedding gives us plenty of time to find the perfect look. — Sofia",
+      "Yes! IMA light on a 2016 Insight is usually the battery pack aging. We can run a diagnostic ($120) first, then decide on replacement if needed. Wednesday 11am? — Sofia",
   },
 ];
 
@@ -211,19 +211,19 @@ function buildInboxItems(): InboxItem[] {
     });
   }
 
-  const amberReview = reviewsData.reviews.find((r) => r.id === "r8");
-  if (amberReview) {
+  const emergencyReview = reviewsData.reviews.find((r) => r.id === "r8");
+  if (emergencyReview) {
     items.push({
       id: "dm0",
-      sender: amberReview.author,
-      preview: amberReview.text,
+      sender: emergencyReview.author,
+      preview: emergencyReview.text,
       channel: "instagram",
-      urgency: "action",
-      urgencyLabel: "Prom",
+      urgency: "urgent",
+      urgencyLabel: "Emergency",
       timestamp: "2026-05-15T08:30:00Z",
       timeAgo: "1d ago",
       aiReply:
-        "Hi Amber! Yes — Saturday at 11am or 2pm both work for prom color. I'll save the 2pm for your niece if that works. So exciting! — Sofia",
+        "Hi David! CVT shifting issues are common in Subarus. Don't drive far — can you bring it in at 8am tomorrow? Sofía will diagnose it first thing. — Sofia",
     });
   }
 

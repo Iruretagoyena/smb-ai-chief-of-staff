@@ -6,7 +6,7 @@
       "date": "2026-05-11",
       "author": "Stephanie K.",
       "rating": 3,
-      "text": "Sofía herself is amazing — my color was perfect. Took off a star because I had to DM Instagram three times to get a booking, then they didn't have me in the book when I showed up. Front desk situation is rough.",
+      "text": "Sofía herself is amazing — my brake job was perfect and fair priced. Took off a star because I had to DM Instagram three times to get an appointment, then they didn't have me in the system when I showed up. Scheduling situation is rough.",
       "replied": false
     },
     {
@@ -15,16 +15,16 @@
       "date": "2026-05-09",
       "author": "Bianca R.",
       "rating": 5,
-      "text": "Sofía understands curly hair like no one else. I've been to 5 salons in SF and this is the first time I left without my curls being fried. Bringing my sister next.",
+      "text": "Sofía understands cars like no one else. I've been to 5 shops in SF and this is the first time I left without feeling like I got ripped off. Bringing my sister's car next.",
       "replied": false
     },
     {
       "id": "r3",
       "source": "Google",
       "date": "2026-05-04",
-      "author": "Jasmine T.",
+      "author": "Marcus T.",
       "rating": 5,
-      "text": "Got my bridal trial done last week. Sofía took two hours and tried three different looks until we found the one. Worth every penny.",
+      "text": "Got my transmission diagnostic done last week. Sofía took two hours and checked everything until she found the real issue. Saved me $800 over the dealer quote. Worth every penny.",
       "replied": false
     },
     {
@@ -33,7 +33,7 @@
       "date": "2026-05-01",
       "author": "Priya S.",
       "rating": 5,
-      "text": "Hidden gem. Booking is hard because they don't have an online system but once you're in — magic. Sofía remembered my chemistry from a year ago.",
+      "text": "Hidden gem. Booking is hard because they don't have an online system but once you're in — magic. Sofía remembered my car's history from a year ago.",
       "replied": false
     },
     {
@@ -42,7 +42,7 @@
       "date": "2026-04-26",
       "author": "Devon K.",
       "rating": 2,
-      "text": "DM'd Instagram 4 times over two weeks, never got a reply. Showed up in person — fully booked through June. If you can't take new clients say so.",
+      "text": "DM'd Instagram 4 times over two weeks, never got a reply. Showed up in person — fully booked through June. If you can't take new customers say so.",
       "replied": false
     },
     {
@@ -51,7 +51,7 @@
       "date": "2026-04-22",
       "author": "Maritza H.",
       "rating": 5,
-      "text": "Mi salón favorito en la Mission. Sofía es una artista. Mi quinceañera salió perfecta gracias a ella. ¡Vayan!",
+      "text": "Mi taller favorito en la Mission. Sofía es una artista con los carros. Le arregló la transmisión a mi esposo y quedó perfecto. ¡Vayan!",
       "replied": false
     },
     {
@@ -60,40 +60,40 @@
       "date": "2026-04-15",
       "author": "Ashley R.",
       "rating": 4,
-      "text": "Great cut and color. Wish they had online booking — I almost gave up before getting an appointment.",
+      "text": "Great brake job and oil change. Wish they had online booking — I almost gave up before getting an appointment.",
       "replied": false
     },
     {
       "id": "r8",
       "source": "Instagram DM",
       "date": "2026-05-15",
-      "author": "@amber_m_sf",
+      "author": "@davidk_sf",
       "rating": null,
-      "text": "hi! is there any way I can book for next Saturday for color? prom for my niece 🫶",
+      "text": "is anyone awake?? my subaru is shifting really weird, almost stalled at a light",
       "replied": false
     },
     {
       "id": "r9",
       "source": "Instagram comments",
       "date": "2026-05-13",
-      "author": "@nat_curls",
+      "author": "@henry.cuevas",
       "rating": 5,
-      "text": "Just left Sol & Trenza and I'm literally CRYING. Sofia saved my curls after two years of bad cuts. This woman is a genius 😭🙌",
+      "text": "Just picked up my Civic from Reyes Auto Repair and I'm literally SO relieved. Sofia fixed my brakes perfectly and it was $200 less than the dealer quoted. This woman is a genius 🔧🙌",
       "replied": false
     },
     {
       "id": "r10",
       "source": "Instagram comments",
       "date": "2026-05-06",
-      "author": "@quince_luisa",
+      "author": "@andrea.morales",
       "rating": 5,
-      "text": "My daughter's quinceañera hair was EVERYTHING. All six girls looked stunning. Sofia and her team are magic ✨💕",
+      "text": "First time here thanks to my friend Maritza. Oil change + tire rotation for my Lexus was fast and fair. Sofia and her team are the real deal ✨💪",
       "replied": false
     }
   ],
   "ai_competitor_simulation": {
-    "name": "Curl Lab AI",
-    "tagline": "Same hands. Same neighborhood. Always replies in 4 minutes.",
+    "name": "PitPilot Auto AI",
+    "tagline": "Same tools. Same neighborhood. Always replies in 4 minutes.",
     "stats": {
       "dm_response_rate": "100%",
       "avg_response_time_minutes": 4,
