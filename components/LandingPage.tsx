@@ -2,13 +2,12 @@
 
 import Link from "next/link";
 import ArchitectureStack from "./ArchitectureStack";
-import WhatsAppDemo from "./WhatsAppDemo";
 import RecommendedTools from "./RecommendedTools";
 
 export default function LandingPage() {
-  function scrollToChat() {
+  function scrollToNext() {
     document
-      .getElementById("conversation")
+      .getElementById("how-it-works")
       ?.scrollIntoView({ behavior: "smooth" });
   }
 
@@ -52,7 +51,7 @@ export default function LandingPage() {
           </p>
           <div className="mt-10">
             <button
-              onClick={scrollToChat}
+              onClick={scrollToNext}
               className="px-8 py-4 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-bold text-lg transition-colors"
             >
               Start the demo &rarr;
@@ -62,12 +61,11 @@ export default function LandingPage() {
       </section>
 
       {/* ═══ SECTION 2 — HOW IT WORKS ═══ */}
-      <ArchitectureStack />
+      <div id="how-it-works">
+        <ArchitectureStack />
+      </div>
 
-      {/* ═══ SECTION 3 — THE CONVERSATION ═══ */}
-      <WhatsAppDemo />
-
-      {/* ═══ SECTION 4 + 5 — REVEAL + CTA ═══ */}
+      {/* ═══ SECTION 3 + 4 — REVEAL + CTA ═══ */}
       <RecommendedTools />
     </div>
   );
