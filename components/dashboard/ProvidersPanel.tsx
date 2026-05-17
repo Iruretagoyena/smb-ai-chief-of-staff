@@ -54,7 +54,7 @@ const PROVIDERS: Provider[] = [
     id: "p3",
     name: "Synthflow",
     description:
-      "After-hours booking — automated scheduling when salon is closed",
+      "After-hours booking — automated scheduling when shop is closed",
     dataCapture: "18 after-hours bookings captured",
     alternatives: [
       {
@@ -71,16 +71,16 @@ const PROVIDERS: Provider[] = [
     id: "p4",
     name: "ChatGPT",
     description:
-      "Custom styling recipes — trend analysis, product recommendations",
-    dataCapture: "34 recipes generated · 12 trend reports",
+      "Repair knowledge base — diagnostic guides, parts cross-reference",
+    dataCapture: "34 guides generated · 12 diagnostic reports",
     alternatives: [
       {
         name: "Anthropic Claude",
-        description: "Advanced reasoning for beauty trend analysis",
+        description: "Advanced reasoning for diagnostic analysis",
       },
       {
         name: "Google Gemini",
-        description: "Image-understanding for style matching",
+        description: "Image-understanding for damage assessment",
       },
     ],
   },
@@ -88,7 +88,7 @@ const PROVIDERS: Provider[] = [
     id: "p5",
     name: "ElevenLabs",
     description:
-      "Voicemail greeting — professional outgoing message in Sofia’s voice",
+      "Voicemail greeting — professional outgoing message in Sofía’s voice",
     dataCapture: "Voice clone active · 2 greeting variants",
     alternatives: [
       {

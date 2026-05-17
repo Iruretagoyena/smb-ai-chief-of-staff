@@ -516,7 +516,7 @@ export default function GBrainBrowser() {
         <div className="flex-1 relative">
           <input
             type="text"
-            placeholder="Find anything Sofia has ever said or received..."
+            placeholder="Find anything Sofía has ever said or received..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             className="w-full bg-white/[0.04] border border-white/[0.08] rounded px-3 py-2 text-sm text-white placeholder:text-white/30 focus:outline-none focus:border-white/20"
@@ -1043,9 +1043,9 @@ function ReviewDetail({ data }: { data: Record<string, unknown> }) {
   const stars = review.rating ?? 0;
   const draftReply = `Hi ${review.author.split(" ")[0]}, thank you for taking the time to leave a review! ${
     stars >= 4
-      ? "We're so glad you had a great experience with Sofia."
+      ? "We're so glad you had a great experience with Sofía."
       : "We're sorry the experience wasn't perfect and we're working to improve."
-  } We appreciate your feedback and hope to see you again soon. — Sofia, Sol & Trenza`;
+  } We appreciate your feedback and hope to see you again soon. — Sofía, Reyes Auto Repair`;
 
   return (
     <div className="p-5">
@@ -1106,19 +1106,19 @@ function CalendarDetail({ data }: { data: Record<string, unknown> }) {
   };
 
   const crossRefs: { label: string; type: string }[] = [];
-  if (event.type === "bridal") {
-    crossRefs.push({ label: "Email from isabella.cruz@gmail.com", type: "email" });
-    crossRefs.push({ label: "Phone call from Carmen Cruz (4m 12s)", type: "call" });
+  if (event.type === "service") {
+    crossRefs.push({ label: "Email from henry.cuevas@gmail.com", type: "email" });
+    crossRefs.push({ label: "Phone call from Henry Cuevas (3m 42s)", type: "call" });
   } else if (event.type === "client") {
     crossRefs.push({ label: "Review by Maritza H. (5★ Yelp)", type: "review" });
   } else if (event.type === "hiring") {
-    crossRefs.push({ label: "Email from stylist.applicant.mara@gmail.com", type: "email" });
-    crossRefs.push({ label: 'Co-pilot session: "Should I hire Mara?"', type: "copilot" });
+    crossRefs.push({ label: "Email from mechanic.applicant.diego@gmail.com", type: "email" });
+    crossRefs.push({ label: 'Co-pilot session: "Should I hire Diego?"', type: "copilot" });
   }
 
   const TYPE_LABELS: Record<string, string> = {
     client: "Client appointment",
-    bridal: "Bridal",
+    service: "Service",
     ops: "Operations",
     admin: "Admin",
     hiring: "Hiring",
