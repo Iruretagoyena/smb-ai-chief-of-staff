@@ -40,6 +40,8 @@ bun run dev
 
 Open http://localhost:3000.
 
+The dev server uses Next.js defaults, so if port 3000 is busy it will prompt for the next available port. Keep local secrets in `.env.local`; the checked-in `.env.example` is only a template.
+
 ### Required env
 
 | Var | Required for |
